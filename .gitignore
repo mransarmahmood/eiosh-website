@@ -12,11 +12,12 @@ out
 next-env.d.ts
 
 # Sibling apps deployed separately — keep this repo Next.js-only
-exam/
-invoice/
-lms/
-cms/
-publiceiosh/
+# Use leading slash so we don't accidentally match nested folders like lib/cms/
+/exam/
+/invoice/
+/lms/
+/cms/
+/publiceiosh/
 
 # Local-only assistant config
 .claude/

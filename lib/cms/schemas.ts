@@ -1,0 +1,698 @@
+// Schema registry — every editable resource declares its JSON file, shape type,
+// and editable fields. The admin UI and API routes are 100% driven by this.
+
+export type FieldType =
+  | "text"
+  | "slug"
+  | "textarea"
+  | "richtext"
+  | "number"
+  | "boolean"
+  | "date"
+  | "datetime"
+  | "enum"
+  | "tags"        // array of strings
+  | "stringList"  // array of strings (vertical, for longer items)
+  | "moduleList"  // array of { title, description }
+  | "statList"    // array of { label, value }
+  | "lineItems"   // array of { description, qty, unitPrice }
+  | "socialObj"   // key/value object
+  | "color";
+
+export interface FieldDef {
+  name: string;
+  label: string;
+  type: FieldType;
+  required?: boolean;
+  placeholder?: string;
+  help?: string;
+  /** Path for nested fields (e.g. "contact.email"). If omitted, name is the path. */
+  path?: string;
+  /** For enum */
+  options?: { value: string; label: string }[];
+  /** For text inputs — wider area */
+  wide?: boolean;
+}
+
+export interface ResourceSchema {
+  /** Slug used in URLs, e.g. /admin/courses */
+  key: string;
+  /** Display label plural */
+  label: string;
+  /** Display label singular */
+  singular: string;
+  /** JSON file path relative to content/data/ */
+  file: string;
+  /** Shape of the collection — array of records OR a single object (site settings). */
+  shape: "collection" | "singleton";
+  /** Identifying field used to build admin links. Default: id */
+  idField?: string;
+  /** Human-readable field used in list views (title/question/etc). */
+  displayField: string;
+  /** Secondary display line in list (optional) */
+  subField?: string;
+  /** Ordered field definitions for the editor. */
+  fields: FieldDef[];
+  /** Icon key (lucide name). */
+  icon?: string;
+  /** Short description shown in dashboard tile. */
+  description?: string;
+}
+
+// Reusable enum options
+const modeOptions = [
+  { value: "online", label: "Online" },
+  { value: "in-person", label: "In-person" },
+  { value: "blended", label: "Blended" },
+  { value: "self-paced", label: "Self-paced" },
+];
+const levelOptions = [
+  { value: "introductory", label: "Introductory" },
+  { value: "foundation", label: "Foundation" },
+  { value: "intermediate", label: "Intermediate" },
+  { value: "advanced", label: "Advanced" },
+  { value: "specialist", label: "Specialist" },
+];
+const languageOptions = [
+  { value: "en", label: "English" },
+  { value: "ar", label: "Arabic" },
+  { value: "en-ar", label: "English + Arabic" },
+];
+
+export const schemas: ResourceSchema[] = [
+  {
+    key: "site",
+    label: "Site settings",
+    singular: "Site settings",
+    file: "site.json",
+    shape: "singleton",
+    displayField: "brand.name",
+    icon: "Settings",
+    description: "Brand name, contact details, stats and social links.",
+    fields: [
+      { name: "brand.name", label: "Brand name", type: "text", required: true },
+      { name: "brand.tagline", label: "Tagline", type: "text" },
+      { name: "brand.strapline", label: "Strapline", type: "textarea", wide: true },
+      { name: "brand.logoLight", label: "Logo (light surface)", type: "text", help: "Path under /public" },
+      { name: "brand.logoDark", label: "Logo (dark surface)", type: "text" },
+      { name: "contact.email", label: "Contact email", type: "text", required: true },
+      { name: "contact.phone", label: "Contact phone", type: "text" },
+      { name: "contact.whatsapp", label: "WhatsApp number", type: "text", help: "Digits only, international format" },
+      { name: "contact.addressLines", label: "Address (one line per row)", type: "stringList" },
+      { name: "social", label: "Social links", type: "socialObj" },
+      { name: "stats", label: "Headline stats", type: "statList" },
+    ],
+  },
+  {
+    key: "categories",
+    label: "Course categories",
+    singular: "Category",
+    file: "categories.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "tagline",
+    icon: "FolderTree",
+    description: "Top-level groupings shown in menus and filters.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true },
+      { name: "tagline", label: "Tagline", type: "text" },
+      { name: "description", label: "Description", type: "textarea", wide: true },
+      { name: "icon", label: "Lucide icon", type: "text", help: "e.g. HardHat, Flame, Leaf" },
+      { name: "accentHex", label: "Accent colour (hex)", type: "color" },
+    ],
+  },
+  {
+    key: "accreditations",
+    label: "Awarding bodies",
+    singular: "Awarding body",
+    file: "accreditations.json",
+    shape: "collection",
+    displayField: "shortName",
+    subField: "name",
+    icon: "Award",
+    description: "Awarding bodies and learning partners.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "shortName", label: "Short name", type: "text", required: true },
+      { name: "name", label: "Full name", type: "text", required: true },
+      {
+        name: "kind",
+        label: "Kind",
+        type: "enum",
+        options: [
+          { value: "awarding-body", label: "Awarding body" },
+          { value: "accreditor", label: "Accreditor" },
+          { value: "partner", label: "Learning partner" },
+        ],
+      },
+      { name: "country", label: "Country" , type: "text" },
+      { name: "logo", label: "Logo path", type: "text" },
+      { name: "summary", label: "Summary", type: "textarea", wide: true },
+      { name: "highlights", label: "Highlights", type: "stringList" },
+      { name: "website", label: "Website", type: "text" },
+    ],
+  },
+  {
+    key: "courses",
+    label: "Courses",
+    singular: "Course",
+    file: "courses.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "headline",
+    icon: "GraduationCap",
+    description: "Paid qualification programmes.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true, wide: true },
+      { name: "headline", label: "Headline", type: "textarea", wide: true },
+      { name: "category", label: "Category slug", type: "text" },
+      { name: "awardingBody", label: "Awarding body slug", type: "text" },
+      { name: "level", label: "Level", type: "enum", options: levelOptions },
+      { name: "durationHours", label: "Duration (hours)", type: "number" },
+      {
+        name: "modes",
+        label: "Delivery modes (comma)",
+        type: "tags",
+        help: "online, in-person, blended, self-paced",
+      },
+      { name: "language", label: "Language", type: "enum", options: languageOptions },
+      { name: "priceFromUSD", label: "Price from (USD)", type: "number" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "open", label: "Open for enrolment" },
+          { value: "filling-fast", label: "Filling fast" },
+          { value: "waitlist", label: "Waitlist" },
+          { value: "upcoming", label: "Upcoming cohort" },
+        ],
+      },
+      { name: "cohortStart", label: "Next cohort (ISO date)", type: "date" },
+      { name: "learningOutcomes", label: "Learning outcomes", type: "stringList" },
+      { name: "whoShouldAttend", label: "Who should attend", type: "stringList" },
+      { name: "moduleOutline", label: "Module outline", type: "moduleList" },
+      { name: "assessment", label: "Assessment", type: "textarea", wide: true },
+      { name: "certification", label: "Certification", type: "textarea", wide: true },
+      { name: "heroImage", label: "Hero image (URL)", type: "text" },
+      { name: "featured", label: "Featured on homepage", type: "boolean" },
+    ],
+  },
+  {
+    key: "trainers",
+    label: "Trainers",
+    singular: "Trainer",
+    file: "trainers.json",
+    shape: "collection",
+    displayField: "name",
+    subField: "title",
+    icon: "UsersRound",
+    description: "Faculty member profiles.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "name", label: "Name", type: "text", required: true },
+      { name: "title", label: "Title", type: "text" },
+      { name: "credentials", label: "Credentials", type: "tags" },
+      { name: "specialisms", label: "Specialisms", type: "tags" },
+      { name: "bio", label: "Bio", type: "textarea", wide: true },
+      { name: "photo", label: "Photo URL", type: "text" },
+      { name: "linkedin", label: "LinkedIn URL", type: "text" },
+    ],
+  },
+  {
+    key: "testimonials",
+    label: "Testimonials",
+    singular: "Testimonial",
+    file: "testimonials.json",
+    shape: "collection",
+    displayField: "name",
+    subField: "company",
+    icon: "Quote",
+    description: "Learner and client endorsements.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "quote", label: "Quote", type: "textarea", wide: true, required: true },
+      { name: "name", label: "Name", type: "text", required: true },
+      { name: "role", label: "Role", type: "text" },
+      { name: "company", label: "Company", type: "text" },
+      { name: "courseSlug", label: "Related course slug", type: "text" },
+      {
+        name: "rating",
+        label: "Rating",
+        type: "enum",
+        options: [
+          { value: "5", label: "5 stars" },
+          { value: "4", label: "4 stars" },
+          { value: "3", label: "3 stars" },
+          { value: "2", label: "2 stars" },
+          { value: "1", label: "1 star" },
+        ],
+      },
+      { name: "avatar", label: "Avatar URL", type: "text" },
+    ],
+  },
+  {
+    key: "blog",
+    label: "Blog posts",
+    singular: "Blog post",
+    file: "blog.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "author",
+    icon: "FileText",
+    description: "Insights and faculty briefings.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true, wide: true },
+      { name: "excerpt", label: "Excerpt", type: "textarea", wide: true },
+      { name: "body", label: "Body (markdown)", type: "richtext", wide: true },
+      { name: "tags", label: "Tags", type: "tags" },
+      { name: "author", label: "Author", type: "text" },
+      { name: "publishedAt", label: "Published on", type: "date" },
+      { name: "readTimeMinutes", label: "Read time (minutes)", type: "number" },
+      { name: "cover", label: "Cover image URL", type: "text" },
+    ],
+  },
+  {
+    key: "events",
+    label: "Events",
+    singular: "Event",
+    file: "events.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "type",
+    icon: "CalendarDays",
+    description: "Workshops, seminars, webinars, open days, cohort starts.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true, wide: true },
+      {
+        name: "type",
+        label: "Type",
+        type: "enum",
+        options: [
+          { value: "webinar", label: "Webinar" },
+          { value: "workshop", label: "Workshop / seminar" },
+          { value: "open-day", label: "Open day" },
+          { value: "cohort-start", label: "Cohort start" },
+        ],
+      },
+      { name: "startsAt", label: "Starts at (ISO datetime)", type: "datetime", required: true },
+      { name: "endsAt", label: "Ends at (ISO datetime)", type: "datetime" },
+      { name: "mode", label: "Mode", type: "enum", options: modeOptions },
+      { name: "location", label: "Location", type: "text" },
+      { name: "summary", label: "Summary", type: "textarea", wide: true },
+      { name: "registerUrl", label: "Registration URL", type: "text" },
+    ],
+  },
+  {
+    key: "faqs",
+    label: "FAQs",
+    singular: "FAQ",
+    file: "faqs.json",
+    shape: "collection",
+    displayField: "question",
+    subField: "category",
+    icon: "HelpCircle",
+    description: "Help and clarifications.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      {
+        name: "category",
+        label: "Category",
+        type: "enum",
+        options: [
+          { value: "admissions", label: "Admissions" },
+          { value: "certification", label: "Certification" },
+          { value: "payments", label: "Payments" },
+          { value: "corporate", label: "Corporate" },
+          { value: "verification", label: "Verification" },
+          { value: "general", label: "General" },
+        ],
+      },
+      { name: "question", label: "Question", type: "text", required: true, wide: true },
+      { name: "answer", label: "Answer", type: "textarea", wide: true },
+    ],
+  },
+  {
+    key: "free-courses",
+    label: "Free courses",
+    singular: "Free course",
+    file: "free-courses.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "format",
+    icon: "PlayCircle",
+    description: "Open library — video, reading, podcast, interactive.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true, wide: true },
+      { name: "summary", label: "Summary", type: "textarea", wide: true },
+      {
+        name: "format",
+        label: "Format",
+        type: "enum",
+        options: [
+          { value: "video", label: "Video" },
+          { value: "reading", label: "Reading" },
+          { value: "interactive", label: "Interactive" },
+          { value: "podcast", label: "Podcast" },
+        ],
+      },
+      { name: "durationMinutes", label: "Duration (minutes)", type: "number" },
+      { name: "level", label: "Level", type: "enum", options: levelOptions.slice(0, 3) },
+      { name: "lessonsCount", label: "Lessons count", type: "number" },
+      { name: "category", label: "Category slug", type: "text" },
+      { name: "authorSlug", label: "Author slug", type: "text" },
+      { name: "enrolledCount", label: "Enrolled count", type: "number" },
+      { name: "hasCertificate", label: "Includes certificate", type: "boolean" },
+      { name: "tags", label: "Tags", type: "tags" },
+    ],
+  },
+  {
+    key: "proposals",
+    label: "Proposals",
+    singular: "Proposal",
+    file: "proposals.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "companyName",
+    icon: "ClipboardList",
+    description: "Training / certification / service proposals — ready to send.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "title", label: "Proposal title", type: "text", required: true, wide: true },
+      {
+        name: "kind",
+        label: "Proposal type",
+        type: "enum",
+        options: [
+          { value: "training", label: "Training proposal" },
+          { value: "certification", label: "Certification proposal" },
+          { value: "service", label: "Professional services proposal" },
+          { value: "equipment-inspection", label: "Equipment inspection proposal" },
+          { value: "consulting", label: "HSE consulting proposal" },
+          { value: "custom", label: "Custom proposal" },
+        ],
+      },
+      { name: "companyName", label: "Company name", type: "text" },
+      { name: "companyEmail", label: "Company email", type: "text" },
+      { name: "phone", label: "Phone", type: "text" },
+      { name: "companyAddress", label: "Company address", type: "textarea" },
+      { name: "invoiceDate", label: "Proposal date", type: "date" },
+      { name: "validUntil", label: "Valid until", type: "date" },
+      { name: "overview", label: "Overview", type: "textarea", wide: true, help: "First paragraph on the document — ready-to-submit copy auto-populated when you pick a type." },
+      { name: "scope", label: "Scope of work", type: "stringList", wide: true, help: "Bullet points shown under SCOPE OF WORK." },
+      { name: "deliverables", label: "Deliverables", type: "stringList", wide: true, help: "Bullet points shown under DELIVERABLES." },
+      { name: "timeline", label: "Timeline", type: "textarea", wide: true },
+      { name: "investmentSummary", label: "Investment summary", type: "textarea", wide: true },
+      { name: "terms", label: "Terms & conditions", type: "textarea", wide: true },
+      { name: "description", label: "Additional notes (optional)", type: "textarea", wide: true },
+      { name: "receivedAt", label: "Received at (ISO)", type: "datetime" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "new", label: "Draft" },
+          { value: "in-review", label: "Sent — awaiting response" },
+          { value: "responded", label: "Accepted" },
+          { value: "closed", label: "Declined" },
+          { value: "historical", label: "Archived" },
+        ],
+      },
+    ],
+  },
+  {
+    key: "quotations",
+    label: "Quotations",
+    singular: "Quotation",
+    file: "quotations.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "company",
+    icon: "Receipt",
+    description: "Typed quotations with line items and validity — ready to send.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "title", label: "Subject", type: "text", required: true, wide: true },
+      {
+        name: "kind",
+        label: "Quotation type",
+        type: "enum",
+        options: [
+          { value: "training", label: "Training quotation" },
+          { value: "certification", label: "Certification preparation quotation" },
+          { value: "service", label: "Professional services quotation" },
+          { value: "equipment-inspection", label: "Equipment inspection quotation" },
+          { value: "consulting", label: "HSE consulting quotation" },
+          { value: "custom", label: "Custom quotation" },
+        ],
+      },
+      { name: "company", label: "Company", type: "text" },
+      { name: "email", label: "Email", type: "text" },
+      { name: "mobile", label: "Mobile", type: "text" },
+      { name: "serviceRequired", label: "Service required", type: "text" },
+      { name: "overview", label: "Overview", type: "textarea", wide: true, help: "Lead paragraph on the document — auto-populated when you pick a type." },
+      { name: "lineItems", label: "Line items", type: "lineItems", wide: true },
+      { name: "currency", label: "Currency", type: "text", placeholder: "USD" },
+      { name: "vatPercent", label: "VAT %", type: "number" },
+      { name: "validUntil", label: "Valid until", type: "date" },
+      { name: "terms", label: "Terms & conditions", type: "textarea", wide: true },
+      { name: "notes", label: "Additional information", type: "textarea", wide: true },
+      { name: "receivedAt", label: "Received at (ISO)", type: "datetime" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "new", label: "Draft" },
+          { value: "in-review", label: "Sent — awaiting response" },
+          { value: "responded", label: "Accepted" },
+          { value: "closed", label: "Declined" },
+          { value: "historical", label: "Archived" },
+        ],
+      },
+    ],
+  },
+  {
+    key: "invoices",
+    label: "Invoices",
+    singular: "Invoice",
+    file: "invoices.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "company",
+    icon: "FileSpreadsheet",
+    description: "Invoices generated and issued to clients. Print as branded PDF.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "title", label: "Invoice subject", type: "text", required: true, wide: true },
+      {
+        name: "kind",
+        label: "Invoice type",
+        type: "enum",
+        options: [
+          { value: "training", label: "Training invoice" },
+          { value: "certification", label: "Certification preparation invoice" },
+          { value: "service", label: "Professional services invoice" },
+          { value: "equipment-inspection", label: "Equipment inspection invoice" },
+          { value: "consulting", label: "HSE consulting invoice" },
+          { value: "custom", label: "Custom invoice" },
+        ],
+      },
+      { name: "company", label: "Bill to — company", type: "text", required: true },
+      { name: "billToName", label: "Bill to — contact name", type: "text" },
+      { name: "companyAddress", label: "Bill to — address", type: "textarea" },
+      { name: "companyEmail", label: "Bill to — email", type: "text" },
+      { name: "phone", label: "Bill to — phone", type: "text" },
+      { name: "invoiceDate", label: "Invoice date", type: "date", required: true },
+      { name: "dueDate", label: "Due date", type: "date" },
+      { name: "currency", label: "Currency", type: "text", placeholder: "USD" },
+      { name: "vatPercent", label: "VAT %", type: "number" },
+      { name: "lineItems", label: "Line items", type: "lineItems", wide: true },
+      { name: "notes", label: "Notes / special instructions", type: "textarea", wide: true },
+      { name: "terms", label: "Terms & payment conditions", type: "textarea", wide: true },
+      { name: "receivedAt", label: "Generated at (ISO)", type: "datetime" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "new", label: "Draft" },
+          { value: "in-review", label: "Sent" },
+          { value: "responded", label: "Paid" },
+          { value: "closed", label: "Void" },
+          { value: "historical", label: "Archived" },
+        ],
+      },
+    ],
+  },
+  {
+    key: "registrations",
+    label: "Event registrations",
+    singular: "Registration",
+    file: "registrations.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "eventTitle",
+    icon: "UserCheck",
+    description: "RSVPs captured from the Events / Calendar pages.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "title", label: "Attendee name", type: "text", required: true, wide: true },
+      { name: "email", label: "Email", type: "text", required: true },
+      { name: "phone", label: "Phone", type: "text" },
+      { name: "company", label: "Company", type: "text" },
+      { name: "eventSlug", label: "Event slug", type: "text" },
+      { name: "eventTitle", label: "Event title", type: "text" },
+      { name: "notes", label: "Notes", type: "textarea", wide: true },
+      { name: "receivedAt", label: "Received at (ISO)", type: "datetime" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "new", label: "New" },
+          { value: "in-review", label: "Confirmed" },
+          { value: "responded", label: "Attended" },
+          { value: "closed", label: "No-show" },
+          { value: "historical", label: "Past" },
+        ],
+      },
+    ],
+  },
+  {
+    key: "admissions",
+    label: "Admission forms",
+    singular: "Admission",
+    file: "admissions.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "courseApplied",
+    icon: "UserPlus",
+    description: "Learner admission applications — formal enrolment form.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "admissionNumber", label: "Admission / Reg number", type: "text", help: "Auto-assigned on acceptance. Leave blank for new applications." },
+      { name: "session", label: "Session / intake", type: "text", placeholder: "e.g. 2026-27" },
+      { name: "courseApplied", label: "Course applied for", type: "text", wide: true, required: true },
+      { name: "title", label: "Applicant full name", type: "text", required: true, wide: true },
+      { name: "fatherName", label: "Father's name", type: "text" },
+      { name: "dob", label: "Date of birth", type: "date" },
+      {
+        name: "gender",
+        label: "Gender",
+        type: "enum",
+        options: [
+          { value: "Male", label: "Male" },
+          { value: "Female", label: "Female" },
+          { value: "Prefer not to say", label: "Prefer not to say" },
+        ],
+      },
+      { name: "nationality", label: "Nationality", type: "text" },
+      { name: "religion", label: "Religion", type: "text" },
+      { name: "cnic", label: "CNIC / National ID / Passport", type: "text" },
+      { name: "email", label: "Email", type: "text", required: true },
+      { name: "mobile", label: "Mobile", type: "text", required: true },
+      { name: "company", label: "Employer / organisation", type: "text" },
+      { name: "lastQualification", label: "Qualification", type: "text", help: "Highest qualification + institute + year (one line)." },
+      { name: "photoUrl", label: "Photo URL (/brand/...)", type: "text", help: "Paste a public image path for the photo box on the printed form." },
+      { name: "notes", label: "Additional notes", type: "textarea", wide: true },
+      { name: "receivedAt", label: "Received at (ISO)", type: "datetime" },
+      {
+        name: "status",
+        label: "Status",
+        type: "enum",
+        options: [
+          { value: "new", label: "New" },
+          { value: "in-review", label: "Reviewing" },
+          { value: "responded", label: "Accepted" },
+          { value: "closed", label: "Rejected" },
+          { value: "historical", label: "Historical (migrated)" },
+        ],
+      },
+    ],
+  },
+  {
+    key: "certificates",
+    label: "Certificate register",
+    singular: "Certificate",
+    file: "certificates.json",
+    shape: "collection",
+    displayField: "holder",
+    subField: "certificateNumber",
+    icon: "Award",
+    description: "Public certificate-verification register. Every row is verifiable at /verify-certificate via its certificate or registration number.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "holder", label: "Holder name", type: "text", required: true, wide: true },
+      { name: "certificateNumber", label: "Certificate number", type: "text", required: true, help: "Used by the public verifier." },
+      { name: "registrationNumber", label: "Registration number", type: "text" },
+      { name: "course", label: "Course / programme", type: "text", wide: true },
+      { name: "issueDate", label: "Issue date", type: "date" },
+      { name: "expiryDate", label: "Expiry date", type: "date" },
+      { name: "company", label: "Company / sponsor code", type: "text" },
+    ],
+  },
+  {
+    key: "resources",
+    label: "Resources (books & notes)",
+    singular: "Resource",
+    file: "resources.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "kind",
+    icon: "BookText",
+    description: "Books, notes, sample papers, checklists, whitepapers, brochures.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title", type: "text", required: true, wide: true },
+      {
+        name: "kind",
+        label: "Kind",
+        type: "enum",
+        options: [
+          { value: "book", label: "Book" },
+          { value: "notes", label: "Study notes" },
+          { value: "sample-paper", label: "Sample paper" },
+          { value: "brochure", label: "Brochure" },
+          { value: "checklist", label: "Checklist" },
+          { value: "whitepaper", label: "Whitepaper" },
+        ],
+      },
+      { name: "summary", label: "Summary", type: "textarea", wide: true },
+      { name: "pages", label: "Pages", type: "number" },
+      { name: "sizeMB", label: "Size (MB)", type: "number" },
+      { name: "language", label: "Language", type: "enum", options: languageOptions },
+      { name: "fileUrl", label: "File URL", type: "text" },
+      {
+        name: "accessLevel",
+        label: "Access level",
+        type: "enum",
+        options: [
+          { value: "public", label: "Public" },
+          { value: "email-gated", label: "Email-gated" },
+          { value: "learner-only", label: "Learner only" },
+        ],
+      },
+      { name: "awardingBodySlug", label: "Awarding body slug", type: "text" },
+      { name: "categorySlug", label: "Category slug", type: "text" },
+      { name: "updatedAt", label: "Updated at (ISO date)", type: "date", required: true },
+    ],
+  },
+];
+
+export function getSchema(key: string) {
+  return schemas.find((s) => s.key === key) ?? null;
+}
