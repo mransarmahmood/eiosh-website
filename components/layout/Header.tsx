@@ -97,7 +97,7 @@ export function Header() {
             </a>
             <span aria-hidden className="h-3 w-px bg-white/20" />
             <a
-              href={process.env.NEXT_PUBLIC_LMS_URL ?? "http://localhost/eiosh/lms/"}
+              href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 hover:text-cyan-300 transition"
@@ -171,7 +171,7 @@ export function Header() {
 
             <div className="flex items-center gap-2.5">
               <a
-                href={process.env.NEXT_PUBLIC_LMS_URL ?? "http://localhost/eiosh/lms/"}
+                href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hidden md:inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-medium text-navy-900 transition hover:border-cyan-400 hover:text-cyan-700"

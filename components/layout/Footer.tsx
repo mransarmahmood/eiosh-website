@@ -35,17 +35,17 @@ const columns = [
     links: [
       {
         label: "Learning Management System",
-        href: process.env.NEXT_PUBLIC_LMS_URL ?? "http://localhost/eiosh/lms/",
+        href: process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/",
         external: true,
       },
       {
         label: "Exam portal",
-        href: process.env.NEXT_PUBLIC_EXAM_URL ?? "http://localhost/eiosh/exam/public/login",
+        href: process.env.NEXT_PUBLIC_EXAM_URL ?? "https://eiosh-com-725461.hostingersite.com/exam/public/login",
         external: true,
       },
       {
         label: "Invoice / billing",
-        href: process.env.NEXT_PUBLIC_INVOICE_URL ?? "http://localhost/eiosh/invoice/public/admin/login",
+        href: process.env.NEXT_PUBLIC_INVOICE_URL ?? "https://eiosh-com-725461.hostingersite.com/invoice/public/admin/login",
         external: true,
       },
       { label: "Verify certificate", href: "/verify-certificate" },

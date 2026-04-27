@@ -14,7 +14,7 @@ const modules: Module[] = [
   {
     name: "LMS · Academy",
     description: "Full CodeIgniter learning management system — courses, enrolments, quizzes, certificates.",
-    href: "http://localhost/eiosh/lms/",
+    href: "https://eiosh-com-725461.hostingersite.com/lms/",
     icon: GraduationCap,
     status: "ready",
     notes: "DB: eiosh_lms (seeded from install.sql)",
@@ -22,7 +22,7 @@ const modules: Module[] = [
   {
     name: "Exam portal",
     description: "Laravel exam engine with Jetstream + Inertia — campuses, courses, exam entries and results.",
-    href: "http://localhost/eiosh/exam/public/login",
+    href: "https://eiosh-com-725461.hostingersite.com/exam/public/login",
     icon: FileCheck,
     status: "ready",
     notes: "DB: exam (pre-populated)",
@@ -30,7 +30,7 @@ const modules: Module[] = [
   {
     name: "Invoice / billing",
     description: "Laravel invoicing app (ZATCA-ready) with Jetstream multi-auth.",
-    href: "http://localhost/eiosh/invoice/public/login",
+    href: "https://eiosh-com-725461.hostingersite.com/invoice/public/login",
     icon: Receipt,
     status: "partial",
     notes: "Login loads; admin dashboard needs the bmatovu/multi-auth `admin` guard wired into config/auth.php",

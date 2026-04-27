@@ -61,7 +61,7 @@ export function MobileNav({
               {/* Account actions up-top */}
               <div className="grid grid-cols-2 gap-2.5">
                 <a
-                  href={process.env.NEXT_PUBLIC_LMS_URL ?? "http://localhost/eiosh/lms/"}
+                  href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={onClose}
@@ -132,7 +132,7 @@ export function MobileNav({
               <ul className="mt-1 space-y-0.5">
                 <li>
                   <a
-                    href={process.env.NEXT_PUBLIC_LMS_URL ?? "http://localhost/eiosh/lms/"}
+                    href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={onClose}
@@ -144,7 +144,7 @@ export function MobileNav({
                 </li>
                 <li>
                   <a
-                    href={process.env.NEXT_PUBLIC_EXAM_URL ?? "http://localhost/eiosh/exam/public/login"}
+                    href={process.env.NEXT_PUBLIC_EXAM_URL ?? "https://eiosh-com-725461.hostingersite.com/exam/public/login"}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={onClose}
