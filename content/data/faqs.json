@@ -1,0 +1,38 @@
+[
+  {
+    "id": "faq-1",
+    "category": "admissions",
+    "question": "Do I need prior experience to join an EIOSH programme?",
+    "answer": "Most introductory and foundation qualifications have no formal prerequisites. For Level 6 and above, an advisor will review your experience and prior learning to recommend the right pathway."
+  },
+  {
+    "id": "faq-2",
+    "category": "certification",
+    "question": "Are your qualifications internationally recognised?",
+    "answer": "Yes. EIOSH is an approved centre or learning partner for IOSH, OSHAcademy, OSHAwards, HABC and OTHM, with qualifications regulated by Ofqual and recognised globally."
+  },
+  {
+    "id": "faq-3",
+    "category": "payments",
+    "question": "Can I pay in instalments?",
+    "answer": "Flexible instalment plans are available for our Level 5–7 programmes. Corporate purchase orders are accepted for enterprise bookings."
+  },
+  {
+    "id": "faq-4",
+    "category": "corporate",
+    "question": "Can you deliver a programme in-house for our team?",
+    "answer": "Absolutely. Our corporate faculty designs tailored delivery — on-site, virtual or blended — with sector-specific case studies and project-based assessment."
+  },
+  {
+    "id": "faq-5",
+    "category": "verification",
+    "question": "How can employers verify an EIOSH certificate?",
+    "answer": "Every EIOSH certificate carries a unique QR code and verification reference. Employers can validate credentials directly through our certificate verification tool."
+  },
+  {
+    "id": "faq-6",
+    "category": "general",
+    "question": "Do you deliver training in Arabic?",
+    "answer": "Selected qualifications are delivered bilingually in English and Arabic, with certification assessed in either language where the awarding body permits."
+  }
+]

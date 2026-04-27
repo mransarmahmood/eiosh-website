@@ -1,0 +1,123 @@
+[
+  {
+    "id": "evt-1",
+    "slug": "free-webinar-nebosh-pathways",
+    "title": "Free Webinar: NEBOSH career pathways in 2026",
+    "type": "webinar",
+    "startsAt": "2026-05-02T13:00:00Z",
+    "mode": "online",
+    "summary": "A 45-minute live session on how to choose between NEBOSH IGC, Diploma and sector certificates — with live Q&A from our lead faculty."
+  },
+  {
+    "id": "evt-2",
+    "slug": "workshop-iso-45001-internal-audit",
+    "title": "Workshop: ISO 45001 internal auditor masterclass",
+    "type": "workshop",
+    "startsAt": "2026-05-21T08:30:00Z",
+    "endsAt": "2026-05-22T16:00:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "Two-day hands-on masterclass for internal auditors — stage one audit planning, nonconformity writing and closing the audit cycle."
+  },
+  {
+    "id": "evt-3",
+    "slug": "open-day-may",
+    "title": "Open Day: Talk to our faculty",
+    "type": "open-day",
+    "startsAt": "2026-05-10T09:00:00Z",
+    "endsAt": "2026-05-10T16:00:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "Tour our training suites, meet lead faculty, and map out your qualification pathway with an admissions advisor."
+  },
+  {
+    "id": "evt-4",
+    "slug": "cohort-start-nebosh-igc-jun",
+    "title": "Cohort start: NEBOSH IGC (Evenings)",
+    "type": "cohort-start",
+    "startsAt": "2026-06-02T17:00:00Z",
+    "mode": "blended",
+    "summary": "Our June evening cohort for the NEBOSH International General Certificate begins — last enrolment 28 May."
+  },
+  {
+    "id": "evt-5",
+    "slug": "seminar-haccp-hospitality-leaders",
+    "title": "Seminar: HACCP for hospitality leaders",
+    "type": "workshop",
+    "startsAt": "2026-05-14T09:30:00Z",
+    "endsAt": "2026-05-14T12:30:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "A three-hour executive briefing for F&B directors on audit-ready HACCP, allergen controls and supplier assurance."
+  },
+  {
+    "id": "evt-6",
+    "slug": "webinar-esg-for-hse-teams",
+    "title": "Webinar: ESG disclosure for HSE teams",
+    "type": "webinar",
+    "startsAt": "2026-05-28T13:00:00Z",
+    "mode": "online",
+    "summary": "How TCFD, ISSB S1 and S2 are reshaping the HSE remit — and a practical path to the first disclosure."
+  },
+  {
+    "id": "evt-7",
+    "slug": "workshop-fire-risk-assessment",
+    "title": "Workshop: Fire risk assessment that passes Civil Defence",
+    "type": "workshop",
+    "startsAt": "2026-06-09T09:00:00Z",
+    "endsAt": "2026-06-09T17:00:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "One-day deep dive on PAS 79, GCC Civil Defence expectations and building a defensible assessment dossier."
+  },
+  {
+    "id": "evt-8",
+    "slug": "cohort-start-iosh-ms-jun",
+    "title": "Cohort start: IOSH Managing Safely (Weekend)",
+    "type": "cohort-start",
+    "startsAt": "2026-06-13T08:30:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "A four-Saturday cohort of IOSH Managing Safely — last enrolment 10 June."
+  },
+  {
+    "id": "evt-9",
+    "slug": "webinar-behavioural-safety",
+    "title": "Webinar: Behavioural safety without the posters",
+    "type": "webinar",
+    "startsAt": "2026-06-18T13:00:00Z",
+    "mode": "online",
+    "summary": "Why leading indicators and observation programmes actually shift outcomes — and what to stop doing."
+  },
+  {
+    "id": "evt-10",
+    "slug": "workshop-permit-to-work",
+    "title": "Workshop: Permit-to-work system design",
+    "type": "workshop",
+    "startsAt": "2026-06-24T09:00:00Z",
+    "endsAt": "2026-06-25T17:00:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Academy, Dubai",
+    "summary": "A two-day workshop for operations and HSE leads on designing a permit-to-work system that doesn't get bypassed."
+  },
+  {
+    "id": "evt-11",
+    "slug": "cohort-start-othm-l6",
+    "title": "Cohort start: OTHM Level 6 Diploma (Online)",
+    "type": "cohort-start",
+    "startsAt": "2026-07-07T16:00:00Z",
+    "mode": "online",
+    "summary": "Our July online cohort of the OTHM Level 6 Diploma in Occupational Health and Safety begins."
+  },
+  {
+    "id": "evt-12",
+    "slug": "open-day-riyadh",
+    "title": "Riyadh Open Day",
+    "type": "open-day",
+    "startsAt": "2026-07-12T10:00:00Z",
+    "endsAt": "2026-07-12T16:00:00Z",
+    "mode": "in-person",
+    "location": "EIOSH Hub, Al Olaya, Riyadh",
+    "summary": "Tour our Riyadh delivery hub, meet regional faculty and lock in your qualification pathway."
+  }
+]

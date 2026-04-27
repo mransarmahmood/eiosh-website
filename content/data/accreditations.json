@@ -1,0 +1,155 @@
+[
+  {
+    "id": "acc-iosh",
+    "slug": "iosh",
+    "name": "Institution of Occupational Safety and Health",
+    "shortName": "IOSH",
+    "kind": "awarding-body",
+    "country": "United Kingdom",
+    "summary": "The world's largest chartered body for safety and health professionals. EIOSH delivers IOSH Managing Safely V5.0, Working Safely and tailored enterprise variants.",
+    "highlights": [
+      "Chartered in the UK, recognised globally",
+      "Over 48,000 members across 130 countries",
+      "Benchmark HSE qualification for managers and supervisors"
+    ],
+    "website": "https://iosh.com",
+    "logo": "inline:IOSH"
+  },
+  {
+    "id": "acc-oshacademy",
+    "slug": "oshacademy",
+    "name": "OSHAcademy Safety & Health Training",
+    "shortName": "OSHAcademy USA",
+    "kind": "awarding-body",
+    "country": "United States",
+    "summary": "Independent provider of online occupational safety and health training, with stackable certificates aligned to US OSHA and international best practice.",
+    "highlights": [
+      "Self-paced and instructor-supported pathways",
+      "Verifiable digital certificates",
+      "Over 100 safety disciplines"
+    ],
+    "website": "https://oshatrain.org",
+    "logo": "inline:OSHAcademy USA"
+  },
+  {
+    "id": "acc-oshawards",
+    "slug": "oshawards",
+    "name": "OSHAwards UK",
+    "shortName": "OSHAwards",
+    "kind": "awarding-body",
+    "country": "United Kingdom",
+    "summary": "International awarding body for safety, environment and quality qualifications, with approved centres across the Middle East, South Asia and Africa.",
+    "highlights": [
+      "Qualifications aligned to ISO 45001 and 14001",
+      "Approved centre network in 40+ countries",
+      "Train-the-Trainer specialism"
+    ],
+    "logo": "inline:OSHAwards"
+  },
+  {
+    "id": "acc-habc",
+    "slug": "habc",
+    "name": "Highfield Awarding Body for Compliance",
+    "shortName": "HABC UK",
+    "kind": "awarding-body",
+    "country": "United Kingdom",
+    "summary": "One of the UK's leading Ofqual-recognised awarding bodies for food safety, health & safety, and compliance qualifications.",
+    "highlights": [
+      "Ofqual regulated",
+      "Food safety and HACCP specialism",
+      "Industry-standard in hospitality and facilities"
+    ],
+    "website": "https://highfieldqualifications.com",
+    "logo": "inline:HABC UK"
+  },
+  {
+    "id": "acc-othm",
+    "slug": "othm",
+    "name": "OTHM Qualifications",
+    "shortName": "OTHM UK",
+    "kind": "awarding-body",
+    "country": "United Kingdom",
+    "summary": "Ofqual-regulated awarding body offering Level 3–8 qualifications in business, HR, health & social care and occupational health and safety.",
+    "highlights": [
+      "Ofqual regulated",
+      "Level 3 to Level 8 coverage",
+      "University progression routes"
+    ],
+    "website": "https://othm.org.uk",
+    "logo": "inline:OTHM UK"
+  },
+  {
+    "id": "acc-nasp",
+    "slug": "nasp",
+    "name": "National Association of Safety Professionals",
+    "shortName": "NASP USA",
+    "kind": "awarding-body",
+    "country": "United States",
+    "summary": "One of the leading US safety certification bodies, offering CSM, CSHO and CSD designations recognised by employers across North America and the Gulf.",
+    "highlights": [
+      "CSM, CSHO and CSD pathways",
+      "Recognised by ANSI-accredited programmes"
+    ],
+    "logo": "inline:NASP USA"
+  },
+  {
+    "id": "acc-icboq",
+    "slug": "icboq",
+    "name": "International Certification Board for Qualifications",
+    "shortName": "ICBOQ UK",
+    "kind": "awarding-body",
+    "country": "United Kingdom",
+    "summary": "UK-registered certification board issuing globally portable qualifications in health, safety, environment and allied disciplines.",
+    "highlights": [
+      "UKRLP and HRD registered",
+      "Globally portable certificates"
+    ],
+    "logo": "inline:ICBOQ UK"
+  },
+  {
+    "id": "acc-global-awards",
+    "slug": "global-awards",
+    "name": "Global Awards",
+    "shortName": "Global Awards",
+    "kind": "awarding-body",
+    "summary": "Global Awards issues international qualifications across safety, environment and professional-development disciplines, with an approved-centre network in the GCC and South Asia.",
+    "highlights": [
+      "Train-the-Trainer programme",
+      "Approved centres across the GCC and South Asia"
+    ],
+    "logo": "inline:Global Awards"
+  },
+  {
+    "id": "acc-iq-ohs",
+    "slug": "iq-ohs",
+    "name": "IQ Occupational Health & Safety",
+    "shortName": "IQ-OHS",
+    "kind": "awarding-body",
+    "summary": "A specialist OHS awarding body whose qualifications are mapped to ISO 45001 and audited for industry employability.",
+    "highlights": [
+      "ISO 45001-mapped syllabi",
+      "Employer-endorsed assessment"
+    ],
+    "logo": "inline:IQ-OHS"
+  },
+  {
+    "id": "acc-nebosh-partner",
+    "slug": "cosh-partner",
+    "name": "COSH Learning Partner",
+    "shortName": "COSH",
+    "kind": "partner",
+    "country": "United Kingdom",
+    "summary": "EIOSH partners with COSH learning providers to deliver the Certificate ,Diploma and industry-sector certificates.",
+    "logo": "inline:COSH"
+  },
+  {
+    "id": "acc-iema",
+    "slug": "iema",
+    "name": "Institute of Environmental Management & Assessment",
+    "shortName": "IEMA",
+    "kind": "partner",
+    "country": "United Kingdom",
+    "summary": "Environmental and sustainability qualifications for professionals leading ESG and carbon-literacy programmes.",
+    "logo": "inline:IEMA"
+  }
+]

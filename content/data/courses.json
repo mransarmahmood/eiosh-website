@@ -1,0 +1,1672 @@
+[
+  {
+    "id": "crs-iosh-ms",
+    "slug": "iosh-managing-safely",
+    "title": "IOSH Managing Safely",
+    "headline": "The benchmark safety qualification for line managers and supervisors.",
+    "category": "health-safety-environment",
+    "awardingBody": "iosh",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "priceFromUSD": 385,
+    "status": "open",
+    "cohortStart": "2026-05-05",
+    "featured": true,
+    "learningOutcomes": [
+      "Identify workplace hazards and assess risk using a structured methodology",
+      "Apply control-of-work principles to reduce incidents and downtime",
+      "Communicate safety responsibilities confidently across a team",
+      "Investigate incidents and close out corrective actions effectively"
+    ],
+    "whoShouldAttend": [
+      "Line managers",
+      "Team leaders and supervisors",
+      "Project engineers",
+      "Operations managers"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Introducing Managing Safely",
+        "description": "The manager's legal and moral responsibilities, and the business case for safety."
+      },
+      {
+        "title": "Assessing risks",
+        "description": "Structured risk assessment, ALARP principle and risk registers."
+      },
+      {
+        "title": "Controlling risks",
+        "description": "Hierarchy of control, safe systems of work and permit-to-work fundamentals."
+      },
+      {
+        "title": "Understanding responsibilities",
+        "description": "UK, GCC and international HSE duties for managers."
+      },
+      {
+        "title": "Understanding hazards",
+        "description": "Chemical, physical, biological, ergonomic and psychosocial hazards."
+      },
+      {
+        "title": "Investigating incidents",
+        "description": "Root-cause analysis, learning reviews and corrective action tracking."
+      },
+      {
+        "title": "Measuring performance",
+        "description": "Leading and lagging indicators, audits and continuous improvement."
+      }
+    ],
+    "assessment": "40-question written assessment plus a workplace-based risk assessment project.",
+    "certification": "IOSH Managing Safely certificate, recognised globally and valid for life.",
+    "heroImage": "/brand/courses/iosh-managing-safely.jpg"
+  },
+  {
+    "id": "crs-iosh-ws",
+    "slug": "iosh-working-safely",
+    "title": "IOSH Working Safely",
+    "headline": "Core safety awareness for every worker — in any industry, anywhere in the world.",
+    "category": "health-safety-environment",
+    "awardingBody": "iosh",
+    "level": "introductory",
+    "durationHours": 6,
+    "modes": [
+      "online",
+      "in-person",
+      "self-paced"
+    ],
+    "language": "en-ar",
+    "priceFromUSD": 95,
+    "status": "open",
+    "featured": true,
+    "learningOutcomes": [
+      "Understand why safety is everyone's responsibility",
+      "Recognise common workplace hazards across sectors",
+      "Use safe behaviours to protect yourself and colleagues",
+      "Report concerns through the right channels"
+    ],
+    "whoShouldAttend": [
+      "All employees",
+      "New starters and inductees",
+      "Contractors and subcontractors"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Introducing Working Safely",
+        "description": "Why safety matters and the cost of getting it wrong."
+      },
+      {
+        "title": "Defining hazard and risk",
+        "description": "How to spot hazards in your own role."
+      },
+      {
+        "title": "Identifying common hazards",
+        "description": "Slips, trips, manual handling, chemical, noise, stress."
+      },
+      {
+        "title": "Improving safety performance",
+        "description": "Personal contribution to a safer workplace."
+      },
+      {
+        "title": "Protecting the environment",
+        "description": "Everyday actions to reduce environmental impact."
+      }
+    ],
+    "assessment": "Multiple-choice assessment plus a hazard-spotting exercise.",
+    "certification": "IOSH Working Safely certificate.",
+    "heroImage": "/brand/courses/iosh-class.jpg"
+  },
+  {
+    "id": "crs-nebosh-igc",
+    "slug": "nebosh-international-general-certificate",
+    "title": "NEBOSH International General Certificate",
+    "headline": "The world's most respected health and safety qualification for practitioners.",
+    "category": "health-safety-environment",
+    "awardingBody": "nebosh-partner",
+    "level": "intermediate",
+    "durationHours": 120,
+    "modes": [
+      "in-person",
+      "blended",
+      "online"
+    ],
+    "language": "en",
+    "priceFromUSD": 995,
+    "status": "filling-fast",
+    "cohortStart": "2026-06-02",
+    "featured": true,
+    "learningOutcomes": [
+      "Apply risk management and control strategies in any sector",
+      "Interpret international standards including ILO OSH-2001 and ISO 45001",
+      "Investigate incidents and design robust safe systems of work",
+      "Prepare for the NEBOSH IG1 and IG2 assessments"
+    ],
+    "whoShouldAttend": [
+      "Aspiring HSE professionals",
+      "Safety officers seeking a recognised qualification",
+      "Career changers entering HSE"
+    ],
+    "moduleOutline": [
+      {
+        "title": "IG1 — Management of international health and safety",
+        "description": "11 elements covering policy, culture, risk and performance."
+      },
+      {
+        "title": "IG2 — Risk assessment",
+        "description": "Practical workplace-based risk assessment project."
+      }
+    ],
+    "assessment": "IG1 open-book written assessment and IG2 practical risk assessment.",
+    "certification": "NEBOSH International General Certificate.",
+    "heroImage": "/brand/courses/course-1.jpg"
+  },
+  {
+    "id": "crs-othm-l6-ohs",
+    "slug": "othm-level-6-diploma-ohs",
+    "title": "OTHM Level 6 Diploma in Occupational Health and Safety",
+    "headline": "A regulated Level 6 diploma with direct progression to a UK master's degree.",
+    "category": "health-safety-environment",
+    "awardingBody": "othm",
+    "level": "advanced",
+    "durationHours": 480,
+    "modes": [
+      "online",
+      "blended"
+    ],
+    "language": "en",
+    "priceFromUSD": 1850,
+    "status": "upcoming",
+    "cohortStart": "2026-07-07",
+    "featured": true,
+    "learningOutcomes": [
+      "Lead enterprise-wide safety strategy and culture programmes",
+      "Design management systems aligned to ISO 45001",
+      "Influence board-level risk appetite and assurance",
+      "Progress to MSc Occupational Health and Safety with UK partners"
+    ],
+    "whoShouldAttend": [
+      "Senior HSE managers",
+      "HSE consultants",
+      "Heads of Risk and Assurance"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Health and safety management principles and policy",
+        "description": "Enterprise HSE policy architecture."
+      },
+      {
+        "title": "Risk and incident management",
+        "description": "Advanced risk frameworks, HAZOP, bow-tie analysis."
+      },
+      {
+        "title": "Promoting a positive health and safety culture",
+        "description": "Behavioural safety and leadership."
+      },
+      {
+        "title": "Maintaining a safe working environment",
+        "description": "Technical control strategies across hazards."
+      },
+      {
+        "title": "Workplace law",
+        "description": "UK and GCC comparative health and safety law."
+      },
+      {
+        "title": "Research project",
+        "description": "Workplace-based independent research dissertation."
+      }
+    ],
+    "assessment": "Six written assignments plus an applied research project.",
+    "certification": "OTHM Level 6 Diploma, regulated by Ofqual.",
+    "heroImage": "/brand/courses/course-2.jpg"
+  },
+  {
+    "id": "crs-habc-l2-food",
+    "slug": "habc-level-2-food-safety",
+    "title": "HABC Level 2 Award in Food Safety in Catering",
+    "headline": "An Ofqual-regulated food safety qualification for catering teams.",
+    "category": "food-safety-hospitality",
+    "awardingBody": "habc",
+    "level": "foundation",
+    "durationHours": 8,
+    "modes": [
+      "in-person",
+      "online"
+    ],
+    "language": "en-ar",
+    "priceFromUSD": 120,
+    "status": "open",
+    "learningOutcomes": [
+      "Understand food safety hazards and how to control them",
+      "Apply HACCP principles in day-to-day kitchen operations",
+      "Maintain personal, kitchen and equipment hygiene",
+      "Comply with food safety law in your region"
+    ],
+    "whoShouldAttend": [
+      "Kitchen staff",
+      "Catering supervisors",
+      "Hospitality inductees"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Food safety legislation",
+        "description": "Regional food safety duties and enforcement."
+      },
+      {
+        "title": "Microbiological hazards",
+        "description": "Bacteria, viruses, parasites and toxin control."
+      },
+      {
+        "title": "HACCP fundamentals",
+        "description": "The seven principles applied to catering operations."
+      }
+    ],
+    "assessment": "Multiple-choice written examination.",
+    "certification": "HABC Level 2 Award, Ofqual regulated.",
+    "heroImage": "/brand/courses/course-3.jpg"
+  },
+  {
+    "id": "crs-fire-marshal",
+    "slug": "fire-marshal-warden",
+    "title": "Fire Marshal & Warden",
+    "headline": "Practical fire prevention, evacuation and emergency command for every workplace.",
+    "category": "fire-safety-emergency",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 8,
+    "modes": [
+      "in-person",
+      "blended"
+    ],
+    "language": "en-ar",
+    "priceFromUSD": 110,
+    "status": "open",
+    "learningOutcomes": [
+      "Identify and control fire hazards",
+      "Lead evacuations with confidence",
+      "Use portable fire-fighting equipment correctly",
+      "Coordinate with emergency services during an incident"
+    ],
+    "whoShouldAttend": [
+      "Nominated fire wardens",
+      "Facility managers",
+      "Site supervisors"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Fire science and behaviour",
+        "description": "Fire tetrahedron, spread and smoke control."
+      },
+      {
+        "title": "Fire prevention",
+        "description": "Housekeeping, hot work permits and ignition control."
+      },
+      {
+        "title": "Emergency response",
+        "description": "Evacuation routes, refuge points and assembly."
+      },
+      {
+        "title": "Practical drill",
+        "description": "Hands-on use of extinguishers and fire blankets."
+      }
+    ],
+    "assessment": "Written assessment plus supervised practical drill.",
+    "certification": "OSHAwards Fire Marshal certificate.",
+    "heroImage": "/brand/courses/fire-warden.jpg"
+  },
+  {
+    "id": "crs-iema-carbon",
+    "slug": "iema-foundation-sustainability",
+    "title": "IEMA Foundation Certificate in Environmental Management",
+    "headline": "Build the environmental and sustainability fluency that every business now requires.",
+    "category": "environment-sustainability",
+    "awardingBody": "iema",
+    "level": "foundation",
+    "durationHours": 40,
+    "modes": [
+      "online",
+      "blended"
+    ],
+    "language": "en",
+    "priceFromUSD": 690,
+    "status": "open",
+    "learningOutcomes": [
+      "Understand the principles of environmental management",
+      "Interpret ISO 14001 and plan for implementation",
+      "Communicate environmental performance to stakeholders",
+      "Support a net-zero and ESG reporting strategy"
+    ],
+    "whoShouldAttend": [
+      "Environmental officers",
+      "ESG coordinators",
+      "Operations and compliance leads"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Principles of environmental management",
+        "description": "Policy, legislation and stakeholders."
+      },
+      {
+        "title": "Environmental management systems",
+        "description": "Plan-Do-Check-Act and ISO 14001."
+      },
+      {
+        "title": "Sustainable operations",
+        "description": "Energy, waste, water and resource efficiency."
+      }
+    ],
+    "assessment": "Portfolio of workplace tasks and a written assessment.",
+    "certification": "IEMA Foundation Certificate.",
+    "heroImage": "/brand/courses/course-4.jpg"
+  },
+  {
+    "id": "crs-firstaid-fawc",
+    "slug": "first-aid-at-work",
+    "title": "First Aid at Work (Level 3)",
+    "headline": "A regulated first-aid qualification for nominated responders in any workplace.",
+    "category": "first-aid-medical",
+    "awardingBody": "habc",
+    "level": "foundation",
+    "durationHours": 18,
+    "modes": [
+      "in-person"
+    ],
+    "language": "en-ar",
+    "priceFromUSD": 220,
+    "status": "filling-fast",
+    "cohortStart": "2026-05-18",
+    "learningOutcomes": [
+      "Assess an incident scene safely",
+      "Provide effective CPR and use an AED",
+      "Manage bleeding, shock, burns, fractures and medical emergencies",
+      "Complete a compliant incident record"
+    ],
+    "whoShouldAttend": [
+      "Nominated workplace first aiders",
+      "Site safety officers",
+      "Facility teams"
+    ],
+    "moduleOutline": [
+      {
+        "title": "Primary and secondary survey",
+        "description": "Scene safety and patient assessment."
+      },
+      {
+        "title": "CPR & AED",
+        "description": "Adult, child and infant protocols."
+      },
+      {
+        "title": "Trauma management",
+        "description": "Bleeding, fractures, burns, head and spinal injury."
+      },
+      {
+        "title": "Medical emergencies",
+        "description": "Cardiac, diabetic, seizure, stroke and anaphylaxis."
+      }
+    ],
+    "assessment": "Practical skills assessment plus a written paper.",
+    "certification": "HABC Level 3 Award in First Aid at Work.",
+    "heroImage": "/brand/courses/course-5.jpg"
+  },
+  {
+    "id": "crs-sql-56258",
+    "slug": "train-the-trainer",
+    "title": "Train the Trainer",
+    "headline": "Train the Trainer Course",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "ok"
+      }
+    ],
+    "assessment": "Multiple-choice assessment. Pass mark: 80%.",
+    "certification": "340",
+    "courseCode": "OSH123",
+    "featured": false,
+    "sourceId": 56258
+  },
+  {
+    "id": "crs-sql-56270",
+    "slug": "fire-safety-level-2",
+    "title": "Fire Safety Level 2",
+    "headline": "Fire Safety Level 2",
+    "category": "fire-safety-emergency",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Fire Safety Level 2 certificate issued upon completion.",
+    "courseCode": "1",
+    "featured": false,
+    "sourceId": 56270
+  },
+  {
+    "id": "crs-sql-56271",
+    "slug": "food-safety-level-2",
+    "title": "Food Safety Level 2",
+    "headline": "Food Safety Level 2",
+    "category": "food-safety-hospitality",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Food Safety Level 2 certificate issued upon completion.",
+    "courseCode": "i",
+    "featured": false,
+    "sourceId": 56271
+  },
+  {
+    "id": "crs-sql-56272",
+    "slug": "first-aid-level-2",
+    "title": "First Aid Level 2",
+    "headline": "First Aid Level 2",
+    "category": "first-aid-medical",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "First Aid Level 2 certificate issued upon completion.",
+    "courseCode": "ok",
+    "featured": false,
+    "sourceId": 56272
+  },
+  {
+    "id": "crs-sql-56273",
+    "slug": "train-the-trainer-1",
+    "title": "Train the Trainer",
+    "headline": "Train the Trainer",
+    "category": "health-safety-environment",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Train the Trainer certificate issued upon completion.",
+    "courseCode": "9",
+    "featured": false,
+    "sourceId": 56273
+  },
+  {
+    "id": "crs-sql-56274",
+    "slug": "fire-safety-level-1",
+    "title": "Fire Safety Level 2",
+    "headline": "Fire Safety Level 2",
+    "category": "fire-safety-emergency",
+    "awardingBody": "habc",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Fire Safety Level 2 certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56274
+  },
+  {
+    "id": "crs-sql-56275",
+    "slug": "food-safety-level-1",
+    "title": "Food Safety Level 2",
+    "headline": "Food Safety Level 2",
+    "category": "food-safety-hospitality",
+    "awardingBody": "habc",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Food Safety Level 2 certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56275
+  },
+  {
+    "id": "crs-sql-56276",
+    "slug": "food-safety-level-3",
+    "title": "Food Safety Level 3",
+    "headline": "Food Safety Level 3",
+    "category": "food-safety-hospitality",
+    "awardingBody": "habc",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Food Safety Level 3 certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56276
+  },
+  {
+    "id": "crs-sql-56277",
+    "slug": "fire-safety-level-3",
+    "title": "Fire Safety Level 2",
+    "headline": "Fire Safety Level 2",
+    "category": "fire-safety-emergency",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Fire Safety Level 2 certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56277
+  },
+  {
+    "id": "crs-sql-56278",
+    "slug": "food-safety-level-4",
+    "title": "Food Safety Level 2",
+    "headline": "Food Safety Level 2",
+    "category": "food-safety-hospitality",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Food Safety Level 2 certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56278
+  },
+  {
+    "id": "crs-sql-56279",
+    "slug": "certificate-in-environment-management",
+    "title": "Certificate in Environment Management",
+    "headline": "Certificate in Environment Management",
+    "category": "leadership-management",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Certificate in Environment Management certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56279
+  },
+  {
+    "id": "crs-sql-56280",
+    "slug": "permit-to-work",
+    "title": "Permit to work",
+    "headline": "Permit to work",
+    "category": "health-safety-environment",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Permit to work certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56280
+  },
+  {
+    "id": "crs-sql-56281",
+    "slug": "food-safety-level-5",
+    "title": "Food Safety Level 2",
+    "headline": "Food Safety Level 2",
+    "category": "food-safety-hospitality",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Food Safety Level 2 certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56281
+  },
+  {
+    "id": "crs-sql-56282",
+    "slug": "train-the-trainer-2",
+    "title": "Train the Trainer",
+    "headline": "Train the Trainer",
+    "category": "health-safety-environment",
+    "awardingBody": "icboq",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Train the Trainer certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56282
+  },
+  {
+    "id": "crs-sql-56283",
+    "slug": "nasp-30-hours-general-industry",
+    "title": "NASP 30 Hours General Industry",
+    "headline": "NASP 30 Hours General Industry",
+    "category": "health-safety-environment",
+    "awardingBody": "nasp",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "NASP 30 Hours General Industry certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56283
+  },
+  {
+    "id": "crs-sql-56284",
+    "slug": "nasp-advance-diploma-in-osh",
+    "title": "NASP Advance Diploma in OSH",
+    "headline": "NASP Advance Diploma in OSH",
+    "category": "health-safety-environment",
+    "awardingBody": "nasp",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "NASP Advance Diploma in OSH certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56284
+  },
+  {
+    "id": "crs-sql-56285",
+    "slug": "nasp-30-hours-osha-standard",
+    "title": "NASP 30 Hours OSHA Standard",
+    "headline": "NASP 30 Hours OSHA Standard",
+    "category": "health-safety-environment",
+    "awardingBody": "nasp",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "NASP 30 Hours OSHA Standard certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56285
+  },
+  {
+    "id": "crs-sql-56286",
+    "slug": "30-hour-construction-safety-and-health",
+    "title": "30-Hour Construction Safety and Health",
+    "headline": "Welcome to the OSHAcademy 30-Hour Construction Safety and Health course offered by EIOSH Private Limited, an approved center of OSHAcademy authorized to deliver this essential…",
+    "category": "construction-site-safety",
+    "awardingBody": "oshacademy",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Upon successful completion of this program, the candidate will receive an OSHAcademy 30-Hour Construction Safety and Health program certificate and training record card, along with a transcript",
+      "Features 18 course certificates 1 Program certificate Training record card 1 transcripts https://app.oshacademy-atp.com/verify/"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "OSHAcademy 30-Hour Construction Safety and Health Course Contents 105 Hazard Communication: Basic 115 Electrical Safety for Employees: Basic 144 Introduction to OSHA 150 Physical Health Hazards in Construction 151 Biological Health Hazards in Construction 152 Ergonomic Hazards in Construction 602 Heat and Cold Stress Safety 603 Stairway and Ladder Safety 604 Scaffold Safety 605 Confined Space Safety 614 Personal Protective and Lifesaving Equipment 618 Managing Safety and Health in Construction…"
+      }
+    ],
+    "assessment": "",
+    "certification": "Welcome to the culmination of your learning journey with EIOSH Pvt Ltd! The Final Course Exam is the gateway to validating your understanding of the course material. After diligently studying the modules and successfully completing the knowledge check activities, you are now ready to demonstrate your knowledge through this comprehensive exam. Exam Characteristics: Exams vary in length, ranging…",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56286
+  },
+  {
+    "id": "crs-sql-56287",
+    "slug": "30-hour-general-industry-safety-and-health",
+    "title": "30-Hour General Industry Safety and Health",
+    "headline": "Welcome to EIOSH Pvt Ltd, an approved center of OSHAcademy, proudly authorized to deliver the OSHAcademy 30-Hour General Industry course. As a leading provider of health and…",
+    "category": "health-safety-environment",
+    "awardingBody": "oshacademy",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Upon successful completion of this program, the candidate will receive an OSHAcademy 30-Hour General Industry Safety and Health program certificate and training record card along with transcript",
+      "Features 23 course certificates 1 Program certificate Training record card 1 transcripts"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "OSHAcademy 30-Hour General Industry Safety and Health Course Contents 105 Hazard Communication 108 Personal Protective Equipment 112 Introduction to Safety Supervision 113 Introduction to Safety Leadership 114 Walking-Working Surfaces and Fall Protection 115 Electrical Safety for Employees 116 Introduction to Safety Accountability Programs 117 Introduction to Safety Recognition Programs 121 Introduction to Safety Training 122 Introduction to Hazard Controls 123 Introduction to Job Hazard…"
+      }
+    ],
+    "assessment": "",
+    "certification": "Welcome to the culmination of your learning journey with EIOSH Pvt Ltd! The Final Course Exam is the gateway to validating your understanding of the course material. After diligently studying the modules and successfully completing the knowledge check activities, you are now ready to demonstrate your knowledge through this comprehensive exam. Exam Characteristics: Exams vary in length, ranging…",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56287
+  },
+  {
+    "id": "crs-sql-56288",
+    "slug": "48-hour-occupational-safety-and-health-manager-program",
+    "title": "48-hour Occupational Safety and Health Manager Program",
+    "headline": "48 -hour Occupational Safety and Health Manager Program Immerse yourself in the 48-hour OSH Manager course, a specialized offering from OSHAcademy through EIOSH Pvt Ltd. This…",
+    "category": "health-safety-environment",
+    "awardingBody": "oshacademy",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Upon successful completion of this program, the candidate will receive an OSHAcademy 48-hour OSH Manager Safety and Health program certificate and training record card, along with a transcript",
+      "Features 9 course certificates 1 Program certificate Training record card 1 transcripts"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "OSHAcademy 48 -hour Occupational Safety and Health Manager Program Course Contents 700 Introduction to Safety Management 701 Effective Safety Committee Operations 702 Effective Accident Investigation 712 Safety Supervision and Leadership 716 Safety Management System Evaluation 717 Emergency Action Plans 718 Fire Prevention Plans 719 Fleet Safety Management 722 Ergonomics Program Management"
+      }
+    ],
+    "assessment": "",
+    "certification": "Welcome to the culmination of your learning journey with EIOSH Pvt Ltd! The Final Course Exam is the gateway to validating your understanding of the course material. After diligently studying the modules and successfully completing the knowledge check activities, you are now ready to demonstrate your knowledge through this comprehensive exam. Exam Characteristics: Exams vary in length, ranging…",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56288
+  },
+  {
+    "id": "crs-sql-56289",
+    "slug": "36-hour-osh-train-the-trainer",
+    "title": "36-hour OSH Train-the-Trainer",
+    "headline": "Introducing the OSHAcademy 36-Hours OSH Train-the-Trainer Course, a specialized offering brought to you by EIOSH Pvt Ltd. Tailored for individuals seeking to enhance their…",
+    "category": "health-safety-environment",
+    "awardingBody": "oshacademy",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Upon successful completion of this program, the candidate will receive an OSHAcademy 36-hour OSH Train the Trainer program certificate and training record card, along with a transcript",
+      "Features 7 course certificates 1 Program certificate 1 Training record card transcripts For Certificate Validation : https://app.oshacademy-atp.com/verify/"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "OSHAcademy 36-Hours OSH Train-the-Trainer Course Contents 700 Introduction to Safety Management 703 Introduction to OSH Training 704 Hazard Analysis and Control 706 Conducting a Job Hazard Analysis 711 Introduction to Ergonomics 721 Developing OSH Training 723 Conducting OSH Training"
+      }
+    ],
+    "assessment": "",
+    "certification": "Welcome to the culmination of your learning journey with EIOSH Pvt Ltd! The Final Course Exam is the gateway to validating your understanding of the course material. After diligently studying the modules and successfully completing the knowledge check activities, you are now ready to demonstrate your knowledge through this comprehensive exam. Exam Characteristics: Exams vary in length, ranging…",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56289
+  },
+  {
+    "id": "crs-sql-56290",
+    "slug": "othm-level-3-award-in-assessing-vocationally-related-achievement",
+    "title": "OTHM Level 3 Award in Assessing Vocationally Related Achievement",
+    "headline": "OTHM Level 3 Award in Assessing Vocationally Related Achievement",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 3 Award in Assessing Vocationally Related Achievement certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56290
+  },
+  {
+    "id": "crs-sql-56291",
+    "slug": "othm-level-3-technical-certificate-in-occupational-health-and-safety",
+    "title": "OTHM Level 3 Technical Certificate in Occupational Health and Safety",
+    "headline": "OTHM Level 3 Technical Certificate in Occupational Health and Safety",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 3 Technical Certificate in Occupational Health and Safety certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56291
+  },
+  {
+    "id": "crs-sql-56292",
+    "slug": "othm-level-6-certificate-in-occupational-health-and-safety",
+    "title": "OTHM Level 6 Certificate in Occupational Health and Safety",
+    "headline": "OTHM Level 6 Certificate in Occupational Health and Safety",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 6 Certificate in Occupational Health and Safety certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56292
+  },
+  {
+    "id": "crs-sql-56293",
+    "slug": "othm-level-6-diploma-in-business-management",
+    "title": "OTHM Level 6 Diploma in Business Management",
+    "headline": "OTHM Level 6 Diploma in Business Management",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 6 Diploma in Business Management certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56293
+  },
+  {
+    "id": "crs-sql-56294",
+    "slug": "othm-level-6-diploma-in-occupational-health-and-safety",
+    "title": "OTHM Level 6 Diploma in Occupational Health and Safety",
+    "headline": "OTHM Level 6 Diploma in Occupational Health and Safety",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 6 Diploma in Occupational Health and Safety certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56294
+  },
+  {
+    "id": "crs-sql-56295",
+    "slug": "othm-level-7-diploma-in-education-management-and-leadership",
+    "title": "OTHM Level 7 Diploma in Education Management and Leadership",
+    "headline": "OTHM Level 7 Diploma in Education Management and Leadership",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 7 Diploma in Education Management and Leadership certificate issued upon completion.",
+    "courseCode": "0",
+    "featured": false,
+    "sourceId": 56295
+  },
+  {
+    "id": "crs-sql-56296",
+    "slug": "othm-level-7-diploma-in-occupational-health-and-safety-management",
+    "title": "OTHM Level 7 Diploma in Occupational Health and Safety Management",
+    "headline": "OTHM Level 7 Diploma in Occupational Health and Safety Management",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 7 Diploma in Occupational Health and Safety Management certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56296
+  },
+  {
+    "id": "crs-sql-56297",
+    "slug": "othm-level-7-diploma-in-project-management",
+    "title": "OTHM Level 7 Diploma in Project Management",
+    "headline": "OTHM Level 7 Diploma in Project Management",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "OTHM Level 7 Diploma in Project Management certificate issued upon completion.",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56297
+  },
+  {
+    "id": "crs-sql-56298",
+    "slug": "othm-level-7-diploma-in-strategic-management-and-leadership",
+    "title": "OTHM Level 7 Diploma in Strategic Management and Leadership",
+    "headline": "OTHM Level 7 Diploma in Strategic Management and Leadership",
+    "category": "leadership-management",
+    "awardingBody": "othm",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "All CSS List Properties Property Description list-style Sets all the properties for a list in one declaration list-style-image Specifies an image as the list-item marker list-style-position Specifies the position of the list-item markers (bullet points) list-style-type Specifies the type of list-item marker"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "All CSS List Properties Property Description list-style Sets all the properties for a list in one declaration list-style-image Specifies an image as the list-item marker list-style-position Specifies the position of the list-item markers (bullet points) list-style-type Specifies the type of list-item marker"
+      }
+    ],
+    "assessment": "",
+    "certification": "All CSS List Properties Property Description list-style Sets all the properties for a list in one declaration list-style-image Specifies an image as the list-item marker list-style-position Specifies the position of the list-item markers (bullet points) list-style-type Specifies the type of list-item marker",
+    "courseCode": "o",
+    "featured": false,
+    "sourceId": 56298
+  },
+  {
+    "id": "crs-sql-56301",
+    "slug": "iso-17020-2012-internal-auditor",
+    "title": "ISO 17020:2012 Internal Auditor",
+    "headline": "ISO 17020:2012",
+    "category": "health-safety-environment",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "ISO 17020:2012 Internal Auditor certificate issued upon completion.",
+    "courseCode": "12",
+    "featured": false,
+    "sourceId": 56301
+  },
+  {
+    "id": "crs-sql-56330",
+    "slug": "safety-certification-by-iq-ohs",
+    "title": "Safety certification By IQ-OHS",
+    "headline": "General Basic Safety Courses Inspector/Supervisor/Foreman for Safety OSHA GI/CI-30Hrs Train The Trainer for safety courses Certified Safety Officer (CSO) Certified Safety Trainer…",
+    "category": "health-safety-environment",
+    "awardingBody": "iq-ohs",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [],
+    "assessment": "",
+    "certification": "Safety certification By IQ-OHS certificate issued upon completion.",
+    "courseCode": "IQ-OHS",
+    "featured": false,
+    "sourceId": 56330
+  },
+  {
+    "id": "crs-sql-56331",
+    "slug": "lifting-industries-operator-certification",
+    "title": "Lifting Industries & Operator Certification",
+    "headline": "Rigging & lifting Basic rigger Intermediate rigger Advanced rigger Lifting Supervisor Lifting Equipment Inspector Any Operator Certification",
+    "category": "health-safety-environment",
+    "awardingBody": "iq-ohs",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Rigging & lifting Basic rigger Intermediate rigger Advanced rigger Lifting Supervisor Lifting Equipment Inspector Any Operator Certification"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Rigging & lifting Basic rigger Intermediate rigger Advanced rigger Lifting Supervisor Lifting Equipment Inspector Any Operator Certification"
+      }
+    ],
+    "assessment": "",
+    "certification": "Rigging & lifting Basic rigger Intermediate rigger Advanced rigger Lifting Supervisor Lifting Equipment Inspector Any Operator Certification",
+    "courseCode": "OSHA GI/CI-30Hrs",
+    "featured": false,
+    "sourceId": 56331
+  },
+  {
+    "id": "crs-sql-56332",
+    "slug": "iso-certification",
+    "title": "ISO Certification",
+    "headline": "s",
+    "category": "health-safety-environment",
+    "awardingBody": "iq-ohs",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "ISO Certification Internal Auditor Lead Auditor Quality Certification for Organizations"
+      }
+    ],
+    "assessment": "",
+    "certification": "s",
+    "courseCode": "1",
+    "featured": false,
+    "sourceId": 56332
+  },
+  {
+    "id": "crs-sql-56347",
+    "slug": "132-hours-osh-professional",
+    "title": "132- Hours OSH Professional",
+    "headline": "132- Hours OSH Professional EIOSH Private Limited proudly offers the OSH 132 Hrs Program in collaboration with OSHAcademy. This comprehensive program stands out as an excellent…",
+    "category": "health-safety-environment",
+    "awardingBody": "oshacademy",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Upon successful completion of this program, the candidate will receive an OSHAcademy 48-hour OSH Manager Safety and Health program certificate and training record card, along with a transcript",
+      "Features OSHAcademy Transcript 7 Program Certificates Training Record Card 25 Course Certificates"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "132- Hours OSH Professional Course Contents 700 Introduction to Safety Management 701 Effective Safety Committee Operations 702 Effective Accident Investigation 703 Introduction to OSH Training 704 Hazard Analysis and Control 705 Hazard Communication Program 706 Conducting a Job Hazard Analysis 707 Effective Safety Committee Meetings 709 Personal Protective Equipment 710 Energy Control Program - LOTO 711 Introduction to Ergonomics 712 Safety Supervision and Leadership 713 Confined Space Program…"
+      }
+    ],
+    "assessment": "",
+    "certification": "Welcome to the pinnacle of your educational voyage with EIOSH Pvt Ltd! The Final Course Exam serves as the key to affirming your comprehension of the course material. Having conscientiously immersed yourself in the modules and triumphantly navigated the knowledge check activities, you are now poised to showcase your expertise through this all-encompassing examination. Exam Highlights: Variability…",
+    "courseCode": "OSH30",
+    "featured": false,
+    "sourceId": 56347
+  },
+  {
+    "id": "crs-sql-56360",
+    "slug": "certificate-of-it",
+    "title": "Certificate of IT",
+    "headline": "Certificate in IT",
+    "category": "health-safety-environment",
+    "awardingBody": "global-awards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Certificate in IT"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Certificate in IT"
+      }
+    ],
+    "assessment": "",
+    "certification": "Certificate in IT",
+    "courseCode": "CIT",
+    "featured": false,
+    "sourceId": 56360
+  },
+  {
+    "id": "crs-sql-56372",
+    "slug": "safety-leadership",
+    "title": "Safety Leadership",
+    "headline": "Safety Leadership",
+    "category": "leadership-management",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Safety Leadership"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Safety Leadership"
+      }
+    ],
+    "assessment": "",
+    "certification": "Safety Leadership",
+    "courseCode": "SL-OSHL",
+    "featured": false,
+    "sourceId": 56372
+  },
+  {
+    "id": "crs-sql-56373",
+    "slug": "h2s-awareness-and-safety-use-of-scba",
+    "title": "H2S Awareness and Safety & Use Of SCBA",
+    "headline": "H2S Awareness and Safety & Use Of SCBA",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "H2S Awareness and Safety & Use Of SCBA"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "H2S Awareness and Safety & Use Of SCBA"
+      }
+    ],
+    "assessment": "",
+    "certification": "H2S Awareness and Safety & Use Of SCBA",
+    "courseCode": "H2S-02",
+    "featured": false,
+    "sourceId": 56373
+  },
+  {
+    "id": "crs-sql-56374",
+    "slug": "working-at-hieght",
+    "title": "Working at Hieght",
+    "headline": "Working at Height",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Working at Height"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Working at Height"
+      }
+    ],
+    "assessment": "",
+    "certification": "Working at Height",
+    "courseCode": "WH-02",
+    "featured": false,
+    "sourceId": 56374
+  },
+  {
+    "id": "crs-sql-56375",
+    "slug": "defensive-driving",
+    "title": "Defensive Driving",
+    "headline": "Defensive Driving",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Defensive Driving"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Defensive Driving"
+      }
+    ],
+    "assessment": "",
+    "certification": "Defensive Driving",
+    "courseCode": "DD-01",
+    "featured": false,
+    "sourceId": 56375
+  },
+  {
+    "id": "crs-sql-56376",
+    "slug": "log-out-tag-out",
+    "title": "Log-Out / Tag-Out",
+    "headline": "Log-Out / Tag-Out",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Log-Out / Tag-Out"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Log-Out / Tag-Out"
+      }
+    ],
+    "assessment": "",
+    "certification": "Log-Out / Tag-Out",
+    "courseCode": "LOTO-01",
+    "featured": false,
+    "sourceId": 56376
+  },
+  {
+    "id": "crs-sql-56377",
+    "slug": "hazard-communication-hazcom",
+    "title": "Hazard Communication (HAZCOM)",
+    "headline": "Hazard Communication (HAZCOM)",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Hazard Communication (HAZCOM)"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Hazard Communication (HAZCOM)"
+      }
+    ],
+    "assessment": "",
+    "certification": "Hazard Communication (HAZCOM)",
+    "courseCode": "Hazard Communication (HAZCOM)",
+    "featured": false,
+    "sourceId": 56377
+  },
+  {
+    "id": "crs-sql-56378",
+    "slug": "emergency-response-and-planning",
+    "title": "Emergency Response and Planning",
+    "headline": "Emergency Response and Planning",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Emergency Response and Planning"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Emergency Response and Planning"
+      }
+    ],
+    "assessment": "",
+    "certification": "Emergency Response and Planning",
+    "courseCode": "Emergency Response and Planning",
+    "featured": false,
+    "sourceId": 56378
+  },
+  {
+    "id": "crs-sql-56379",
+    "slug": "hazard-and-risk-assessment",
+    "title": "Hazard and Risk Assessment",
+    "headline": "Hazard and Risk Assessment",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Hazard and Risk Assessment"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Hazard and Risk Assessment"
+      }
+    ],
+    "assessment": "",
+    "certification": "Hazard and Risk Assessment",
+    "courseCode": "Hazard and Risk Assessment",
+    "featured": false,
+    "sourceId": 56379
+  },
+  {
+    "id": "crs-sql-56380",
+    "slug": "technical-training",
+    "title": "Technical Training",
+    "headline": "Technical Training and Check list prepration",
+    "category": "health-safety-environment",
+    "awardingBody": "oshawards",
+    "level": "foundation",
+    "durationHours": 24,
+    "modes": [
+      "online",
+      "in-person",
+      "blended"
+    ],
+    "language": "en",
+    "status": "open",
+    "learningOutcomes": [
+      "Technical Training and Check list prepration"
+    ],
+    "whoShouldAttend": [],
+    "moduleOutline": [
+      {
+        "title": "Course contents",
+        "description": "Technical Training and Check list prepration"
+      }
+    ],
+    "assessment": "",
+    "certification": "Technical Training and Check list prepration",
+    "courseCode": "Technical Training and Check list prepration",
+    "featured": false,
+    "sourceId": 56380
+  }
+]

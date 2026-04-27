@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&family=Source+Sans+3:wght@300;400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --navy: 10 31 68;
+    --cyan: 31 182 224;
+    --gold: 212 160 23;
+    --ink: 15 23 42;
+    --surface: 255 255 255;
+    --surface-subtle: 248 250 252;
+
+    --radius: 0.75rem;
+    --focus-ring: 0 0 0 3px rgba(31, 182, 224, 0.35);
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-surface text-ink font-body;
+    font-feature-settings: "cv11", "ss01", "ss03";
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading tracking-tight;
+    /* Color applied per-context so headings on dark backgrounds are not blacked out. */
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: none;
+    box-shadow: var(--focus-ring);
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background: rgb(var(--cyan) / 0.25);
+    color: rgb(var(--navy));
+  }
+
+  /* Arabic / RTL readiness — Source Sans 3 covers Latin; for ar swap to a system stack. */
+  [dir="rtl"] body {
+    font-family: "Segoe UI", "Tahoma", "Arial", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.16em] text-cyan-700;
+  }
+
+  .prose-eiosh {
+    @apply text-ink-muted leading-relaxed;
+  }
+
+  .prose-eiosh p + p {
+    @apply mt-4;
+  }
+
+  .divider-soft {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-border to-transparent;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .text-pretty {
+    text-wrap: pretty;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

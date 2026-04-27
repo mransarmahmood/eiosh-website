@@ -1,0 +1,152 @@
+[
+  {
+    "id": "prop-sql-54460",
+    "title": "Test Proposal",
+    "companyName": "eCompact Solutions",
+    "phone": "03436193567",
+    "companyAddress": "Islamabad",
+    "companyEmail": "intiahmad92@gmail.com",
+    "invoiceDate": "Course",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ac ante urna. Nunc pulvinar quis ex et ornare. Fusce purus enim, interdum nec accumsan ut, pulvinar imperdiet ipsum. Aenean eleifend tempor risus, vel cursus tortor consequat in. Curabitur dignissim gravida aliquet. Vivamus blandit, dolor a pharetra pellentesque, diam magna dignissim justo, a suscipit elit tellus eu purus. Aliquam rutrum ligula ligula, at feugiat lorem vehicula eget. Proin porttitor, tortor ac tempus accumsan, velit ipsum lacinia metus, vel ultricies metus erat vitae felis. Nam tristique arcu quis ex semper consectetur. In rutrum, felis vel dictum convallis, lorem nisl vestibulum velit, ac ornare magna lectus vitae ipsum. Nam purus mi, sollicitudin eu rutrum sit amet, accumsan in leo. Integer vehicula lorem et ligula auctor, accumsan placerat felis pulvinar. Integer eros eros, consequat et velit ac, efficitur malesuada quam. Cras tincidunt arcu in magna ultricies mollis. Ut at quam purus. Vivamus a iaculis neque. Aenean rutrum, quam quis congue dapibus, purus mi interdum neque, tempor aliquet dolor augue sit amet sem. Curabitur varius vulputate est, in vestibulum diam pretium vitae.",
+    "receivedAt": "2022-05-20T02:42:26.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-54471",
+    "title": "Training Services Proposal",
+    "companyName": "",
+    "phone": "",
+    "companyAddress": "",
+    "companyEmail": "",
+    "invoiceDate": "Service",
+    "description": "First Proposal",
+    "receivedAt": "2022-05-22T12:20:33.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-55548",
+    "title": "gfhdghfgh",
+    "companyName": "",
+    "phone": "",
+    "companyAddress": "",
+    "companyEmail": "",
+    "invoiceDate": "Course",
+    "description": "fhdshfdghdfghdfg",
+    "receivedAt": "2022-12-27T20:18:09.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56307",
+    "title": "Training Proposal",
+    "companyName": "Adeptus Certifications",
+    "phone": "0000000000",
+    "companyAddress": "2nd floor royal arcade qainchi stop ferozepur road Lahore",
+    "companyEmail": "info@eiosh.com",
+    "invoiceDate": "Course",
+    "description": "New Proposal",
+    "receivedAt": "2023-03-04T12:20:54.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56309",
+    "title": "sss",
+    "companyName": "EIOSH Private Limited",
+    "phone": "+923339284928",
+    "companyAddress": "Lahore Pakistan",
+    "companyEmail": "info@eiosh.com",
+    "invoiceDate": "Course",
+    "description": "NVQ Level 6",
+    "receivedAt": "2023-03-20T08:37:45.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56327",
+    "title": "IOSH Managing Safely",
+    "companyName": "ABC",
+    "phone": "111111",
+    "companyAddress": "1111122",
+    "companyEmail": "info@eiosh.com",
+    "invoiceDate": "Course",
+    "description": "IOSH Managing Safely IOSH Managing Safely IOSH Managing Safely IOSH Managing Safely IOSH Managing Safely IOSH Managing Safely",
+    "receivedAt": "2023-07-17T19:53:23.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56335",
+    "title": "Fire Warden Training",
+    "companyName": "Abuljadayel Co",
+    "phone": "+966592076709",
+    "companyAddress": "Jeddah , KSA",
+    "companyEmail": "Amjad_jd_pk@yahoo.com",
+    "invoiceDate": "Service",
+    "description": "Note: If there are more than 15 individuals, each certificate will cost 300 SAR. If there are fewer than 15 individuals, each certificate will cost 400 SAR.",
+    "receivedAt": "2023-09-13T07:24:44.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56370",
+    "title": "HSE Trainings - Technical Trainings",
+    "companyName": "Engineering Zone",
+    "phone": "+966 55 972 2942",
+    "companyAddress": "Ash Shulah, P.O Box 7197, Dammam-34265, KSA.",
+    "companyEmail": "arshad.m@engineeringzone.com.sa",
+    "invoiceDate": "Course",
+    "description": "An international certification from either OSHAcademy USA or OSHAaward UK.",
+    "receivedAt": "2024-04-22T16:56:16.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56381",
+    "title": "HSE and Technical Trainings",
+    "companyName": "Engineering Zone",
+    "phone": "+966 55 972 2942",
+    "companyAddress": "Ash Shulah, P.O Box 7197, Dammam-34265, KSA",
+    "companyEmail": "arshad.m@engineeringzone.com.sa",
+    "invoiceDate": "Course",
+    "description": "Dear Arshad, Thank you for your inquiry regarding HSE training. We are pleased to provide you with the following quotation for your consideration: Regards, EIOSH Private Limited",
+    "receivedAt": "2024-04-22T18:16:23.000Z",
+    "status": "historical"
+  },
+  {
+    "id": "prop-sql-56382",
+    "title": "HSE and Technical Trainings",
+    "companyName": "Engineering Zone",
+    "phone": "+966 55 972 2942",
+    "companyAddress": "Dammam-34265, KSA.",
+    "companyEmail": "arshad.m@engineeringzone.com.sa",
+    "invoiceDate": "Course",
+    "description": "Dear Arshad, Thank you for your inquiry regarding HSE training. We are pleased to provide you with the following quotation for your consideration:",
+    "receivedAt": "2024-04-22T19:29:31.000Z",
+    "status": "historical"
+  },
+  {
+    "title": "Training proposal for Gulf Petrochemical Industries",
+    "kind": "training",
+    "companyName": "Gulf Petrochemical Industries",
+    "companyEmail": "hse@gulfpetrochemical.example",
+    "phone": "+971 4 000 0000",
+    "companyAddress": "Business Bay, Dubai, UAE",
+    "invoiceDate": "2026-04-20",
+    "validUntil": "2026-05-20",
+    "overview": "EIOSH International is pleased to submit this training proposal for Gulf Petrochemical Industries.",
+    "scope": [
+      "Needs analysis",
+      "Programme design",
+      "Delivery",
+      "Assessment",
+      "Certification"
+    ],
+    "deliverables": [
+      "Branded materials",
+      "Certified trainer",
+      "Assessments",
+      "Certificates",
+      "Final report"
+    ],
+    "timeline": "Kick-off within 3 business days of signed acceptance.",
+    "investmentSummary": "See the accompanying quotation for per-learner and cohort investment.",
+    "terms": "Payment terms: 50/50 split against signed acceptance.",
+    "status": "new",
+    "id": "proposals-mo4x7gtf"
+  }
+]

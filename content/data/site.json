@@ -1,0 +1,42 @@
+{
+  "brand": {
+    "name": "EIOSH International",
+    "tagline": "Build the skills to drive your career.",
+    "strapline": "An approved international training centre delivering accredited global health, safety and compliance qualifications — with in-person, blended and online pathways for individuals and enterprise teams.",
+    "logoLight": "/brand/eiosh-logo.png",
+    "logoDark": "/brand/eiosh-logo-dark.png"
+  },
+  "contact": {
+    "email": "info@eiosh.com",
+    "phone": "+92 300 458 0231",
+    "whatsapp": "+923004580231",
+    "addressLines": [
+      "Office #7, 2nd Floor, Royal Arcade",
+      "Lahore, Pakistan"
+    ]
+  },
+  "social": {
+    "linkedin": "https://www.linkedin.com/company/eiosh",
+    "facebook": "https://www.facebook.com/eiosh",
+    "instagram": "https://www.instagram.com/eiosh",
+    "youtube": "https://www.youtube.com/@eiosh"
+  },
+  "stats": [
+    {
+      "label": "Students enrolled",
+      "value": "1,500+"
+    },
+    {
+      "label": "Accredited courses",
+      "value": "375+"
+    },
+    {
+      "label": "Satisfaction rate",
+      "value": "100%"
+    },
+    {
+      "label": "Positive reviews",
+      "value": "2,400+"
+    }
+  ]
+}

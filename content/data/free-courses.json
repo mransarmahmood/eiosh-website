@@ -1,0 +1,147 @@
+[
+  {
+    "id": "free-1",
+    "slug": "introduction-to-workplace-hazards",
+    "title": "Introduction to Workplace Hazards",
+    "summary": "A one-hour primer on the five hazard categories every employee should recognise — physical, chemical, biological, ergonomic, and psychosocial.",
+    "format": "video",
+    "durationMinutes": 60,
+    "level": "introductory",
+    "lessonsCount": 6,
+    "category": "health-safety-environment",
+    "authorSlug": "ayesha-khan",
+    "enrolledCount": 12480,
+    "hasCertificate": true,
+    "tags": [
+      "Hazards",
+      "Starter",
+      "IOSH-aligned"
+    ]
+  },
+  {
+    "id": "free-2",
+    "slug": "haccp-in-ten-minutes",
+    "title": "HACCP in Ten Minutes",
+    "summary": "A rapid video walk-through of the seven HACCP principles, with a downloadable one-pager for kitchen supervisors.",
+    "format": "video",
+    "durationMinutes": 10,
+    "level": "introductory",
+    "lessonsCount": 2,
+    "category": "food-safety-hospitality",
+    "enrolledCount": 8640,
+    "tags": [
+      "HACCP",
+      "Kitchen",
+      "Quick read"
+    ]
+  },
+  {
+    "id": "free-3",
+    "slug": "fire-warden-essentials",
+    "title": "Fire Warden Essentials",
+    "summary": "What every nominated fire warden must know before their first drill — routes, refuge, roll call, and portable-extinguisher selection.",
+    "format": "interactive",
+    "durationMinutes": 45,
+    "level": "foundation",
+    "lessonsCount": 5,
+    "category": "fire-safety-emergency",
+    "authorSlug": "rohan-hassan",
+    "enrolledCount": 5210,
+    "hasCertificate": true,
+    "tags": [
+      "Fire",
+      "Warden",
+      "Emergency"
+    ]
+  },
+  {
+    "id": "free-4",
+    "slug": "cpr-aed-refresher",
+    "title": "CPR & AED Refresher",
+    "summary": "A 20-minute refresher for first aiders between their annual in-person requalifications. Covers adult, child and infant protocols.",
+    "format": "video",
+    "durationMinutes": 20,
+    "level": "foundation",
+    "lessonsCount": 4,
+    "category": "first-aid-medical",
+    "enrolledCount": 9310,
+    "tags": [
+      "CPR",
+      "AED",
+      "Refresher"
+    ]
+  },
+  {
+    "id": "free-5",
+    "slug": "iso-45001-clause-walkthrough",
+    "title": "ISO 45001 Clause Walkthrough",
+    "summary": "A clause-by-clause reading guide that turns the standard into plain language — perfect for implementation leads and internal auditors.",
+    "format": "reading",
+    "durationMinutes": 75,
+    "level": "intermediate",
+    "lessonsCount": 10,
+    "category": "health-safety-environment",
+    "authorSlug": "sameer-mahmood",
+    "enrolledCount": 3980,
+    "tags": [
+      "ISO 45001",
+      "Audit",
+      "Management systems"
+    ]
+  },
+  {
+    "id": "free-6",
+    "slug": "esg-for-hse-teams",
+    "title": "ESG for HSE Teams",
+    "summary": "A four-part audio series on why sustainability reporting is landing on HSE desks — and how to get ahead of it.",
+    "format": "podcast",
+    "durationMinutes": 120,
+    "level": "intermediate",
+    "lessonsCount": 4,
+    "category": "environment-sustainability",
+    "authorSlug": "layla-yousuf",
+    "enrolledCount": 2760,
+    "tags": [
+      "ESG",
+      "Sustainability",
+      "Podcast"
+    ]
+  },
+  {
+    "id": "free-7",
+    "slug": "behavioural-safety-foundations",
+    "title": "Behavioural Safety Foundations",
+    "summary": "How leading indicators, observation programmes and stop-work authority actually change site behaviour — without a single poster.",
+    "format": "video",
+    "durationMinutes": 40,
+    "level": "intermediate",
+    "lessonsCount": 5,
+    "category": "health-safety-environment",
+    "authorSlug": "ayesha-khan",
+    "enrolledCount": 4120,
+    "hasCertificate": true,
+    "tags": [
+      "Behavioural safety",
+      "Culture",
+      "Leadership"
+    ]
+  },
+  {
+    "id": "free-8",
+    "slug": "permit-to-work-101",
+    "title": "Permit-to-Work 101",
+    "summary": "The mechanics of a defensible permit-to-work system — issuer, acceptor, interlocks, and common failure modes.",
+    "format": "interactive",
+    "durationMinutes": 55,
+    "level": "foundation",
+    "lessonsCount": 6,
+    "category": "construction-site-safety",
+    "authorSlug": "sameer-mahmood",
+    "enrolledCount": 3540,
+    "tags": [
+      "PTW",
+      "Construction",
+      "Operations"
+    ]
+  }
+]

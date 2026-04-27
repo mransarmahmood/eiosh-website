@@ -1,0 +1,149 @@
+[
+  {
+    "id": "trn-ak",
+    "slug": "ayesha-khan",
+    "name": "Dr. Ayesha Khan",
+    "title": "Lead Faculty — Occupational Safety & Risk",
+    "credentials": [
+      "PhD Occupational Safety",
+      "CMIOSH",
+      "NEBOSH Diploma",
+      "ISO 45001 Lead Auditor"
+    ],
+    "specialisms": [
+      "IOSH Managing Safely",
+      "NEBOSH IGC",
+      "OTHM Level 6",
+      "Behavioural Safety"
+    ],
+    "bio": "Dr. Khan has led HSE capability programmes for energy, construction and logistics clients across the GCC and South Asia for more than 18 years. She chairs EIOSH's academic standards board."
+  },
+  {
+    "id": "trn-sm",
+    "slug": "sameer-mahmood",
+    "name": "Sameer Mahmood",
+    "title": "Principal Trainer — Construction Safety",
+    "credentials": [
+      "CMIOSH",
+      "NEBOSH Construction Certificate",
+      "CITP"
+    ],
+    "specialisms": [
+      "Working at height",
+      "Permit-to-work",
+      "Scaffold inspection",
+      "Site supervisor training"
+    ],
+    "bio": "A site safety practitioner with 15 years on megaprojects across Saudi Arabia, the UAE and Qatar. Sameer specialises in turning audit findings into practical supervisor coaching."
+  },
+  {
+    "id": "trn-ly",
+    "slug": "layla-yousuf",
+    "name": "Layla Yousuf",
+    "title": "Lead Tutor — Environment & Sustainability",
+    "credentials": [
+      "MSc Environmental Management",
+      "PIEMA",
+      "ISO 14001 Lead Auditor"
+    ],
+    "specialisms": [
+      "IEMA qualifications",
+      "ISO 14001",
+      "ESG reporting",
+      "Carbon literacy"
+    ],
+    "bio": "Layla guides ESG teams at listed companies through ISO 14001 implementation and TCFD-aligned disclosure. She teaches in English and Arabic."
+  },
+  {
+    "id": "trn-rh",
+    "slug": "rohan-hassan",
+    "name": "Rohan Hassan",
+    "title": "Senior Trainer — Fire & Emergency",
+    "credentials": [
+      "NEBOSH Fire Certificate",
+      "IFE Level 3",
+      "Advanced Trauma Life Support"
+    ],
+    "specialisms": [
+      "Fire risk assessment",
+      "Industrial fire-fighting",
+      "Emergency command",
+      "First aid at work"
+    ],
+    "bio": "A former municipal fire officer, Rohan designs EIOSH's hands-on fire and emergency drills and has trained response teams for oil & gas, ports and aviation clients."
+  },
+  {
+    "id": "trn-sa",
+    "slug": "sara-ahmed",
+    "name": "Sara Ahmed",
+    "title": "Faculty Lead — Leadership & Management",
+    "credentials": [
+      "MBA",
+      "CMI Level 7",
+      "OTHM Internal Verifier"
+    ],
+    "specialisms": [
+      "OTHM Level 3–7",
+      "Executive coaching",
+      "People analytics",
+      "Strategic HR"
+    ],
+    "bio": "Sara has designed leadership academies for banking and telecoms operators across the GCC, and is an internal verifier for EIOSH's OTHM centre."
+  },
+  {
+    "id": "trn-sql-23",
+    "slug": "abdul-salam",
+    "name": "Abdul Salam",
+    "title": "Senior Trainer",
+    "credentials": [
+      "IOSH",
+      "NEBOSH"
+    ],
+    "specialisms": [
+      "Health & Safety"
+    ],
+    "bio": "Abdul Salam working as Equipment inspector"
+  },
+  {
+    "id": "trn-sql-24",
+    "slug": "hamza-ali-abbasi",
+    "name": "Hamza Ali Abbasi",
+    "title": "Senior Trainer",
+    "credentials": [
+      "IOSH",
+      "NEBOSH"
+    ],
+    "specialisms": [
+      "Health & Safety"
+    ],
+    "bio": "Hamza Ali Abbasi Working as Senior Equipment Inspector"
+  },
+  {
+    "id": "trn-sql-25",
+    "slug": "mir-wajahat-ali-khan",
+    "name": "Mir Wajahat Ali khan",
+    "title": "Senior Trainer",
+    "credentials": [
+      "IOSH",
+      "NEBOSH"
+    ],
+    "specialisms": [
+      "Health & Safety"
+    ],
+    "bio": "Mir Wajahat Ali Khan the Senior Engineer"
+  },
+  {
+    "id": "trn-sql-54375",
+    "slug": "abdul-rehman",
+    "name": "Abdul Rehman",
+    "title": "Senior Trainer",
+    "credentials": [
+      "IOSH",
+      "NEBOSH"
+    ],
+    "specialisms": [
+      "Health & Safety"
+    ],
+    "bio": "Abdul Rehman working as Business Development Manager"
+  }
+]

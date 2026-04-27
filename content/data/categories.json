@@ -1,0 +1,154 @@
+[
+  {
+    "id": "cat-hse",
+    "slug": "health-safety-environment",
+    "title": "Health, Safety & Environment",
+    "tagline": "IOSH, NEBOSH and OSHA-aligned pathways",
+    "description": "Core HSE qualifications for managers, supervisors and site professionals — from entry-level awareness to Level 6 diplomas.",
+    "icon": "HardHat",
+    "image": "/brand/courses/iosh-managing-safely.jpg"
+  },
+  {
+    "id": "cat-food",
+    "slug": "food-safety-hospitality",
+    "title": "Food Safety & Hospitality",
+    "tagline": "HABC and Highfield Ofqual-regulated",
+    "description": "HACCP, food hygiene and compliance qualifications for kitchens, catering, and hospitality operators.",
+    "icon": "UtensilsCrossed",
+    "image": "/brand/courses/course-3.jpg"
+  },
+  {
+    "id": "cat-fire",
+    "slug": "fire-safety-emergency",
+    "title": "Fire Safety & Emergency Response",
+    "tagline": "Fire marshal, warden and incident command",
+    "description": "Fire prevention, evacuation, emergency planning and industrial fire-fighting for facilities and high-risk sites.",
+    "icon": "Flame",
+    "image": "/brand/courses/fire-warden.jpg"
+  },
+  {
+    "id": "cat-management",
+    "slug": "leadership-management",
+    "title": "Leadership & Management",
+    "tagline": "OTHM Level 3–7 regulated qualifications",
+    "description": "Regulated management qualifications with university progression — ideal for team leads, managers and senior operators.",
+    "icon": "Briefcase",
+    "image": "/brand/courses/course-2.jpg"
+  },
+  {
+    "id": "cat-hr",
+    "slug": "human-resources",
+    "title": "Human Resource Management",
+    "tagline": "OTHM regulated HR pathways",
+    "description": "Strategic HR, employment law, and people analytics qualifications for HR business partners and practitioners.",
+    "icon": "Users",
+    "image": "/brand/courses/course-4.jpg"
+  },
+  {
+    "id": "cat-esg",
+    "slug": "environment-sustainability",
+    "title": "Environment & Sustainability",
+    "tagline": "ISO 14001, IEMA and ESG foundations",
+    "description": "Environmental management systems, carbon literacy and ESG reporting fundamentals for operations and compliance teams.",
+    "icon": "Leaf",
+    "image": "/brand/courses/course-5.jpg"
+  },
+  {
+    "id": "cat-construction",
+    "slug": "construction-site-safety",
+    "title": "Construction & Site Safety",
+    "tagline": "Site-specific HSE qualifications",
+    "description": "Site supervisor safety, working at height, permit-to-work and contractor management for the built environment.",
+    "icon": "HardHat",
+    "image": "/brand/courses/course-6.jpg"
+  },
+  {
+    "id": "cat-firstaid",
+    "slug": "first-aid-medical",
+    "title": "First Aid & Medical Response",
+    "tagline": "Workplace and industrial first aid",
+    "description": "Regulated first aid at work, CPR/AED and industrial medic qualifications delivered by registered instructors.",
+    "icon": "HeartPulse",
+    "image": "/brand/courses/course-1.jpg"
+  },
+  {
+    "id": "cat-56259",
+    "slug": "iosh-uk",
+    "title": "IOSH UK",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by IOSH UK.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56260",
+    "slug": "global-awards",
+    "title": "Global Awards",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by Global Awards.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56261",
+    "slug": "habc-uk",
+    "title": "HABC UK",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by HABC UK.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56263",
+    "slug": "icboq-uk",
+    "title": "ICBOQ UK",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by ICBOQ UK.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56265",
+    "slug": "nasp-usa",
+    "title": "NASP USA",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by NASP USA.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56267",
+    "slug": "oshawards-uk",
+    "title": "OSHAwards UK",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by OSHAwards UK.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56268",
+    "slug": "othm-uk",
+    "title": "OTHM UK",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by OTHM UK.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56329",
+    "slug": "iq-ohs",
+    "title": "IQ-OHS",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by IQ-OHS.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56346",
+    "slug": "oshacademy-usa-1",
+    "title": "OSHAcademy USA",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by OSHAcademy USA.",
+    "icon": "Award"
+  },
+  {
+    "id": "cat-56359",
+    "slug": "computer-applications",
+    "title": "Computer Applications",
+    "tagline": "International awarding body",
+    "description": "EIOSH delivers regulated programmes accredited by Computer Applications.",
+    "icon": "Award"
+  }
+]

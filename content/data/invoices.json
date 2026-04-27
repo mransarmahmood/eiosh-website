@@ -1,0 +1,69 @@
+[
+  {
+    "id": "inv-sample-001",
+    "title": "IOSH Managing Safely — Supervisor cohort",
+    "company": "Acme Industries Ltd",
+    "billToName": "Lara Hamid — L&D Manager",
+    "companyAddress": "Business Bay District, Dubai, UAE",
+    "companyEmail": "procurement@acme.example",
+    "phone": "+971 4 000 0000",
+    "invoiceDate": "2026-04-12",
+    "dueDate": "2026-05-12",
+    "currency": "USD",
+    "vatPercent": 5,
+    "lineItems": [
+      { "description": "IOSH Managing Safely V5.0 — in-person, 3 days", "qty": 20, "unitPrice": 385 },
+      { "description": "Learner packs + certification fees", "qty": 20, "unitPrice": 45 },
+      { "description": "On-site delivery (trainer travel + accommodation)", "qty": 1, "unitPrice": 850 }
+    ],
+    "notes": "Payment terms: net 30 days. Bank details provided on the signed SOW.",
+    "terms": "Payment by wire transfer within 30 days of invoice date. Invoice is considered accepted if no dispute is raised within 7 business days. EIOSH International Trade Licence and tax registration certificate available on request.",
+    "status": "in-review",
+    "receivedAt": "2026-04-12T09:00:00Z"
+  },
+  {
+    "id": "inv-sample-002",
+    "title": "NEBOSH IGC — Q2 cohort fees",
+    "company": "Emirates Facility Management",
+    "billToName": "Hina Raza — HSE Lead",
+    "companyAddress": "Dubai Internet City, Dubai, UAE",
+    "companyEmail": "hina.raza@efm.example",
+    "phone": "+971 50 000 0000",
+    "invoiceDate": "2026-04-05",
+    "dueDate": "2026-05-05",
+    "currency": "USD",
+    "vatPercent": 5,
+    "lineItems": [
+      { "description": "NEBOSH IGC blended programme (per candidate)", "qty": 12, "unitPrice": 995 },
+      { "description": "Awarding-body examination & registration fees", "qty": 12, "unitPrice": 220 },
+      { "description": "Internal verification & workplace project mentoring", "qty": 1, "unitPrice": 1800 }
+    ],
+    "notes": "Second instalment due on completion of IG2 practical assessment.",
+    "terms": "Payment terms: 50% on invoice, 50% on completion of IG2 practical assessment. Applicable taxes extra.",
+    "status": "responded",
+    "receivedAt": "2026-04-05T08:00:00Z"
+  },
+  {
+    "id": "inv-sample-003",
+    "title": "Equipment inspection programme — March 2026",
+    "company": "Horizon Logistics",
+    "billToName": "Deepa Iyer — COO",
+    "companyAddress": "Jebel Ali Free Zone, Dubai, UAE",
+    "companyEmail": "deepa@horizon.example",
+    "phone": "+971 4 000 1111",
+    "invoiceDate": "2026-03-30",
+    "dueDate": "2026-04-30",
+    "currency": "USD",
+    "vatPercent": 5,
+    "lineItems": [
+      { "description": "Lifting equipment inspection (per asset)", "qty": 48, "unitPrice": 85 },
+      { "description": "Pressure equipment inspection (per asset)", "qty": 12, "unitPrice": 145 },
+      { "description": "Inspector mobilisation + reporting fee", "qty": 1, "unitPrice": 950 },
+      { "description": "Digital certificate register + next-inspection tracker", "qty": 1, "unitPrice": 350 }
+    ],
+    "notes": "All certificates of thorough examination delivered via the client's inspection portal.",
+    "terms": "Payment terms: net 30 days. Certificates of thorough examination issued on cleared funds.",
+    "status": "responded",
+    "receivedAt": "2026-03-30T10:00:00Z"
+  }
+]

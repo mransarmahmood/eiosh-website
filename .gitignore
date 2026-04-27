@@ -1,0 +1,39 @@
+node_modules
+.next
+out
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+.vercel
+.idea
+.vscode
+next-env.d.ts
+
+# Sibling apps deployed separately — keep this repo Next.js-only
+exam/
+invoice/
+lms/
+cms/
+publiceiosh/
+
+# Local-only assistant config
+.claude/
+
+# Misc
+EIOSH-Ecosystem-Links.pdf
+build_links_pdf.py
+
+# PHP / Laravel
+**/storage/*.key
+**/storage/logs/*
+**/storage/framework/cache/*
+**/storage/framework/sessions/*
+**/storage/framework/views/*
+!**/storage/framework/cache/.gitignore
+!**/storage/framework/sessions/.gitignore
+!**/storage/framework/views/.gitignore
+
+# IDE / OS
+Thumbs.db
