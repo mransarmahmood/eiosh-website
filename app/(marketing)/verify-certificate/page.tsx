@@ -27,11 +27,11 @@ export default function VerifyCertificatePage() {
         breadcrumbs={[{ label: "Verify Certificate" }]}
         align="center"
       >
-        <div className="mx-auto mt-2 flex flex-wrap items-center justify-center gap-4 text-[0.75rem] text-white/75">
+        <div className="mx-auto mt-2 flex flex-wrap items-center justify-center gap-4 text-[0.75rem] text-ink-muted dark:text-white/75">
           <span className="inline-flex items-center gap-1.5">
-            <ShieldCheck className="h-4 w-4 text-cyan-300" /> 681 certificates indexed
+            <ShieldCheck className="h-4 w-4 text-cyan-700 dark:text-cyan-300" /> 681 certificates indexed
           </span>
-          <span className="hidden sm:inline h-1 w-1 rounded-full bg-white/30" aria-hidden />
+          <span className="hidden sm:inline h-1 w-1 rounded-full bg-ink-soft/40 dark:bg-white/30" aria-hidden />
           <span>Approved centre for IOSH · OSHAcademy · OSHAwards · HABC · OTHM · NASP</span>
         </div>
       </PageHero>

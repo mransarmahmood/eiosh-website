@@ -36,7 +36,7 @@ export default function CalendarPage() {
             href="/events"
             variant="outline"
             size="lg"
-            className="bg-white/5 text-white ring-white/20 hover:bg-white/10 hover:ring-white/40"
+            className="bg-white text-navy-900 ring-border hover:bg-navy-50 hover:ring-cyan-300 dark:bg-white/5 dark:text-white dark:ring-white/20 dark:hover:bg-white/10 dark:hover:ring-white/40"
           >
             Events list
           </Button>

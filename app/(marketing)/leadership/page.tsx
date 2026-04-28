@@ -70,7 +70,7 @@ export default async function LeadershipPage() {
         description={p.hero.description}
         breadcrumbs={[{ label: "Leadership" }]}
       >
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-500/15 px-3 py-1 text-xs font-medium uppercase tracking-wider text-cyan-200 ring-1 ring-cyan-400/30">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100 px-3 py-1 text-xs font-medium uppercase tracking-wider text-cyan-700 ring-1 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30">
           <Crown className="h-3.5 w-3.5" /> Director-level cohort
         </span>
       </PageHero>

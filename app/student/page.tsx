@@ -90,7 +90,7 @@ export default async function StudentDashboard() {
         <form action="/api/student/logout" method="POST">
           <button
             type="submit"
-            className="inline-flex items-center gap-1.5 rounded-full bg-white/10 px-3 py-1.5 text-xs text-white/80 ring-1 ring-inset ring-white/20 hover:bg-white/15"
+            className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs text-navy-900 ring-1 ring-inset ring-border hover:bg-navy-50 dark:bg-white/10 dark:text-white/80 dark:ring-white/20 dark:hover:bg-white/15"
           >
             <LogOut className="h-3 w-3" /> Sign out
           </button>

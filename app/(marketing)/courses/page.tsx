@@ -54,11 +54,25 @@ export default function CoursesPage({ searchParams }: { searchParams: Search }) 
       >
         {body || category ? (
           <div className="flex flex-wrap items-center gap-2">
-            {body ? <Badge tone="cyan" className="bg-cyan-500/15 text-cyan-200 ring-cyan-400/30">{body.shortName}</Badge> : null}
-            {category ? <Badge tone="cyan" className="bg-cyan-500/15 text-cyan-200 ring-cyan-400/30">{category.title}</Badge> : null}
+            {body ? (
+              <Badge
+                tone="cyan"
+                className="bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30"
+              >
+                {body.shortName}
+              </Badge>
+            ) : null}
+            {category ? (
+              <Badge
+                tone="cyan"
+                className="bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30"
+              >
+                {category.title}
+              </Badge>
+            ) : null}
             <Link
               href="/courses"
-              className="inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 text-xs font-medium text-white/80 ring-1 ring-inset ring-white/20 transition hover:bg-white/10"
+              className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 text-xs font-medium text-navy-900 ring-1 ring-inset ring-border transition hover:bg-navy-50 dark:bg-white/5 dark:text-white/80 dark:ring-white/20 dark:hover:bg-white/10"
             >
               Clear filter
             </Link>

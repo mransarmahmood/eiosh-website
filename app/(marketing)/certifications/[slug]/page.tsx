@@ -58,11 +58,18 @@ export default function CertificationDetailPage({ params }: Props) {
         ]}
       >
         <div className="flex flex-wrap items-center gap-2">
-          <Badge tone="cyan" className="bg-cyan-500/15 text-cyan-200 ring-cyan-400/30">
+          <Badge
+            tone="cyan"
+            className="bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30"
+          >
             <Award className="h-3.5 w-3.5" /> {cert.level}
           </Badge>
           {cert.deliveryModes.map((m) => (
-            <Badge key={m} tone="navy" className="bg-white/10 text-white ring-white/20 capitalize">
+            <Badge
+              key={m}
+              tone="navy"
+              className="bg-white text-navy-900 ring-border capitalize dark:bg-white/10 dark:text-white dark:ring-white/20"
+            >
               {m}
             </Badge>
           ))}

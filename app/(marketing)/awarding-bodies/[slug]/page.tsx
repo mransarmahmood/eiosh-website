@@ -46,11 +46,17 @@ export default function AwardingBodyDetailPage({ params }: Params) {
         ]}
       >
         <div className="flex flex-wrap items-center gap-3">
-          <Badge tone="cyan" className="bg-cyan-500/15 text-cyan-200 ring-cyan-400/30">
+          <Badge
+            tone="cyan"
+            className="bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30"
+          >
             {body.name}
           </Badge>
           {body.country ? (
-            <Badge tone="navy" className="bg-white/10 text-white ring-white/20">
+            <Badge
+              tone="navy"
+              className="bg-white text-navy-900 ring-border dark:bg-white/10 dark:text-white dark:ring-white/20"
+            >
               {body.country}
             </Badge>
           ) : null}

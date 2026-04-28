@@ -25,8 +25,12 @@ export default async function JobsBoardPage() {
         description="Roles posted by employers actively seeking IOSH / NEBOSH / OSHA-certified candidates. Browse free; apply directly to the employer."
         breadcrumbs={[{ label: "Jobs" }]}
       >
-        <p className="text-sm text-white/75">
-          Hiring? <Link href="/contact" className="underline">Post a role</Link> — free for the first listing.
+        <p className="text-sm text-ink-muted dark:text-white/75">
+          Hiring?{" "}
+          <Link href="/contact" className="font-semibold text-cyan-700 underline hover:text-cyan-800 dark:text-cyan-300 dark:hover:text-cyan-200">
+            Post a role
+          </Link>{" "}
+          — free for the first listing.
         </p>
       </PageHero>
 

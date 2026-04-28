@@ -127,7 +127,7 @@ export default function ContactPage() {
           </a>
           <a
             href={`tel:${site.contact.phone}`}
-            className="inline-flex h-13 items-center gap-2 rounded-lg bg-white/5 px-7 py-3.5 font-heading font-medium text-white ring-1 ring-inset ring-white/20 transition hover:bg-white/10 hover:ring-white/40"
+            className="inline-flex h-13 items-center gap-2 rounded-lg bg-white px-7 py-3.5 font-heading font-medium text-navy-900 ring-1 ring-inset ring-border transition hover:bg-navy-50 hover:ring-cyan-300 dark:bg-white/5 dark:text-white dark:ring-white/20 dark:hover:bg-white/10 dark:hover:ring-white/40"
           >
             <Phone className="h-4 w-4" /> {site.contact.phone}
           </a>

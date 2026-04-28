@@ -47,17 +47,20 @@ export default function FreeCoursesPage() {
             href="/courses"
             variant="outline"
             size="lg"
-            className="bg-white/5 text-white ring-white/20 hover:bg-white/10 hover:ring-white/40"
+            className="bg-white text-navy-900 ring-border hover:bg-navy-50 hover:ring-cyan-300 dark:bg-white/5 dark:text-white dark:ring-white/20 dark:hover:bg-white/10 dark:hover:ring-white/40"
           >
             Ready for a qualification?
           </Button>
         </div>
-        <div className="mt-8 flex flex-wrap items-center gap-2 text-sm text-white/70">
+        <div className="mt-8 flex flex-wrap items-center gap-2 text-sm text-ink-muted dark:text-white/70">
           {formats.map((f) => {
             const Icon = f.icon;
             return (
-              <span key={f.label} className="inline-flex items-center gap-1.5 rounded-full bg-white/5 px-3 py-1 ring-1 ring-inset ring-white/15">
-                <Icon className="h-3.5 w-3.5 text-cyan-300" /> {f.label}
+              <span
+                key={f.label}
+                className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1 ring-1 ring-inset ring-border dark:bg-white/5 dark:ring-white/15"
+              >
+                <Icon className="h-3.5 w-3.5 text-cyan-700 dark:text-cyan-300" /> {f.label}
               </span>
             );
           })}

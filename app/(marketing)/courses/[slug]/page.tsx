@@ -66,17 +66,29 @@ export default async function CourseDetailPage({ params }: Params) {
         breadcrumbs={[{ label: "Courses", href: "/courses" }, { label: course.title }]}
       >
         <div className="flex flex-wrap items-center gap-3">
-          <Badge tone="cyan" className="bg-cyan-500/15 text-cyan-200 ring-cyan-400/30">
+          <Badge
+            tone="cyan"
+            className="bg-cyan-100 text-cyan-700 ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-200 dark:ring-cyan-400/30"
+          >
             <Award className="h-3.5 w-3.5" /> {body?.shortName ?? "EIOSH"}
           </Badge>
-          <Badge tone="navy" className="bg-white/10 text-white ring-white/20 capitalize">
+          <Badge
+            tone="navy"
+            className="bg-white text-navy-900 ring-border capitalize dark:bg-white/10 dark:text-white dark:ring-white/20"
+          >
             {course.level}
           </Badge>
-          <Badge tone="navy" className="bg-white/10 text-white ring-white/20">
+          <Badge
+            tone="navy"
+            className="bg-white text-navy-900 ring-border dark:bg-white/10 dark:text-white dark:ring-white/20"
+          >
             {formatDuration(course.durationHours)}
           </Badge>
           {course.cohortStart ? (
-            <Badge tone="gold" className="bg-gold-400/20 text-gold-100 ring-gold-300/30">
+            <Badge
+              tone="gold"
+              className="bg-amber-100 text-amber-800 ring-amber-200 dark:bg-gold-400/20 dark:text-gold-100 dark:ring-gold-300/30"
+            >
               <CalendarDays className="h-3.5 w-3.5" /> Next cohort: {formatDate(course.cohortStart)}
             </Badge>
           ) : null}
