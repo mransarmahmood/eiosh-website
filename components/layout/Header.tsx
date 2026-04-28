@@ -11,11 +11,14 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { site } from "@/content/site";
 
 const primaryLinks: { label: string; href: string; mega?: MegaKey }[] = [
+  { label: "About Us", href: "/about" },
   { label: "Courses", href: "/courses", mega: "courses" },
-  { label: "Certifications", href: "/certification-preparation", mega: "certifications" },
+  { label: "Certifications", href: "/certifications", mega: "certifications" },
   { label: "Awarding Bodies", href: "/awarding-bodies", mega: "approvals" },
   { label: "Corporate", href: "/corporate-training" },
+  { label: "Leadership", href: "/leadership" },
   { label: "Resources", href: "/resources", mega: "resources" },
+  { label: "Exam Portal", href: process.env.NEXT_PUBLIC_EXAM_URL ?? "https://eiosh-com-725461.hostingersite.com/exam/public/login" },
   { label: "Calendar", href: "/calendar" },
   { label: "Free Courses", href: "/free-courses" },
 ];
@@ -156,6 +159,15 @@ export function Header() {
                           aria-hidden
                         />
                       </button>
+                    ) : link.href.startsWith("http") ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700"
+                      >
+                        {link.label}
+                      </a>
                     ) : (
                       <Link
                         href={link.href}
@@ -170,14 +182,12 @@ export function Header() {
             </nav>
 
             <div className="flex items-center gap-2.5">
-              <a
-                href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                href="/student/login"
                 className="hidden md:inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-medium text-navy-900 transition hover:border-cyan-400 hover:text-cyan-700"
               >
                 <LogIn className="h-4 w-4" /> Sign in
-              </a>
+              </Link>
               <Button href="/admission" variant="gold" size="sm" className="hidden sm:inline-flex">
                 <UserPlus className="h-4 w-4" /> Apply now
               </Button>

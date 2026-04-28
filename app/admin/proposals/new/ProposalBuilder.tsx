@@ -3,7 +3,12 @@
 import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { Plus, Trash2, Loader2, FileText, Send, ExternalLink, Check } from "lucide-react";
-import type { ProposalTemplate, SavedProposal, ProposalLineItem } from "@/lib/proposals";
+import type {
+  ProposalTemplate,
+  SavedProposal,
+  ProposalLineItem,
+  PriceDisplayMode,
+} from "@/lib/proposals";
 import type { Service } from "@/lib/services";
 import { CurrencySelect } from "@/components/admin/CurrencySelect";
 
@@ -33,6 +38,8 @@ export function ProposalBuilder({
     terms: "",
     notes: "",
     currency: "USD",
+    priceDisplayMode: "all",
+    lumpSumLabel: "",
     totals: {
       subtotal: 0,
       discountPercent: 0,
@@ -230,6 +237,8 @@ export function ProposalBuilder({
                 lineItems: [],
                 terms: "",
                 currency: "USD",
+                priceDisplayMode: "all",
+                lumpSumLabel: "",
                 totals: {
                   subtotal: 0,
                   discountPercent: 0,
@@ -337,12 +346,27 @@ export function ProposalBuilder({
               onChange={(v) => setDraft((d) => ({ ...d, intro: v }))}
             />
           </Field>
-          <Field label="Approach">
+          <Field label="Approach (split into stages — see hint)">
             <Textarea
-              rows={4}
+              rows={6}
+              placeholder={`Tip: structure as numbered stages — they render as cards on the public page.
+
+Stage 1 — Discovery
+We start by reviewing your current SOPs, audit findings and learner profiles…
+
+Stage 2 — Design
+We tailor the syllabus, materials and assessment plan to your context…
+
+Stage 3 — Delivery
+Live cohorts, workplace project and exam coordination…`}
               value={draft.approach ?? ""}
               onChange={(v) => setDraft((d) => ({ ...d, approach: v }))}
             />
+            <span className="mt-1 block text-[0.65rem] text-ink-soft">
+              Use lines like <code className="rounded bg-ink/5 px-1">Stage 1 — Title</code> or{" "}
+              <code className="rounded bg-ink/5 px-1">1. Title</code> to render as numbered stage
+              cards. Plain paragraphs work too.
+            </span>
           </Field>
         </div>
       </Section>
@@ -518,6 +542,44 @@ export function ProposalBuilder({
               </span>
             </p>
           </div>
+        </div>
+      </Section>
+
+      {/* Pricing display */}
+      <Section title="How prices appear on the public page">
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+          <Field label="Price display mode">
+            <select
+              value={draft.priceDisplayMode ?? "all"}
+              onChange={(e) =>
+                setDraft((d) => ({
+                  ...d,
+                  priceDisplayMode: e.target.value as PriceDisplayMode,
+                }))
+              }
+              className="block w-full rounded-lg border border-border bg-white px-3 py-2 text-sm focus:border-cyan-500 focus:outline-none"
+            >
+              <option value="all">Detailed — line items, unit prices and grand total</option>
+              <option value="lumpsum-only">Lump sum only — services list, single total at the end</option>
+              <option value="no-price">Scope only — no prices shown anywhere</option>
+            </select>
+            <span className="mt-1 block text-[0.65rem] text-ink-soft">
+              Some clients want only a final figure, others want zero-price scope memos. Pick what
+              they expect.
+            </span>
+          </Field>
+          {(draft.priceDisplayMode ?? "all") === "lumpsum-only" && (
+            <Field label="Lump-sum label (optional)">
+              <Input
+                placeholder="Project fee · Annual retainer · Engagement total…"
+                value={draft.lumpSumLabel ?? ""}
+                onChange={(v) => setDraft((d) => ({ ...d, lumpSumLabel: v }))}
+              />
+              <span className="mt-1 block text-[0.65rem] text-ink-soft">
+                Defaults to "Total" if left blank.
+              </span>
+            </Field>
+          )}
         </div>
       </Section>
 

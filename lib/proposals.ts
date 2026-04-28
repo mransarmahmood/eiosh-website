@@ -13,6 +13,14 @@ export interface ProposalTemplate {
   validityDays: number;
 }
 
+/**
+ * How prices appear on the public proposal:
+ *  - "all"          — line-item unit prices, line totals, and grand total (default)
+ *  - "lumpsum-only" — services list shows scope only, single lump-sum total at the end
+ *  - "no-price"     — services list shows scope only, no prices anywhere (used for scope-only proposals)
+ */
+export type PriceDisplayMode = "all" | "lumpsum-only" | "no-price";
+
 export interface ProposalLineItem {
   /** Locally generated id so the UI can update specific rows. */
   id: string;
@@ -50,6 +58,10 @@ export interface SavedProposal {
   notes?: string;
   /** Currency of the totals — taken from the first line item, falls back to USD. */
   currency: string;
+  /** Controls how prices render on the public proposal page. Defaults to "all". */
+  priceDisplayMode?: PriceDisplayMode;
+  /** Optional label shown next to the lump-sum figure (e.g. "Project fee" / "Annual retainer"). */
+  lumpSumLabel?: string;
   totals: {
     subtotal: number;
     discountPercent: number;
@@ -141,4 +153,65 @@ export function recomputeTotals(p: SavedProposal): SavedProposal["totals"] {
 
 function round2(n: number) {
   return Math.round(n * 100) / 100;
+}
+
+export interface ApproachStage {
+  index: number;
+  title: string;
+  body: string;
+}
+
+/**
+ * Splits free-form approach text into ordered stage cards.
+ * Recognises three markers (in priority order):
+ *   1. "Stage 1 — Discovery" / "Stage 1: Discovery" / "Phase 2 — Build"
+ *   2. Numbered headings on their own line: "1. Discovery" / "1) Discovery"
+ *   3. Single blank-line separated paragraphs (fallback)
+ *
+ * If no markers are detected and the text is one paragraph, returns a single stage.
+ */
+export function parseApproachStages(text: string): ApproachStage[] {
+  const trimmed = (text ?? "").trim();
+  if (!trimmed) return [];
+
+  // Pattern 1 — explicit "Stage N" / "Phase N" markers
+  const stageRe = /^\s*(?:Stage|Phase|Step)\s+(\d+)\s*[—:.\-–]\s*(.+)$/im;
+  if (stageRe.test(trimmed)) {
+    return splitByLeadRegex(
+      trimmed,
+      /^\s*(?:Stage|Phase|Step)\s+(\d+)\s*[—:.\-–]\s*(.+)$/gim
+    );
+  }
+
+  // Pattern 2 — numbered headings ("1. Discovery", "1) Discovery") on a line of their own
+  const numberedRe = /^\s*(\d+)[.)]\s+(.+)$/m;
+  if (numberedRe.test(trimmed)) {
+    return splitByLeadRegex(trimmed, /^\s*(\d+)[.)]\s+(.+)$/gm);
+  }
+
+  // Pattern 3 — paragraph split (each blank-line block becomes a stage)
+  const paras = trimmed.split(/\n{2,}/).map((p) => p.trim()).filter(Boolean);
+  if (paras.length > 1) {
+    return paras.map((body, i) => ({ index: i + 1, title: `Stage ${i + 1}`, body }));
+  }
+
+  return [{ index: 1, title: "Our approach", body: trimmed }];
+}
+
+function splitByLeadRegex(text: string, re: RegExp): ApproachStage[] {
+  const matches: { match: RegExpExecArray; index: number }[] = [];
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text)) !== null) {
+    matches.push({ match: m, index: m.index });
+  }
+  return matches.map((entry, i) => {
+    const next = matches[i + 1];
+    const headLineEnd = entry.index + entry.match[0].length;
+    const body = text.slice(headLineEnd, next ? next.index : text.length).trim();
+    return {
+      index: Number(entry.match[1]),
+      title: entry.match[2].trim(),
+      body,
+    };
+  });
 }

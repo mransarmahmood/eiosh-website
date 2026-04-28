@@ -27,13 +27,86 @@
       "description": "Cohort-level progress reporting so HR and HSE leadership can track completion + competency in real time."
     }
   ],
+  "services": [
+    {
+      "icon": "GraduationCap",
+      "title": "Open enrolment cohorts",
+      "description": "We open a cohort to your team only. You set the dates, we run it.",
+      "fromUSD": 7500,
+      "unit": "from / cohort up to 20"
+    },
+    {
+      "icon": "Building2",
+      "title": "On-site delivery",
+      "description": "Our trainer at your venue, anywhere in MENA + South Asia. Travel + accommodation passed at cost.",
+      "fromUSD": 9500,
+      "unit": "from / 3-day cohort"
+    },
+    {
+      "icon": "Globe2",
+      "title": "Online + LMS bundle",
+      "description": "Live tutorials over Zoom + 6-month LMS access for unlimited replays. Best for distributed teams.",
+      "fromUSD": 1200,
+      "unit": "from / learner"
+    },
+    {
+      "icon": "Layers",
+      "title": "Multi-cohort rollout",
+      "description": "Quarterly cohorts across multiple sites, with progress dashboards and quarterly steering reviews.",
+      "fromUSD": 0,
+      "unit": "fixed-fee project — request quote"
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Internal verifier (IV) support",
+      "description": "Already running training in-house? We provide IV oversight + EQA audit readiness.",
+      "fromUSD": 9500,
+      "unit": "from / year"
+    },
+    {
+      "icon": "BookOpen",
+      "title": "Bespoke e-learning track",
+      "description": "Branded onboarding e-learning hosted in your LMS — built around your SOPs.",
+      "fromUSD": 12000,
+      "unit": "from / project"
+    }
+  ],
+  "offers": [
+    {
+      "tag": "5+ cohorts",
+      "title": "Volume rollout",
+      "description": "Book 5 or more cohorts in 12 months — automatic 15% off the per-cohort fee."
+    },
+    {
+      "tag": "Q1 2026",
+      "title": "Early-bird Q1",
+      "description": "Cohorts confirmed before 31 March 2026 get 2 free seats per cohort."
+    },
+    {
+      "tag": "Bundle",
+      "title": "IOSH + IV bundle",
+      "description": "Add Internal Verifier support to any IOSH rollout for 25% off the standalone IV retainer."
+    }
+  ],
   "popularProgrammes": [
     "IOSH Managing Safely (3-day cohort)",
     "IOSH Working Safely (workforce-wide)",
     "NEBOSH IGC blended cohort",
     "OTHM Level 6 Diploma in OHS",
-    "Corporate HSE onboarding e-learning"
+    "Corporate HSE onboarding e-learning",
+    "Leadership for HSE professionals (5-day intensive)"
   ],
+  "stats": [
+    { "value": "12+", "label": "years as an approved centre" },
+    { "value": "42,000+", "label": "learners certified" },
+    { "value": "64", "label": "countries served" },
+    { "value": "1 day", "label": "advisor response promise" }
+  ],
+  "contactName": "Salma Khan",
+  "contactRole": "Head of Corporate Partnerships",
+  "contactEmail": "corporate@eiosh.com",
+  "contactPhone": "+92 300 458 0231",
+  "contactWhatsapp": "+923004580231",
   "cta": {
     "heading": "Plan your next cohort.",
     "description": "Tell us how many learners, when, and the certifications you need — we'll come back with a tailored proposal within one business day.",

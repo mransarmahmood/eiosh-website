@@ -60,15 +60,13 @@ export function MobileNav({
             <nav className="flex-1 overflow-y-auto px-5 py-5" aria-label="Mobile">
               {/* Account actions up-top */}
               <div className="grid grid-cols-2 gap-2.5">
-                <a
-                  href={process.env.NEXT_PUBLIC_LMS_URL ?? "https://eiosh-com-725461.hostingersite.com/lms/"}
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <Link
+                  href="/student/login"
                   onClick={onClose}
                   className="inline-flex items-center justify-center gap-2 rounded-lg border border-border bg-white px-3 py-2.5 text-sm font-medium text-navy-900 hover:border-cyan-400 hover:text-cyan-700"
                 >
                   <LogIn className="h-4 w-4" /> Sign in
-                </a>
+                </Link>
                 <Link
                   href="/admission"
                   onClick={onClose}

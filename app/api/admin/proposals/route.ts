@@ -75,6 +75,8 @@ export async function POST(req: Request) {
     terms: input.terms ?? "",
     notes: input.notes,
     currency: lineItems[0]?.currency ?? input.currency ?? "USD",
+    priceDisplayMode: input.priceDisplayMode ?? existing?.priceDisplayMode ?? "all",
+    lumpSumLabel: input.lumpSumLabel ?? existing?.lumpSumLabel,
     totals: {
       subtotal: 0,
       discountPercent: Number(input.totals?.discountPercent ?? 0),

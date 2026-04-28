@@ -1,0 +1,93 @@
+{
+  "hero": {
+    "eyebrow": "Leadership programmes",
+    "title": "Lead the safety, environment and sustainability function.",
+    "description": "Director-level programmes for HSE professionals stepping up. Strategy, board reporting, ESG leadership, culture, and the financial fluency that gets you a seat at the executive table."
+  },
+  "intro": "Most HSE qualifications stop at the level of competent practice. Our leadership track picks up where they end — for senior managers and directors who need to run an HSE function as a strategic line of business, defend a multi-million-pound budget, and present to the board with the same rigour as their CFO.",
+  "courses": [
+    {
+      "icon": "Crown",
+      "title": "Leadership for HSE professionals (5-day intensive)",
+      "level": "Senior / Director",
+      "summary": "Flagship 5-day cohort. Strategy, board reporting, behavioural safety, ESG leadership, finance fluency. Capstone strategy presentation.",
+      "priceFromUSD": 3800,
+      "deliveryModes": ["in-person", "online"],
+      "applyHref": "/quotation?course=leadership-for-hse",
+      "outcomes": [
+        "Build and defend a 12-month HSE strategy on a single page",
+        "Present HSE performance and risk to a board in language they speak",
+        "Lead a behavioural-safety culture programme across multiple sites",
+        "Translate ESG ambition into operational KPIs"
+      ]
+    },
+    {
+      "icon": "BarChart3",
+      "title": "HSE for senior leaders (2-day workshop)",
+      "level": "Senior leaders / executives (non-HSE)",
+      "summary": "A 2-day immersion for the C-suite, COOs and ops directors who need to know exactly what 'good' HSE looks like in their organisation.",
+      "priceFromUSD": 2400,
+      "deliveryModes": ["in-person", "online"],
+      "applyHref": "/quotation?course=hse-for-senior-leaders",
+      "outcomes": [
+        "Understand your personal HSE accountability under company law",
+        "Read an HSE management report critically",
+        "Ask the right questions during incident reviews",
+        "Drive culture from the top — not just the HSE function"
+      ]
+    },
+    {
+      "icon": "Users",
+      "title": "ESG leadership masterclass",
+      "level": "Sustainability / HSE directors",
+      "summary": "Three-day deep dive into ESG strategy, reporting frameworks (GRI, ISSB, CSRD) and how to integrate ESG into the existing HSE management system.",
+      "priceFromUSD": 2900,
+      "deliveryModes": ["in-person", "online"],
+      "applyHref": "/quotation?course=esg-leadership",
+      "outcomes": [
+        "Map your company's material ESG topics",
+        "Choose between GRI, ISSB and CSRD for your audience",
+        "Build a credible Scope-3 emissions inventory",
+        "Defend your ESG narrative to investors and analysts"
+      ]
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Behavioural safety leadership",
+      "level": "HSE managers / line directors",
+      "summary": "How to design, launch and sustain a behavioural-safety programme that actually changes incident rates. 4-day cohort + 90-day post-cohort coaching.",
+      "priceFromUSD": 3200,
+      "deliveryModes": ["in-person", "blended"],
+      "applyHref": "/quotation?course=behavioural-safety-leadership",
+      "outcomes": [
+        "Diagnose your current safety-culture maturity",
+        "Design a behavioural-safety intervention with measurable KPIs",
+        "Train and coach your line managers as safety leaders",
+        "Sustain the programme past the typical 12-month decay curve"
+      ]
+    }
+  ],
+  "outcomes": [
+    "Move from operational HSE manager to strategic HSE leader",
+    "Defend an HSE budget with the rigour the CFO will respect",
+    "Lead behavioural-safety culture across multiple sites",
+    "Translate ESG ambition into operational KPIs and audit-ready evidence",
+    "Present complex HSE performance data to a non-technical board",
+    "Develop and mentor a high-performing HSE function"
+  ],
+  "audience": [
+    "HSE managers stepping into director-level roles",
+    "Newly-appointed HSE directors / heads of function",
+    "Sustainability / ESG leaders moving into a combined HSE+ESG remit",
+    "Operations directors with HSE accountability",
+    "Senior consultants advising boards on HSE / ESG"
+  ],
+  "cta": {
+    "heading": "Build your senior HSE bench.",
+    "description": "Tell us how many leaders, when, and which programme. We'll build a corporate cohort around your calendar and respond within one business day.",
+    "primaryLabel": "Request a corporate quote",
+    "primaryHref": "/quotation?course=leadership-for-hse",
+    "secondaryLabel": "Talk to our partnerships lead",
+    "secondaryHref": "/contact"
+  }
+}

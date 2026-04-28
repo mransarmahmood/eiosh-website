@@ -68,6 +68,7 @@ const GROUPS: { heading: string; icon: LucideIcon; keys: string[]; accent: strin
       "page-certification-preparation",
       "page-about",
       "page-corporate-training",
+      "page-leadership",
       "page-partnership",
       "page-propose-course",
       "page-student-services",
