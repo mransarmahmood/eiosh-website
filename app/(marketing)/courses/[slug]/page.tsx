@@ -6,16 +6,21 @@ import { Container, Section } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { Badge } from "@/components/ui/Badge";
 import { InquiryForm } from "@/components/forms/InquiryForm";
+import { EnrolNowButton } from "@/components/forms/EnrolNowButton";
 import { CourseGrid } from "@/components/sections/CourseGrid";
+import { ReviewsList } from "@/components/reviews/ReviewsList";
 import { courses } from "@/content/courses";
 import { accreditations } from "@/content/accreditations";
 import { categories } from "@/content/categories";
 import { formatDate, formatDuration } from "@/lib/utils";
 import { pageMeta } from "@/lib/seo";
+import { ratingFor, listReviews, courseSchemaJsonLd } from "@/lib/reviews";
 
 interface Params {
   params: { slug: string };
 }
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://eiosh.com";
 
 export function generateStaticParams() {
   return courses.map((c) => ({ slug: c.slug }));
@@ -27,15 +32,32 @@ export function generateMetadata({ params }: Params) {
   return pageMeta({ title: c.title, description: c.headline, path: `/courses/${c.slug}` });
 }
 
-export default function CourseDetailPage({ params }: Params) {
+export default async function CourseDetailPage({ params }: Params) {
   const course = courses.find((c) => c.slug === params.slug);
   if (!course) return notFound();
   const body = accreditations.find((a) => a.slug === course.awardingBody);
   const category = categories.find((cat) => cat.slug === course.category);
   const related = courses.filter((c) => c.category === course.category && c.slug !== course.slug).slice(0, 3);
+  const rating = await ratingFor(course.slug);
+  const reviews = await listReviews({ courseSlug: course.slug, status: "verified" });
+  const jsonLd = courseSchemaJsonLd({
+    course: {
+      slug: course.slug,
+      title: course.title,
+      headline: course.headline,
+      priceFromUSD: course.priceFromUSD,
+    },
+    rating,
+    reviews,
+    siteUrl: SITE_URL,
+  });
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <PageHero
         eyebrow={category?.title ?? "Qualification"}
         title={course.title}
@@ -144,16 +166,45 @@ export default function CourseDetailPage({ params }: Params) {
                   </li>
                 </ul>
                 <div className="mt-6 flex flex-col gap-2.5">
-                  <Button href="#enquire" variant="gold" size="lg">
-                    Enrol or enquire
+                  <EnrolNowButton
+                    courseSlug={course.slug}
+                    price={course.priceFromUSD}
+                    currency="USD"
+                    fullWidth
+                  />
+                  <Button href="#enquire" variant="outline" size="lg">
+                    Talk to admissions
                   </Button>
-                  <Button href="/contact#brochure" variant="outline" size="lg">
+                  <Button href="/contact#brochure" variant="ghost" size="sm">
                     Download brochure
                   </Button>
                 </div>
-                <p className="mt-4 text-xs text-ink-soft">Flexible payment plans available for Level 5+ programmes.</p>
+                <p className="mt-4 text-xs text-ink-soft">
+                  Pay securely by card. Flexible instalment plans available for Level 5+ programmes — ask admissions.
+                </p>
               </div>
             </aside>
+          </div>
+        </Container>
+      </Section>
+
+      <Section>
+        <Container>
+          <div className="flex items-baseline justify-between">
+            <h2 className="font-heading text-2xl font-semibold text-navy-900">
+              Reviews from learners
+            </h2>
+            {rating.count > 0 && (
+              <p className="text-sm text-ink-soft">
+                <strong className="text-navy-900">{rating.avg.toFixed(1)}</strong> / 5 ·{" "}
+                {rating.count} verified review{rating.count === 1 ? "" : "s"}
+              </p>
+            )}
+          </div>
+          <div className="mt-6">
+            {/* Server component reads the reviews JSON. */}
+            {/* @ts-expect-error Async Server Component */}
+            <ReviewsList courseSlug={course.slug} limit={4} />
           </div>
         </Container>
       </Section>

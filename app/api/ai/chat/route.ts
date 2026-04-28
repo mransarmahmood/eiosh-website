@@ -19,13 +19,19 @@ const Schema = z.object({
 });
 
 function buildSystemPrompt() {
+  // Compact course catalogue — title, slug, level, duration, price, awarding body.
   const courseList = courses
-    .slice(0, 25)
-    .map((c) => `- ${c.title} (${c.slug}) — ${c.headline?.slice(0, 120) ?? ""}`)
+    .slice(0, 30)
+    .map((c) => {
+      const price = c.priceFromUSD ? `from US$${c.priceFromUSD}` : "price on request";
+      const body = c.awardingBody ? ` · ${c.awardingBody}` : "";
+      const dur = c.durationHours ? ` · ${c.durationHours}h` : "";
+      return `- ${c.title} (/courses/${c.slug}) — ${c.level}${dur}${body} · ${price} — ${c.headline?.slice(0, 100) ?? ""}`;
+    })
     .join("\n");
   const awardingBodies = accreditations.map((a) => `${a.shortName} (${a.name})`).join(", ");
   const categoryList = categories.map((c) => c.title).join(", ");
-  const faqLines = faqs.slice(0, 8).map((f) => `Q: ${f.question}\nA: ${f.answer}`).join("\n\n");
+  const faqLines = faqs.slice(0, 12).map((f) => `Q: ${f.question}\nA: ${f.answer}`).join("\n\n");
 
   return `You are the EIOSH assistant — a concise, factual guide to EIOSH International's qualifications and services.
 
@@ -36,7 +42,7 @@ About EIOSH:
 - Categories: ${categoryList}
 - Contact: ${site.contact.email} · ${site.contact.phone} · ${site.contact.addressLines.join(", ")}
 
-Top programmes:
+Programmes (with current pricing):
 ${courseList}
 
 Common answers:
@@ -44,10 +50,13 @@ ${faqLines}
 
 Rules:
 - Keep answers under 120 words unless the user asks for more.
-- When recommending a qualification, include the course slug as a markdown link like [Title](/courses/slug).
-- If the user asks to apply or enrol, direct them to /admission or /quotation.
-- If you genuinely don't know, say so and point them to info@eiosh.com.
-- Never make up course prices, cohort dates, or accreditations. If uncertain, suggest the user checks the relevant page.`;
+- When recommending a qualification, link it as a markdown link like [Title](/courses/slug).
+- Quote prices in USD as shown above. If a price isn't listed, say "price on request" and link to /quotation.
+- If the user asks to apply or enrol, direct them to /admission, /quotation, or the course's "Enrol now" button.
+- For LMS / exams / invoices, point to /student (the unified dashboard).
+- For certificate verification, point to /verify-certificate.
+- If you genuinely don't know, say so and point them to ${site.contact.email}.
+- Never invent course details, cohort dates, accreditations, or pricing not in the data above.`;
 }
 
 export async function POST(req: Request) {

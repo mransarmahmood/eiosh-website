@@ -82,7 +82,11 @@ export interface BlogPost {
   excerpt: string;
   body?: string;
   tags: string[];
+  /** Optional broader category — drives /blog filter pills (e.g. "Qualifications", "Leadership"). */
+  category?: string;
   author: string;
+  /** When set, the post's author profile/avatar is pulled from `content/trainers.json` by slug match. */
+  authorTrainerSlug?: string;
   publishedAt: string;
   readTimeMinutes: number;
   cover?: string;
