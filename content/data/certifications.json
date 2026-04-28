@@ -184,5 +184,258 @@
     "deliveryModes": ["in-person", "online"],
     "popular": true,
     "active": true
+  },
+  {
+    "id": "cert-bcsp-asp",
+    "slug": "bcsp-asp",
+    "title": "ASP",
+    "subtitle": "Associate Safety Professional (BCSP)",
+    "awardingBody": "BCSP",
+    "level": "Associate Professional",
+    "summary": "BCSP-accredited Associate Safety Professional credential — the recognised stepping-stone to the CSP. Covers risk, ergonomics, fire, environmental and emergency-response fundamentals to a US/Canada employer-recognised standard.",
+    "courseSlug": "bcsp-asp-prep",
+    "applyHref": "/admission?course=bcsp-asp-prep",
+    "outcomes": [
+      "Pass the BCSP ASP examination at first attempt",
+      "Apply hierarchy-of-control reasoning to mixed industrial settings",
+      "Quantify exposure and apply OSHA / ANSI thresholds",
+      "Build a defensible written hazard-analysis package"
+    ],
+    "modules": [
+      "Advanced sciences and math for safety",
+      "Safety management systems",
+      "Ergonomics and human factors",
+      "Fire prevention and protection",
+      "Occupational health and environmental controls",
+      "Training, education and managing safety programs",
+      "Law, ethics and professional practice",
+      "BCSP exam strategy and 600-question mock bank"
+    ],
+    "duration": "8–10 weeks (≈ 90 hours blended self-study + tutor sessions)",
+    "assessment": "Continuous in-cohort quizzing + final 200-question proctored mock to BCSP cut-score.",
+    "deliveryModes": ["online", "blended"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-bcsp-csp",
+    "slug": "bcsp-csp",
+    "title": "CSP",
+    "subtitle": "Certified Safety Professional (BCSP)",
+    "awardingBody": "BCSP",
+    "level": "Senior Professional",
+    "summary": "The flagship US/Canada credential for senior HSE leaders. The CSP signals that a practitioner can lead enterprise safety strategy, manage budgets, and direct legal and risk-engineering decisions.",
+    "courseSlug": "bcsp-csp-prep",
+    "applyHref": "/admission?course=bcsp-csp-prep",
+    "outcomes": [
+      "Pass the BCSP CSP examination at first attempt",
+      "Lead a corporate-wide HSE programme to ANSI Z10 / ISO 45001",
+      "Run cost-benefit, ROI and TRIR analyses to executive standard",
+      "Direct emergency-response, BCP and crisis-management drills"
+    ],
+    "modules": [
+      "Advanced safety management",
+      "Engineering controls and design review",
+      "Industrial hygiene and toxicology",
+      "Fire prevention engineering",
+      "Environmental management",
+      "Training, leadership and communications",
+      "Law, ethics and professional conduct",
+      "Final 200-question CSP mock to BCSP cut-score"
+    ],
+    "duration": "12 weeks (≈ 130 hours blended)",
+    "assessment": "Topic quizzes, scenario assignments and a full proctored CSP-format mock.",
+    "deliveryModes": ["online", "blended"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-pmi-pmp",
+    "slug": "pmi-pmp",
+    "title": "PMP",
+    "subtitle": "Project Management Professional (PMI)",
+    "awardingBody": "PMI",
+    "level": "Professional",
+    "summary": "PMI's globally recognised Project Management Professional. Mandatory for HSE consultants who lead multi-site programmes, capital projects and turnaround events. Covers Predictive, Agile and Hybrid delivery.",
+    "courseSlug": "pmi-pmp-prep",
+    "applyHref": "/admission?course=pmi-pmp-prep",
+    "outcomes": [
+      "Earn the 35 contact-hour certificate of completion required by PMI",
+      "Pass the PMP exam at first attempt — predictive, agile and hybrid",
+      "Lead cross-functional projects from charter to benefits realisation",
+      "Apply earned-value, risk and stakeholder management at portfolio level"
+    ],
+    "modules": [
+      "People — leading a project team",
+      "Process — managing the technical aspects",
+      "Business environment — strategy and benefits",
+      "Predictive, Agile and Hybrid lifecycles",
+      "Risk, procurement and quality",
+      "Earned value, scheduling and cost",
+      "Mock exams and ECO-aligned drills",
+      "PMI application and audit support"
+    ],
+    "duration": "35 contact hours over 6 weeks + self-study (≈ 80 hrs)",
+    "assessment": "Two full PMP-format mocks (180 questions, 230 minutes) plus topic drills.",
+    "deliveryModes": ["online", "blended", "in-person"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-bcrsp-crsp",
+    "slug": "bcrsp-crsp",
+    "title": "CRSP",
+    "subtitle": "Canadian Registered Safety Professional",
+    "awardingBody": "BCRSP",
+    "level": "Senior Professional",
+    "summary": "The leading Canadian designation for HSE practitioners — recognised across federally and provincially regulated employers. Aligns to the BCRSP Blueprint and prepares candidates for the multiple-choice and case-study examination.",
+    "courseSlug": "bcrsp-crsp-prep",
+    "applyHref": "/admission?course=bcrsp-crsp-prep",
+    "outcomes": [
+      "Pass the BCRSP CRSP examination at first attempt",
+      "Map Canadian OHS legislation and Workers' Compensation across provinces",
+      "Lead a CSA Z1000 / Z1001 / Z1002 management-system implementation",
+      "Run incident causation analysis to BCRSP standard"
+    ],
+    "modules": [
+      "Canadian OHS legislative framework",
+      "Hazard recognition, evaluation and control",
+      "Fire prevention and emergency management",
+      "Environmental management and sustainability",
+      "Industrial hygiene and ergonomics",
+      "Health & safety programme management",
+      "Professional ethics and the BCRSP code",
+      "Mock exams to BCRSP blueprint"
+    ],
+    "duration": "10 weeks blended (≈ 110 hours)",
+    "assessment": "Topic quizzes + two full BCRSP-format mocks.",
+    "deliveryModes": ["online", "blended"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-abih-cih",
+    "slug": "abih-cih",
+    "title": "CIH",
+    "subtitle": "Certified Industrial Hygienist (ABIH)",
+    "awardingBody": "ABIH",
+    "level": "Senior Professional",
+    "summary": "ABIH's gold-standard credential for industrial hygiene professionals. Designed for practitioners managing chemical, biological, physical and ergonomic exposures in heavy industry, healthcare and pharma.",
+    "courseSlug": "abih-cih-prep",
+    "applyHref": "/admission?course=abih-cih-prep",
+    "outcomes": [
+      "Pass the ABIH CIH examination at first attempt",
+      "Design exposure-assessment campaigns to AIHA standards",
+      "Interpret OEL, TLV, PEL and REL frameworks across jurisdictions",
+      "Lead respiratory-protection, hearing and ventilation programmes"
+    ],
+    "modules": [
+      "Air sampling and instrumentation",
+      "Toxicology and biological monitoring",
+      "Noise, radiation and thermal stress",
+      "Ergonomics and biomechanics",
+      "Engineering controls and ventilation",
+      "Programme management and risk communication",
+      "Statistics and exposure assessment",
+      "ABIH-format mock exam"
+    ],
+    "duration": "12 weeks blended (≈ 140 hours)",
+    "assessment": "Calculation drills + ABIH-format proctored mock.",
+    "deliveryModes": ["online", "blended"],
+    "popular": false,
+    "active": true
+  },
+  {
+    "id": "cert-bcsp-chst",
+    "slug": "bcsp-chst",
+    "title": "CHST",
+    "subtitle": "Construction Health & Safety Technician (BCSP)",
+    "awardingBody": "BCSP",
+    "level": "Technician",
+    "summary": "BCSP's site-supervisor credential for construction H&S. Built for foremen, site safety leads and HSE coordinators on civil, building and infrastructure projects.",
+    "courseSlug": "bcsp-chst-prep",
+    "applyHref": "/admission?course=bcsp-chst-prep",
+    "outcomes": [
+      "Pass the BCSP CHST examination at first attempt",
+      "Lead toolbox talks and pre-task briefings to OSHA standard",
+      "Run construction-specific risk assessments (excavation, working at height, hot work)",
+      "Investigate site incidents and write defensible reports"
+    ],
+    "modules": [
+      "Construction site safety regulation (OSHA 1926)",
+      "Working at height, scaffolding and ladders",
+      "Excavation, trenching and confined-space",
+      "Cranes, lifting and rigging",
+      "Hot work, electrical and lockout/tagout",
+      "Personal protective equipment programmes",
+      "Site incident investigation and reporting",
+      "BCSP CHST mock exam"
+    ],
+    "duration": "6 weeks blended (≈ 60 hours)",
+    "assessment": "Topic quizzes + BCSP-format mock.",
+    "deliveryModes": ["online", "in-person"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-bcsp-ohst",
+    "slug": "bcsp-ohst",
+    "title": "OHST",
+    "subtitle": "Occupational Hygiene & Safety Technician (BCSP)",
+    "awardingBody": "BCSP",
+    "level": "Technician",
+    "summary": "BCSP's mid-career technician credential covering general industry and manufacturing. A natural pathway for HSE coordinators who want a US/Canada-recognised mark before stepping up to ASP or CSP.",
+    "courseSlug": "bcsp-ohst-prep",
+    "applyHref": "/admission?course=bcsp-ohst-prep",
+    "outcomes": [
+      "Pass the BCSP OHST examination at first attempt",
+      "Run hazard surveys in mixed industrial settings",
+      "Manage exposure-monitoring data and corrective action",
+      "Communicate findings to operations and senior management"
+    ],
+    "modules": [
+      "Recognition of general-industry hazards",
+      "Industrial hygiene fundamentals",
+      "Fire and emergency preparedness",
+      "Environmental controls",
+      "Training and programme administration",
+      "Records, statistics and KPI reporting",
+      "Ethics and professional practice",
+      "BCSP OHST mock exam"
+    ],
+    "duration": "6 weeks blended (≈ 60 hours)",
+    "assessment": "Topic quizzes + BCSP-format mock.",
+    "deliveryModes": ["online", "blended"],
+    "popular": false,
+    "active": true
+  },
+  {
+    "id": "cert-iosh-cmiosh",
+    "slug": "cmiosh-pathway",
+    "title": "CMIOSH Pathway",
+    "subtitle": "Chartered Member of IOSH",
+    "awardingBody": "IOSH",
+    "level": "Chartered",
+    "summary": "Mentored route to Chartered Membership of IOSH — the UK's gold-standard professional grade. We support candidates through Initial Professional Development (IPD) and the Peer-Review Interview (PRI).",
+    "courseSlug": "cmiosh-pathway",
+    "applyHref": "/admission?course=cmiosh-pathway",
+    "outcomes": [
+      "Map your experience to the IOSH IPD competency framework",
+      "Build a portfolio that survives moderation",
+      "Prepare for and pass the IOSH Peer-Review Interview (PRI)",
+      "Plan a 12-month CPD cycle that retains chartership"
+    ],
+    "modules": [
+      "Understanding the CMIOSH competency framework",
+      "Evidence selection and reflective writing",
+      "Portfolio compilation and review",
+      "Mock peer-review interviews with chartered mentors",
+      "CPD planning post-chartership"
+    ],
+    "duration": "6–12 months mentored",
+    "assessment": "Portfolio submission to IOSH + Peer-Review Interview (PRI).",
+    "deliveryModes": ["online", "blended"],
+    "popular": false,
+    "active": true
   }
 ]

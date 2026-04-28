@@ -153,13 +153,18 @@ function CertificationsPanel() {
 }
 
 function ResourcesPanel() {
-  const shelves: { label: string; href: string; blurb: string }[] = [
+  const examUrl =
+    process.env.NEXT_PUBLIC_EXAM_URL ??
+    "https://eiosh-com-725461.hostingersite.com/exam/public/login";
+  const shelves: { label: string; href: string; blurb: string; external?: boolean }[] = [
     { label: "Course calendar", href: "/calendar", blurb: "Every cohort, workshop and webinar in a month view." },
     { label: "Events & seminars", href: "/events", blurb: "Upcoming workshops, free webinars and open days." },
     { label: "Free online courses", href: "/free-courses", blurb: "Short video, audio and reading courses — always free." },
+    { label: "Exam portal ↗", href: examUrl, blurb: "Schedule and sit your written assessments online.", external: true },
     { label: "Books & notes", href: "/resources", blurb: "Practitioner books, sample papers and checklists." },
     { label: "Insights", href: "/blog", blurb: "Faculty briefings on safety, environment and leadership." },
     { label: "Verify a certificate", href: "/verify-certificate", blurb: "For employers and regulators." },
+    { label: "Community", href: "/community", blurb: "Alumni discussions, peer-led, free to join." },
   ];
   return (
     <div className="grid grid-cols-12 gap-10">
@@ -179,10 +184,22 @@ function ResourcesPanel() {
       <ul className="col-span-7 grid grid-cols-2 gap-3">
         {shelves.map((s) => (
           <li key={s.href}>
-            <Link href={s.href} className="block rounded-lg bg-surface-subtle p-4 ring-1 ring-border transition hover:ring-cyan-400 hover:bg-white">
-              <span className="block font-heading font-medium text-navy-900">{s.label}</span>
-              <span className="mt-0.5 block text-sm text-ink-muted">{s.blurb}</span>
-            </Link>
+            {s.external ? (
+              <a
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block rounded-lg bg-surface-subtle p-4 ring-1 ring-border transition hover:ring-cyan-400 hover:bg-white"
+              >
+                <span className="block font-heading font-medium text-navy-900">{s.label}</span>
+                <span className="mt-0.5 block text-sm text-ink-muted">{s.blurb}</span>
+              </a>
+            ) : (
+              <Link href={s.href} className="block rounded-lg bg-surface-subtle p-4 ring-1 ring-border transition hover:ring-cyan-400 hover:bg-white">
+                <span className="block font-heading font-medium text-navy-900">{s.label}</span>
+                <span className="mt-0.5 block text-sm text-ink-muted">{s.blurb}</span>
+              </Link>
+            )}
           </li>
         ))}
       </ul>

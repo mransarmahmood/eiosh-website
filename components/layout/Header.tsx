@@ -11,16 +11,14 @@ import { MobileNav } from "@/components/layout/MobileNav";
 import { site } from "@/content/site";
 
 const primaryLinks: { label: string; href: string; mega?: MegaKey }[] = [
-  { label: "About Us", href: "/about" },
+  { label: "About", href: "/about" },
   { label: "Courses", href: "/courses", mega: "courses" },
   { label: "Certifications", href: "/certifications", mega: "certifications" },
   { label: "Awarding Bodies", href: "/awarding-bodies", mega: "approvals" },
   { label: "Corporate", href: "/corporate-training" },
   { label: "Leadership", href: "/leadership" },
+  // Resources mega includes Calendar, Free Courses, Exam Portal, Books, Insights, Verify
   { label: "Resources", href: "/resources", mega: "resources" },
-  { label: "Exam Portal", href: process.env.NEXT_PUBLIC_EXAM_URL ?? "https://eiosh-com-725461.hostingersite.com/exam/public/login" },
-  { label: "Calendar", href: "/calendar" },
-  { label: "Free Courses", href: "/free-courses" },
 ];
 
 export function Header() {
