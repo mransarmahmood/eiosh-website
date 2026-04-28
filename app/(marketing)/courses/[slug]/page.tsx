@@ -15,6 +15,7 @@ import { categories } from "@/content/categories";
 import { formatDate, formatDuration } from "@/lib/utils";
 import { pageMeta } from "@/lib/seo";
 import { ratingFor, listReviews, courseSchemaJsonLd } from "@/lib/reviews";
+import { PriceDisplay } from "@/components/ui/PriceDisplay";
 
 interface Params {
   params: { slug: string };
@@ -149,7 +150,11 @@ export default async function CourseDetailPage({ params }: Params) {
               <div className="sticky top-28 rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated">
                 <p className="text-xs uppercase tracking-wider text-ink-soft">From</p>
                 <p className="mt-1 font-heading text-3xl font-semibold text-navy-900">
-                  {course.priceFromUSD ? `US$${course.priceFromUSD.toLocaleString()}` : "Enquire"}
+                  {course.priceFromUSD ? (
+                    <PriceDisplay usd={course.priceFromUSD} showSource={false} />
+                  ) : (
+                    "Enquire"
+                  )}
                 </p>
                 <ul className="mt-5 space-y-3 text-sm">
                   <li className="flex items-center gap-2.5 text-ink">

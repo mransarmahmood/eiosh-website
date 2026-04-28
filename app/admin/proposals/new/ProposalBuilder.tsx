@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { Plus, Trash2, Loader2, FileText, Send, ExternalLink, Check } from "lucide-react";
 import type { ProposalTemplate, SavedProposal, ProposalLineItem } from "@/lib/proposals";
 import type { Service } from "@/lib/services";
+import { CurrencySelect } from "@/components/admin/CurrencySelect";
 
 const blankItem = (currency = "USD"): ProposalLineItem => ({
   id: "li-" + Math.random().toString(36).slice(2, 8),
@@ -412,7 +413,11 @@ export function ProposalBuilder({
                     value={li.unitPrice}
                     onChange={(v) => updateLineItem(li.id, { unitPrice: Number(v) || 0 })}
                   />
-                  <p className="mt-1 text-[0.65rem] uppercase text-ink-soft">unit price ({li.currency})</p>
+                  <CurrencySelect
+                    value={li.currency || "USD"}
+                    onChange={(code) => updateLineItem(li.id, { currency: code })}
+                    className="mt-1 block w-full rounded-md border border-border bg-white px-2 py-1 text-xs focus:border-cyan-500 focus:outline-none"
+                  />
                 </div>
                 <div className="md:col-span-2 flex items-start gap-2">
                   <span className="rounded bg-navy-50 px-2 py-1 text-sm font-mono text-navy-900">

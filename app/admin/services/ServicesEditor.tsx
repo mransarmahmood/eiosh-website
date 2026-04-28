@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Plus, Trash2, Save, Loader2, Check } from "lucide-react";
 import type { Service } from "@/lib/services";
+import { CurrencySelect } from "@/components/admin/CurrencySelect";
 
 const EMPTY: Service = {
   id: "",
@@ -193,12 +194,9 @@ function ServiceFields({
         />
       </Field>
       <Field label="Currency">
-        <input
-          type="text"
-          value={value.currency}
-          onChange={(e) => onChange("currency", e.target.value.toUpperCase())}
-          maxLength={6}
-          className="w-full rounded-lg border border-border bg-white px-3 py-2 text-sm focus:border-cyan-500 focus:outline-none"
+        <CurrencySelect
+          value={value.currency || "USD"}
+          onChange={(code) => onChange("currency", code)}
         />
       </Field>
       <Field label="Unit (e.g. 'per learner')">

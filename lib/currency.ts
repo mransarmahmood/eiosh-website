@@ -41,6 +41,8 @@ export function listSupportedCurrencies(): CurrencyDisplay[] {
   return Object.values(RATES_FROM_USD);
 }
 
+const PREFERENCE_COOKIE = "eiosh_ccy";
+
 /** Best guess at the visitor's country from common edge headers. */
 export function detectCountry(): string {
   try {
@@ -62,8 +64,26 @@ export function detectCountry(): string {
   return "US";
 }
 
-/** Currency the visitor is most likely to spend in. */
+/**
+ * Currency the visitor wants to see prices in. Order of precedence:
+ *   1. `eiosh_ccy` cookie (manual choice from the switcher)
+ *   2. Country → currency map from edge IP headers
+ *   3. USD
+ */
 export function detectCurrency(): CurrencyDisplay {
+  // Cookie wins (user explicitly switched).
+  try {
+    // Lazy-import the cookies API so this module still works in build-time
+    // contexts where the request scope isn't available.
+    // eslint-disable-next-line @typescript-eslint/no-require-imports
+    const { cookies } = require("next/headers") as typeof import("next/headers");
+    const code = cookies().get(PREFERENCE_COOKIE)?.value;
+    if (code && RATES_FROM_USD[code.toUpperCase()]) {
+      return RATES_FROM_USD[code.toUpperCase()];
+    }
+  } catch {
+    // Outside a request — fall through to geo detection.
+  }
   const country = detectCountry();
   const code = COUNTRY_TO_CURRENCY[country] ?? "USD";
   return RATES_FROM_USD[code] ?? RATES_FROM_USD.USD;

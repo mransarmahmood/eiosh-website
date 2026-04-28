@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Linkedin, Facebook, Instagram, Youtube, Mail, Phone, MapPin } from "lucide-react";
 import { Logo } from "@/components/ui/Logo";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
+import { CurrencySwitcher } from "@/components/layout/CurrencySwitcher";
+import { detectCurrency, listSupportedCurrencies } from "@/lib/currency";
 import { site } from "@/content/site";
 
 const columns = [
@@ -185,6 +187,11 @@ export function Footer() {
             © {year} {site.brand.name}. All rights reserved.
           </p>
           <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
+            <CurrencySwitcher
+              current={detectCurrency()}
+              options={listSupportedCurrencies()}
+              variant="full"
+            />
             <Link href="/policies#privacy" className="hover:text-white">
               Privacy
             </Link>
