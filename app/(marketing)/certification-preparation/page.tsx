@@ -1,57 +1,91 @@
+import { promises as fs } from "node:fs";
+import { join } from "node:path";
+import * as Icons from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container, Section } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
 import { FAQSection } from "@/components/sections/FAQSection";
 import { CourseGrid } from "@/components/sections/CourseGrid";
-import { CheckCircle2, Timer, BookOpen, Headphones } from "lucide-react";
 import { courses } from "@/content/courses";
 import { pageMeta } from "@/lib/seo";
 
-export const metadata = pageMeta({
-  title: "Certification Preparation",
-  description:
-    "End-to-end preparation for NEBOSH, IOSH, OTHM, HABC, IEMA and ISO 45001 — with mock assessments, tutor office hours and workplace-project mentoring.",
-  path: "/certification-preparation",
-});
+interface PageContent {
+  hero: { eyebrow: string; title: string; description: string };
+  pillarsHeading: { eyebrow: string; title: string };
+  pillars: { icon: string; title: string; description: string }[];
+  focusHeading: { eyebrow: string; title: string; description: string };
+  focusCourseSlugs: string[];
+  cta: {
+    heading: string;
+    description: string;
+    primaryLabel: string;
+    primaryHref: string;
+    secondaryLabel?: string;
+    secondaryHref?: string;
+  };
+}
 
-const pillars = [
-  { icon: BookOpen, t: "Structured syllabus mapping", d: "Every session linked to the awarding body's published learning outcomes, with nothing skipped." },
-  { icon: Timer, t: "Timed mock assessments", d: "At least two full-length mock exams per course, marked against awarding-body standards." },
-  { icon: Headphones, t: "Tutor office hours", d: "Weekly small-group sessions with the lead tutor — not a support inbox." },
-  { icon: CheckCircle2, t: "Portfolio & project review", d: "Internal verification of every workplace project before it goes to the awarding body." },
-];
+async function loadPage(): Promise<PageContent> {
+  const path = join(process.cwd(), "content", "data", "page-certification-preparation.json");
+  return JSON.parse(await fs.readFile(path, "utf-8")) as PageContent;
+}
 
-export default function CertificationPreparationPage() {
-  const focus = courses.filter((c) => ["iosh-managing-safely", "nebosh-international-general-certificate", "othm-level-6-diploma-ohs", "iema-foundation-sustainability", "habc-level-2-food-safety"].includes(c.slug));
+export async function generateMetadata() {
+  try {
+    const p = await loadPage();
+    return pageMeta({
+      title: p.hero.title,
+      description: p.hero.description,
+      path: "/certification-preparation",
+    });
+  } catch {
+    return pageMeta({ title: "Certification Preparation", path: "/certification-preparation" });
+  }
+}
+
+export default async function CertificationPreparationPage() {
+  const p = await loadPage();
+  // Resolve focus courses from the CMS slug list, preserving the editor's order.
+  const focus = p.focusCourseSlugs
+    .map((slug) => courses.find((c) => c.slug === slug))
+    .filter((c): c is (typeof courses)[number] => !!c);
 
   return (
     <>
       <PageHero
-        eyebrow="Certification preparation"
-        title="Pass the first time. Lead with the credential."
-        description="Our preparation pathway takes you from syllabus to certification in a single, structured programme — designed by the tutors who mark the assessments."
+        eyebrow={p.hero.eyebrow}
+        title={p.hero.title}
+        description={p.hero.description}
         breadcrumbs={[{ label: "Certification preparation" }]}
       />
 
       <Section>
         <Container>
           <SectionHeading
-            eyebrow="What makes EIOSH preparation different"
-            title="Four things we refuse to compromise on."
+            eyebrow={p.pillarsHeading.eyebrow}
+            title={p.pillarsHeading.title}
             align="center"
             className="mx-auto text-center"
           />
           <ul className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {pillars.map((p) => {
-              const Icon = p.icon;
+            {p.pillars.map((pillar) => {
+              const Icon =
+                (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[
+                  pillar.icon
+                ] ?? Icons.CheckCircle2;
               return (
-                <li key={p.t} className="rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated">
+                <li
+                  key={pillar.title}
+                  className="rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated"
+                >
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-navy-50 text-navy-800 ring-1 ring-inset ring-navy-200">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <p className="mt-5 font-heading text-lg font-semibold text-navy-900">{p.t}</p>
-                  <p className="mt-2 text-sm text-ink-muted">{p.d}</p>
+                  <p className="mt-5 font-heading text-lg font-semibold text-navy-900">
+                    {pillar.title}
+                  </p>
+                  <p className="mt-2 text-sm text-ink-muted">{pillar.description}</p>
                 </li>
               );
             })}
@@ -61,9 +95,9 @@ export default function CertificationPreparationPage() {
 
       <CourseGrid
         courses={focus}
-        eyebrow="Focus certifications"
-        title="The credentials we prepare people for every week."
-        description="A selection of our most requested certification preparation pathways, across HSE, environment, food and management."
+        eyebrow={p.focusHeading.eyebrow}
+        title={p.focusHeading.title}
+        description={p.focusHeading.description}
         tone="subtle"
         showViewAll
       />
@@ -71,13 +105,18 @@ export default function CertificationPreparationPage() {
       <Section tone="gradient">
         <Container className="text-center">
           <h2 className="text-display-sm sm:text-display-md font-heading font-semibold text-white text-balance">
-            Tell us the certification you need.
+            {p.cta.heading}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">
-            An advisor will match you to the right cohort and preparation plan — usually within one business day.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Button href="/contact" variant="gold" size="lg">Book an advisory call</Button>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">{p.cta.description}</p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            <Button href={p.cta.primaryHref} variant="gold" size="lg">
+              {p.cta.primaryLabel}
+            </Button>
+            {p.cta.secondaryLabel && p.cta.secondaryHref && (
+              <Button href={p.cta.secondaryHref} variant="outline" size="lg">
+                {p.cta.secondaryLabel}
+              </Button>
+            )}
           </div>
         </Container>
       </Section>

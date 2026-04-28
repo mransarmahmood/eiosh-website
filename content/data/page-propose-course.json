@@ -1,0 +1,22 @@
+{
+  "hero": {
+    "eyebrow": "Propose a course",
+    "title": "There's a course we should run. Tell us.",
+    "description": "If you've identified a sector-specific HSE qualification that EIOSH should add to its catalogue — propose it. Our curriculum team reviews proposals every quarter."
+  },
+  "intro": "We add 4–6 new courses each year to the EIOSH catalogue. Most come from learners or partners who've spotted a regulatory gap, a sector need, or an awarding body update we should adopt early. If you've spotted one — let us know.",
+  "criteria": [
+    "There's an underserved learner audience (sector, region, or job role).",
+    "An accredited awarding body already exists (or you have a credible path to launch one).",
+    "You can articulate the learning outcomes in ≤ 10 bullet points.",
+    "You've checked that no near-equivalent already exists in our catalogue at /courses."
+  ],
+  "cta": {
+    "heading": "Send us your proposal.",
+    "description": "Use the form on this page (or email curriculum@eiosh.com). We aim to respond within 10 working days.",
+    "primaryLabel": "Email curriculum",
+    "primaryHref": "mailto:curriculum@eiosh.com",
+    "secondaryLabel": "Browse current catalogue",
+    "secondaryHref": "/courses"
+  }
+}

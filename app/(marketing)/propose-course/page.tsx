@@ -1,48 +1,52 @@
+import { CheckCircle2 } from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container, Section } from "@/components/ui/Container";
 import { SubmissionForm } from "@/components/forms/SubmissionForm";
-import { CheckCircle2, Target, Users2, ClipboardList } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
+import { loadPageContent, type BasicHero, type BasicCta } from "@/lib/page-content";
 
-export const metadata = pageMeta({
-  title: "Propose a Course",
-  description:
-    "Suggest a custom or bespoke course for your organisation. EIOSH course proposals are reviewed by our faculty and responded to within one business day.",
-  path: "/propose-course",
-});
+interface ProposeContent {
+  hero: BasicHero;
+  intro: string;
+  criteria: string[];
+  cta: BasicCta;
+}
 
-const value = [
-  { icon: Target, t: "Built around your outcomes", d: "Scoped to the competencies and KPIs that matter to your team." },
-  { icon: Users2, t: "Any cohort size", d: "From 6 executives to 500-person enterprise rollouts." },
-  { icon: ClipboardList, t: "Awarding-body aligned", d: "Where possible we certify through IOSH, HABC, OTHM or OSHAcademy." },
-  { icon: CheckCircle2, t: "Response within 1 day", d: "A corporate lead will follow up with feasibility and pricing." },
-];
+export async function generateMetadata() {
+  try {
+    const p = await loadPageContent<ProposeContent>("propose-course");
+    return pageMeta({
+      title: p.hero.title,
+      description: p.hero.description,
+      path: "/propose-course",
+    });
+  } catch {
+    return pageMeta({ title: "Propose a Course", path: "/propose-course" });
+  }
+}
 
-export default function ProposeCoursePage() {
+export default async function ProposeCoursePage() {
+  const p = await loadPageContent<ProposeContent>("propose-course");
+
   return (
     <>
       <PageHero
-        eyebrow="Course proposals"
-        title="Propose a course for your organisation."
-        description="Have a capability gap we can close? Submit a course proposal and our faculty will come back with an outline, cohort plan and investment estimate — usually within one business day."
+        eyebrow={p.hero.eyebrow}
+        title={p.hero.title}
+        description={p.hero.description}
         breadcrumbs={[{ label: "Propose a course" }]}
       />
 
       <Section>
         <Container>
-          <ul className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-            {value.map((v) => {
-              const Icon = v.icon;
-              return (
-                <li key={v.t} className="rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-50 text-cyan-700 ring-1 ring-inset ring-cyan-200">
-                    <Icon className="h-5 w-5" />
-                  </span>
-                  <p className="mt-5 font-heading text-lg font-semibold text-navy-900">{v.t}</p>
-                  <p className="mt-2 text-sm text-ink-muted">{v.d}</p>
-                </li>
-              );
-            })}
+          <p className="prose-eiosh">{p.intro}</p>
+          <ul className="mt-8 space-y-3">
+            {p.criteria.map((line) => (
+              <li key={line} className="flex items-start gap-3 text-sm">
+                <CheckCircle2 className="mt-0.5 h-5 w-5 flex-shrink-0 text-cyan-600" />
+                <span className="text-ink">{line}</span>
+              </li>
+            ))}
           </ul>
         </Container>
       </Section>
@@ -51,24 +55,13 @@ export default function ProposeCoursePage() {
         <Container>
           <div className="grid gap-10 lg:grid-cols-2 lg:items-start">
             <div>
-              <p className="eyebrow">Submit a proposal</p>
+              <p className="eyebrow">{p.cta.heading}</p>
               <h2 className="mt-3 font-heading text-display-sm font-semibold text-navy-900 text-balance">
-                Tell us what you're trying to certify, accredit, or upskill.
+                Tell us what you'd like EIOSH to design or deliver.
               </h2>
-              <p className="mt-4 text-ink-muted">
-                Briefly describe the course you want EIOSH to design or deliver. Our corporate team routes every proposal to the right faculty area.
-              </p>
-              <ul className="mt-6 space-y-2 text-sm text-ink">
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-600" /> NDA available on request
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-600" /> Proposals reviewed by senior faculty
-                </li>
-                <li className="flex items-center gap-2.5">
-                  <CheckCircle2 className="h-4 w-4 text-cyan-600" /> Bilingual delivery (EN / AR) possible
-                </li>
-              </ul>
+              {p.cta.description && (
+                <p className="mt-4 text-ink-muted">{p.cta.description}</p>
+              )}
             </div>
 
             <SubmissionForm

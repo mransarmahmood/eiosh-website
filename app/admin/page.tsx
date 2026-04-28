@@ -61,6 +61,20 @@ const GROUPS: { heading: string; icon: LucideIcon; keys: string[]; accent: strin
     keys: ["admissions", "registrations"],
   },
   {
+    heading: "Static pages",
+    icon: BookText,
+    accent: "from-purple-700 via-purple-500 to-pink-300",
+    keys: [
+      "page-certification-preparation",
+      "page-about",
+      "page-corporate-training",
+      "page-partnership",
+      "page-propose-course",
+      "page-student-services",
+      "page-policies",
+    ],
+  },
+  {
     heading: "Settings",
     icon: Settings,
     accent: "from-navy-950 via-navy-800 to-navy-600",

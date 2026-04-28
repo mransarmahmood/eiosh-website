@@ -1,0 +1,48 @@
+{
+  "hero": {
+    "eyebrow": "Student services",
+    "title": "We don't disappear after enrolment.",
+    "description": "Active learners get tutor office hours, exam re-sit policy, accessibility support, certificate replacement and a graduation alumni network — all included."
+  },
+  "intro": "Every EIOSH learner gets the same baseline support package — regardless of whether you enrolled directly, through a corporate cohort, or via a delivery partner. Need something not listed? Email support@eiosh.com.",
+  "services": [
+    {
+      "icon": "Headphones",
+      "title": "Tutor office hours",
+      "description": "Weekly small-group sessions with the lead tutor on each programme. Drop-in, no booking needed."
+    },
+    {
+      "icon": "ShieldCheck",
+      "title": "Accessibility & adjustments",
+      "description": "Reasonable adjustments for assessments — extra time, screen readers, alternative formats. Apply via student.services@eiosh.com."
+    },
+    {
+      "icon": "RefreshCcw",
+      "title": "Exam re-sits",
+      "description": "One free re-sit included on regulated qualifications (T&Cs apply). Subsequent attempts at the awarding-body fee."
+    },
+    {
+      "icon": "Award",
+      "title": "Certificate replacements",
+      "description": "Lost a certificate? Order a replacement (digital or printed) at the certificate-replacement page in the student dashboard."
+    },
+    {
+      "icon": "Users",
+      "title": "Alumni network",
+      "description": "Once you've certified, you're invited to the alumni community at /community — free, peer-led, full of senior HSE professionals."
+    },
+    {
+      "icon": "Mail",
+      "title": "Direct support",
+      "description": "Email support@eiosh.com. We aim to respond within one business day. Urgent? Use the WhatsApp link in the footer."
+    }
+  ],
+  "cta": {
+    "heading": "Already enrolled?",
+    "description": "Sign in to your student dashboard for course materials, certificates and exam schedules.",
+    "primaryLabel": "Student dashboard",
+    "primaryHref": "/student",
+    "secondaryLabel": "Email support",
+    "secondaryHref": "mailto:support@eiosh.com"
+  }
+}

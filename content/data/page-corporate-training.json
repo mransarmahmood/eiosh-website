@@ -1,0 +1,45 @@
+{
+  "hero": {
+    "eyebrow": "Corporate training",
+    "title": "HSE qualifications, delivered to your team.",
+    "description": "Bespoke cohorts of IOSH, NEBOSH, OSHA and IEMA programmes — at your site, in your LMS, or fully online. From single departments to multi-country rollouts."
+  },
+  "intro": "We work with corporate HSE leaders who need consistent, audit-ready training across their workforce. Whether you're standardising line-manager safety, onboarding 200 new joiners, or upskilling an internal HSE team toward NEBOSH — we deliver the cohort, the materials, the assessment and the certificate, all under one centre.",
+  "pillars": [
+    {
+      "icon": "Building2",
+      "title": "On-site, online or blended",
+      "description": "Live classroom delivery at your venue, fully online cohorts via Zoom + LMS, or blended for distributed teams."
+    },
+    {
+      "icon": "ClipboardCheck",
+      "title": "Audit-ready records",
+      "description": "Attendance, assessment evidence and IV records ready for your awarding-body audits and ISO management reviews."
+    },
+    {
+      "icon": "Users",
+      "title": "Branded learner experience",
+      "description": "Co-branded materials, custom inductions, and integration with your LMS / SSO / HRIS where required."
+    },
+    {
+      "icon": "BarChart3",
+      "title": "Manager dashboards",
+      "description": "Cohort-level progress reporting so HR and HSE leadership can track completion + competency in real time."
+    }
+  ],
+  "popularProgrammes": [
+    "IOSH Managing Safely (3-day cohort)",
+    "IOSH Working Safely (workforce-wide)",
+    "NEBOSH IGC blended cohort",
+    "OTHM Level 6 Diploma in OHS",
+    "Corporate HSE onboarding e-learning"
+  ],
+  "cta": {
+    "heading": "Plan your next cohort.",
+    "description": "Tell us how many learners, when, and the certifications you need — we'll come back with a tailored proposal within one business day.",
+    "primaryLabel": "Request a quote",
+    "primaryHref": "/quotation",
+    "secondaryLabel": "Talk to admissions",
+    "secondaryHref": "/contact"
+  }
+}

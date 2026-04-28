@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "About EIOSH",
+    "title": "Approved international training. Practitioner-led.",
+    "description": "EIOSH International is an approved centre for IOSH, OSHAcademy, OSHAwards, HABC, OTHM and IEMA — delivering regulated qualifications and consulting across MENA, South Asia and beyond."
+  },
+  "intro": "We started with a simple belief: HSE training should be taught by people who actually do the work. Today, our faculty includes IRATA inspectors, IOSH-approved trainers, NEBOSH-registered tutors and ISO 45001 lead auditors — every one of them with site experience, not just slides.",
+  "pillars": [
+    {
+      "icon": "Award",
+      "title": "Approved by 6 awarding bodies",
+      "description": "IOSH, OSHAcademy, OSHAwards, HABC, OTHM and IEMA — externally verified centre standards on every cohort."
+    },
+    {
+      "icon": "Users",
+      "title": "12 years, 5,000+ certificates",
+      "description": "Our public registry covers every learner we've certified. Verifiable by ID at /verify-certificate."
+    },
+    {
+      "icon": "Globe2",
+      "title": "Cross-region delivery",
+      "description": "In-person across MENA + South Asia, blended cohorts globally, plus dedicated corporate onboarding tracks."
+    }
+  ],
+  "missionHeading": "Our mission",
+  "mission": "Equip every learner with credentials that actually open doors — and ensure that every certificate carries the same weight, whether issued in Lahore, Riyadh, Dubai or London.",
+  "cta": {
+    "heading": "Talk to our admissions team.",
+    "description": "Tell us your goal — qualification, corporate rollout, or compliance project — and we'll match you to the right pathway.",
+    "primaryLabel": "Contact us",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Browse courses",
+    "secondaryHref": "/courses"
+  }
+}

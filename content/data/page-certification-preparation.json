@@ -1,0 +1,53 @@
+{
+  "hero": {
+    "eyebrow": "Certification preparation",
+    "title": "Pass the first time. Lead with the credential.",
+    "description": "Our preparation pathway takes you from syllabus to certification in a single, structured programme — designed by the tutors who mark the assessments."
+  },
+  "pillarsHeading": {
+    "eyebrow": "What makes EIOSH preparation different",
+    "title": "Four things we refuse to compromise on."
+  },
+  "pillars": [
+    {
+      "icon": "BookOpen",
+      "title": "Structured syllabus mapping",
+      "description": "Every session linked to the awarding body's published learning outcomes, with nothing skipped."
+    },
+    {
+      "icon": "Timer",
+      "title": "Timed mock assessments",
+      "description": "At least two full-length mock exams per course, marked against awarding-body standards."
+    },
+    {
+      "icon": "Headphones",
+      "title": "Tutor office hours",
+      "description": "Weekly small-group sessions with the lead tutor — not a support inbox."
+    },
+    {
+      "icon": "CheckCircle2",
+      "title": "Portfolio & project review",
+      "description": "Internal verification of every workplace project before it goes to the awarding body."
+    }
+  ],
+  "focusHeading": {
+    "eyebrow": "Focus certifications",
+    "title": "The credentials we prepare people for every week.",
+    "description": "A selection of our most requested certification preparation pathways, across HSE, environment, food and management."
+  },
+  "focusCourseSlugs": [
+    "iosh-managing-safely",
+    "nebosh-international-general-certificate",
+    "othm-level-6-diploma-ohs",
+    "iema-foundation-sustainability",
+    "habc-level-2-food-safety"
+  ],
+  "cta": {
+    "heading": "Tell us the certification you need.",
+    "description": "An advisor will match you to the right cohort and preparation plan — usually within one business day.",
+    "primaryLabel": "Book an advisory call",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Request a quote",
+    "secondaryHref": "/quotation"
+  }
+}

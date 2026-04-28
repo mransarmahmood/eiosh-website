@@ -1,77 +1,69 @@
-import Link from "next/link";
+import * as Icons from "lucide-react";
 import { PageHero } from "@/components/sections/PageHero";
 import { Container, Section } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Button } from "@/components/ui/Button";
-import { LifeBuoy, FileText, BadgeCheck, UserCog, HeartPulse, BookOpen } from "lucide-react";
 import { pageMeta } from "@/lib/seo";
+import { loadPageContent, type BasicHero, type BasicCta, type IconCard } from "@/lib/page-content";
 
-export const metadata = pageMeta({
-  title: "Student Services",
-  description:
-    "Admissions, tutor support, reasonable adjustments, re-sits, transcripts and certificate reissue — all the support services EIOSH offers enrolled learners.",
-  path: "/student-services",
-});
+interface StudentServicesContent {
+  hero: BasicHero;
+  intro: string;
+  services: IconCard[];
+  cta: BasicCta;
+}
 
-const services = [
-  {
-    icon: LifeBuoy,
-    t: "Tutor support",
-    d: "Weekly office hours and email response within one business day throughout your programme.",
-  },
-  {
-    icon: UserCog,
-    t: "Reasonable adjustments",
-    d: "Documented assessment adjustments for learners with disabilities or specific learning differences.",
-  },
-  {
-    icon: BookOpen,
-    t: "Re-sit policy",
-    d: "Clear, fair re-sit procedures aligned to each awarding body's regulations.",
-  },
-  {
-    icon: FileText,
-    t: "Transcripts & replacement certificates",
-    d: "Request an official transcript or a replacement certificate — issued within five business days.",
-  },
-  {
-    icon: BadgeCheck,
-    t: "Digital credentials",
-    d: "Shareable, verifiable digital badges and certificates for LinkedIn and email signatures.",
-  },
-  {
-    icon: HeartPulse,
-    t: "Learner wellbeing",
-    d: "Confidential support pathways for learners experiencing circumstances that affect their studies.",
-  },
-];
+export async function generateMetadata() {
+  try {
+    const p = await loadPageContent<StudentServicesContent>("student-services");
+    return pageMeta({
+      title: p.hero.title,
+      description: p.hero.description,
+      path: "/student-services",
+    });
+  } catch {
+    return pageMeta({ title: "Student Services", path: "/student-services" });
+  }
+}
 
-export default function StudentServicesPage() {
+export default async function StudentServicesPage() {
+  const p = await loadPageContent<StudentServicesContent>("student-services");
+
   return (
     <>
       <PageHero
-        eyebrow="Student services"
-        title="Enrolled with EIOSH — supported every step of the way."
-        description="From admission through to alumni, every learner has access to a documented set of services. This page is the single source of truth for what to expect and how to request it."
-        breadcrumbs={[{ label: "Student Services" }]}
+        eyebrow={p.hero.eyebrow}
+        title={p.hero.title}
+        description={p.hero.description}
+        breadcrumbs={[{ label: "Student services" }]}
       />
 
-      <Section tone="subtle">
+      <Section>
         <Container>
+          <p className="prose-eiosh">{p.intro}</p>
           <SectionHeading
-            eyebrow="What we support"
-            title="Six services that every enrolled learner can request."
+            eyebrow="Support included"
+            title="Everything in your enrolment package."
+            className="mt-12"
           />
-          <ul className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {services.map((s) => {
-              const Icon = s.icon;
+          <ul className="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {p.services.map((card) => {
+              const Icon =
+                (Icons as unknown as Record<string, React.ComponentType<{ className?: string }>>)[
+                  card.icon ?? "LifeBuoy"
+                ] ?? Icons.LifeBuoy;
               return (
-                <li key={s.t} className="rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated">
+                <li
+                  key={card.title}
+                  className="rounded-2xl bg-white p-6 ring-1 ring-border shadow-elevated"
+                >
                   <span className="flex h-11 w-11 items-center justify-center rounded-lg bg-cyan-50 text-cyan-700 ring-1 ring-inset ring-cyan-200">
                     <Icon className="h-5 w-5" />
                   </span>
-                  <p className="mt-5 font-heading text-lg font-semibold text-navy-900">{s.t}</p>
-                  <p className="mt-2 text-sm text-ink-muted">{s.d}</p>
+                  <p className="mt-5 font-heading text-lg font-semibold text-navy-900">
+                    {card.title}
+                  </p>
+                  <p className="mt-2 text-sm text-ink-muted">{card.description}</p>
                 </li>
               );
             })}
@@ -79,19 +71,30 @@ export default function StudentServicesPage() {
         </Container>
       </Section>
 
-      <Section tone="subtle">
+      <Section tone="gradient">
         <Container className="text-center">
-          <h2 className="text-display-sm font-heading font-semibold text-navy-900 text-balance">
-            Need to raise a request, escalate a concern, or book tutor time?
+          <h2 className="text-display-sm sm:text-display-md font-heading font-semibold text-white text-balance">
+            {p.cta.heading}
           </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-ink-muted">
-            The Student Services team responds within one business day. For assessment-related escalations, review the appeals procedure in our policies.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Button href="/contact" variant="primary" size="lg">Contact Student Services</Button>
-            <Link href="/policies#appeals" className="text-sm font-medium text-cyan-700 hover:underline">
-              Read the appeals policy
-            </Link>
+          {p.cta.description && (
+            <p className="mx-auto mt-4 max-w-2xl text-lg text-white/80">{p.cta.description}</p>
+          )}
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+            {p.cta.primaryLabel && p.cta.primaryHref && (
+              <Button href={p.cta.primaryHref} variant="gold" size="lg">
+                {p.cta.primaryLabel}
+              </Button>
+            )}
+            {p.cta.secondaryLabel && p.cta.secondaryHref && (
+              <Button
+                href={p.cta.secondaryHref}
+                variant="outline"
+                size="lg"
+                className="bg-white/5 text-white ring-white/20 hover:bg-white/10 hover:ring-white/40"
+              >
+                {p.cta.secondaryLabel}
+              </Button>
+            )}
           </div>
         </Container>
       </Section>

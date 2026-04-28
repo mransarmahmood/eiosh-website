@@ -1,0 +1,35 @@
+{
+  "hero": {
+    "eyebrow": "Policies",
+    "title": "How we operate.",
+    "description": "Our published policies covering privacy, terms of business, refunds, accessibility and learner conduct. Last reviewed quarterly by the EIOSH leadership team."
+  },
+  "lastReviewed": "2026-04",
+  "sections": [
+    {
+      "id": "privacy",
+      "title": "Privacy policy",
+      "body": "EIOSH International collects only the information needed to deliver your training, certify your achievement, and meet our regulatory obligations to awarding bodies. We do not sell or rent your data.\n\nWhat we collect: name, email, phone, employer (where applicable), course enrolment records, assessment results, payment metadata.\n\nWhy: to register you with awarding bodies, deliver the course, issue certificates, comply with audit obligations, and contact you about your enrolment.\n\nHow long: enrolment records for 7 years (regulatory minimum), marketing contact data until you unsubscribe.\n\nYour rights: access, correction, deletion, portability — email privacy@eiosh.com to exercise any of these. We respond within 30 days."
+    },
+    {
+      "id": "terms",
+      "title": "Terms of business",
+      "body": "By enrolling on any EIOSH programme you agree to these terms. Tuition fees are payable as set out in your invoice or quotation. Late payment may suspend access to the LMS and exam portal.\n\nIntellectual property: course materials remain the property of EIOSH and the relevant awarding body. You may use them for personal study but not redistribute.\n\nLiability: we deliver training to industry-recognised standards but cannot guarantee certification — passing the awarding-body assessment remains the learner's responsibility."
+    },
+    {
+      "id": "refund",
+      "title": "Refund policy",
+      "body": "Cancellation more than 14 days before the cohort start date: full refund less a 5% admin fee.\n\nCancellation 7–14 days before start: 50% refund.\n\nCancellation less than 7 days before start, or after the cohort has begun: no refund (we will, at our discretion, transfer your enrolment to a future cohort).\n\nDigital-only / self-paced programmes: 14-day cooling-off period for refund, provided you have not consumed more than 25% of the LMS content."
+    },
+    {
+      "id": "accessibility",
+      "title": "Accessibility",
+      "body": "EIOSH is committed to making our programmes accessible. Reasonable adjustments are available on every course — extended time on assessments, alternative formats, screen-reader-friendly materials, sign-language interpretation on request.\n\nApply for adjustments at least 14 days before your cohort starts: student.services@eiosh.com.\n\nThis website aims to meet WCAG 2.1 AA standards. Report accessibility issues to accessibility@eiosh.com."
+    },
+    {
+      "id": "conduct",
+      "title": "Learner conduct",
+      "body": "All learners are expected to engage respectfully with tutors, peers and assessors. Plagiarism, exam misconduct or harassment will result in suspension and may be reported to the awarding body.\n\nWe operate a clear escalation path: tutor → centre manager → external moderation. Disputes not resolved internally can be escalated to the relevant awarding body's appeals process."
+    }
+  ]
+}

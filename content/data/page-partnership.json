@@ -1,0 +1,38 @@
+{
+  "hero": {
+    "eyebrow": "Partnership",
+    "title": "Build with EIOSH.",
+    "description": "Authorised training partner, content licensee, awarding body affiliate or in-country delivery centre — we've built every model you'd expect from an approved international training centre."
+  },
+  "intro": "We partner with training centres, universities, corporates and awarding bodies in regions where we don't deliver directly. Our partnership team handles licensing, IV oversight, branded LMS deployments, and centre-approval applications.",
+  "partnerTypes": [
+    {
+      "icon": "GraduationCap",
+      "title": "Authorised training partner",
+      "description": "Licensed to deliver EIOSH-branded preparation programmes for IOSH / NEBOSH / OSHA in your territory. Includes IV support and audit readiness."
+    },
+    {
+      "icon": "BookOpen",
+      "title": "Content licensee",
+      "description": "Use our slide decks, learner workbooks and mock exam banks under your own brand. Quarterly content updates included."
+    },
+    {
+      "icon": "Award",
+      "title": "Awarding body affiliate",
+      "description": "We help you become an approved centre for IOSH / OSHAcademy / HABC / OTHM. End-to-end application support, mock visit included."
+    },
+    {
+      "icon": "Building2",
+      "title": "Corporate university",
+      "description": "White-labelled HSE academy in your enterprise — courses, assessments, certificates and a dedicated tutor team."
+    }
+  ],
+  "cta": {
+    "heading": "Talk to the partnerships team.",
+    "description": "Tell us about your audience, region and the qualifications you want to bring to market — we'll come back with a model that fits.",
+    "primaryLabel": "Contact partnerships",
+    "primaryHref": "/contact",
+    "secondaryLabel": "Browse our courses",
+    "secondaryHref": "/courses"
+  }
+}
