@@ -42,5 +42,53 @@
     "serviceIds": ["svc-iosh-working-safely", "svc-corporate-onboarding"],
     "terms": "Per-cohort pricing covers facilitator, materials, IOSH passports and one round of progress review. Volume discount available for >5 cohorts. Quotation valid 60 days.",
     "validityDays": 60
+  },
+
+  {
+    "id": "tpl-system-management-consultancy",
+    "title": "System management consultancy (IMS)",
+    "description": "End-to-end implementation of an integrated management system covering ISO 9001 (quality), ISO 14001 (environment) and ISO 45001 (OH&S) — single document architecture, joint internal audits, joint certification.",
+    "intro": "EIOSH International is pleased to propose a Management Systems consultancy programme for your organisation. Whether you are starting fresh or harmonising existing siloed systems, we will deliver a single, audit-ready Integrated Management System (IMS) aligned to ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018 — with one document set, one risk register and one audit programme. The end result: lower internal overhead, simpler certification visits, and clearer accountability for your leadership team.",
+    "approach": "Phase 1 — Discovery & gap analysis (weeks 1–3): on-site assessment against all three standards in parallel, with a process-architecture workshop and a baseline risk + opportunity register. Phase 2 — System build (weeks 4–10): unified policy, manuals, procedures and operational controls in your brand template; internal-auditor training for 4–6 staff; joint risk and aspect/impact registers. Phase 3 — Verification & certification (weeks 11–14): integrated internal audit cycle, joint management review facilitation, mock external audit, certification-body liaison and corrective-action close-out.",
+    "serviceIds": [
+      "svc-ims-implementation",
+      "svc-iso-9001-implementation",
+      "svc-iso-14001-implementation",
+      "svc-iso-45001-implementation",
+      "svc-system-audit-programme"
+    ],
+    "terms": "Fixed-price for a single-site scope; multi-site uplift quoted separately. Payment plan: 25% on signature, 25% at end of Phase 1, 30% at end of Phase 2, 20% on certification-body external audit. Travel and accommodation outside the home region billed at cost. Quotation valid for 60 days. Cancellation: pro-rated to the phase completed at the date of notice.",
+    "validityDays": 60
+  },
+  {
+    "id": "tpl-inspection-services",
+    "title": "Inspection services programme",
+    "description": "Annual inspection retainer covering statutory lifting examinations (LOLER), site safety inspections, pre-commissioning checks and centralised compliance reporting across multiple sites.",
+    "intro": "EIOSH International is pleased to propose an Inspection Services programme for your organisation. Whether you need statutory examinations of safety-critical equipment, regular cyclic site inspections, or pre-commissioning verification of new assets, our IRATA / LEEA-trained inspectors deliver evidence-based reports your auditors and insurers will accept. All inspections feed into a centralised compliance dashboard so your HSE leadership has a single source of truth across every site.",
+    "approach": "We start with an asset register reconciliation — confirming exactly which equipment is in scope, due dates, and last-inspection records. Statutory LOLER examinations are then scheduled in line with the regulatory cycle (typically 6 or 12 months). In parallel, our cyclic site safety inspection programme delivers monthly walk-downs against your bespoke checklist, with photographic evidence and a corrective-action tracker. Pre-commissioning inspections are booked on demand for new asset go-live. All findings flow to a quarterly compliance dashboard reviewed with your HSE leadership.",
+    "serviceIds": [
+      "svc-loler-lifting-inspection",
+      "svc-site-inspection-programme",
+      "svc-pre-commissioning-inspection",
+      "svc-statutory-inspection-retainer"
+    ],
+    "terms": "Quoted prices cover inspections within the agreed asset register; out-of-scope items billed at our day rate. Annual retainer billed quarterly in advance; ad-hoc inspections billed within 7 days of completion. Travel beyond the home region passed through at cost. Quotation valid for 45 days. Either party may terminate the retainer with 60 days' written notice.",
+    "validityDays": 45
+  },
+  {
+    "id": "tpl-project-hse",
+    "title": "Health & Safety advisory for projects",
+    "description": "Full-lifecycle HSE support for a capital project — feasibility study, Safety in Design, construction-phase inspections, and incident investigation if needed. Delivered as a fixed-price retainer for the project duration.",
+    "intro": "EIOSH International is delighted to propose a project-wide Health & Safety advisory programme for your upcoming initiative. Major projects rarely fail on a single technical issue — they fail when HSE risk is identified late, after the design is locked or the build is underway. Our advisory programme embeds HSE expertise from feasibility through commissioning, eliminating risk at design where it is cheapest, and verifying it on site where it matters most. Our team has supported capital projects across MENA and Asia in oil & gas, construction, manufacturing and energy.",
+    "approach": "Stage 1 — HSE feasibility study (weeks 1–4): regulatory map, preliminary hazard identification, HSE cost envelope, and a clear go/no-go report for the steering committee. Stage 2 — Safety in Design (during design): designers' risk-register reviews, hazard elimination workshops, residual risk register handed to the build team. Stage 3 — Construction-phase inspections (during build): weekly on-site inspections, contractor compliance scorecards, monthly steering reports. Stage 4 — Independent investigation: should any HSE incident occur during the project, we'll lead an independent root-cause investigation with a board-ready report and corrective action plan. Stage 5 — HSE compliance audit (pre-handover): final independent audit before commissioning sign-off.",
+    "serviceIds": [
+      "svc-hse-feasibility-study",
+      "svc-safety-in-design",
+      "svc-construction-phase-inspections",
+      "svc-incident-investigation",
+      "svc-hse-compliance-audit"
+    ],
+    "terms": "Fixed-price for the agreed project scope. Optional stages (e.g. incident investigation) only billed if invoked. Payment plan: 20% on signature, then milestone invoices on completion of each stage. Travel + accommodation outside the home region passed through at cost. Quotation valid for 60 days. Confidentiality and conflict-of-interest declarations issued on engagement.",
+    "validityDays": 60
   }
 ]

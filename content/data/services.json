@@ -100,5 +100,238 @@
     "defaultPrice": 12000,
     "currency": "USD",
     "unit": "first 100 learners"
+  },
+
+  {
+    "id": "svc-iso-9001-implementation",
+    "slug": "iso-9001-implementation",
+    "title": "ISO 9001 quality management implementation",
+    "category": "Management Systems",
+    "summary": "End-to-end ISO 9001:2015 quality management system implementation — gap analysis to certification audit.",
+    "deliverables": [
+      "On-site gap analysis against ISO 9001:2015 (2 days)",
+      "Process map + interaction matrix",
+      "Quality manual, policies and SOP set",
+      "Document control system setup",
+      "Internal-auditor training for 4 staff",
+      "Management review facilitation",
+      "Pre-certification mock audit",
+      "Certification body liaison"
+    ],
+    "defaultPrice": 16000,
+    "currency": "USD",
+    "unit": "fixed-price project"
+  },
+  {
+    "id": "svc-iso-14001-implementation",
+    "slug": "iso-14001-implementation",
+    "title": "ISO 14001 environmental management implementation",
+    "category": "Management Systems",
+    "summary": "ISO 14001:2015 environmental management system — aspects/impacts register through to certification.",
+    "deliverables": [
+      "Environmental aspects/impacts assessment",
+      "Legal & regulatory register",
+      "Operational control procedures",
+      "Emergency preparedness plan",
+      "Internal-auditor training",
+      "KPI dashboard template",
+      "Pre-certification mock audit"
+    ],
+    "defaultPrice": 14000,
+    "currency": "USD",
+    "unit": "fixed-price project"
+  },
+  {
+    "id": "svc-ims-implementation",
+    "slug": "ims-implementation",
+    "title": "Integrated Management System (9001 + 14001 + 45001)",
+    "category": "Management Systems",
+    "summary": "Single, harmonised IMS combining quality, environment, and OH&S in one document architecture.",
+    "deliverables": [
+      "Unified IMS gap analysis against all three standards",
+      "Common process architecture (Annex SL aligned)",
+      "Single document set with cross-mapped controls",
+      "Combined risk + opportunity register",
+      "Integrated internal audit schedule",
+      "Joint management review facilitation",
+      "Combined certification body liaison"
+    ],
+    "defaultPrice": 32000,
+    "currency": "USD",
+    "unit": "fixed-price project"
+  },
+  {
+    "id": "svc-system-audit-programme",
+    "slug": "system-audit-programme",
+    "title": "Annual management system audit programme",
+    "category": "Management Systems",
+    "summary": "Independent internal audit cycle covering ISO 9001/14001/45001 — quarterly visits, evidence-based reports.",
+    "deliverables": [
+      "Annual audit schedule aligned to your management review",
+      "4 quarterly on-site audits (1 day each)",
+      "Evidence-based findings report after each visit",
+      "Corrective action tracker",
+      "Pre-EQA / pre-certification mock audit"
+    ],
+    "defaultPrice": 11000,
+    "currency": "USD",
+    "unit": "per year"
+  },
+
+  {
+    "id": "svc-loler-lifting-inspection",
+    "slug": "loler-lifting-inspection",
+    "title": "LOLER lifting-equipment inspection",
+    "category": "Inspection",
+    "summary": "Statutory thorough examination of lifting equipment per LOLER 1998 (UK) / equivalent regional regs.",
+    "deliverables": [
+      "Pre-inspection asset register reconciliation",
+      "On-site thorough examination of all in-scope equipment",
+      "Load test where required (within scope)",
+      "Individual statutory certificate per asset",
+      "Aggregate findings report with corrective actions",
+      "Re-inspection of corrective actions within 30 days"
+    ],
+    "defaultPrice": 4500,
+    "currency": "USD",
+    "unit": "per site visit (up to 50 assets)"
+  },
+  {
+    "id": "svc-site-inspection-programme",
+    "slug": "site-inspection-programme",
+    "title": "Site safety inspection programme",
+    "category": "Inspection",
+    "summary": "Cyclic on-site HSE inspections with photographic evidence and a corrective-action tracker.",
+    "deliverables": [
+      "Bespoke inspection checklist (sector-specific)",
+      "Monthly site inspections (up to 4 hrs each)",
+      "Photographic evidence pack per visit",
+      "Corrective-action tracker with deadlines",
+      "Quarterly trend dashboard for the leadership team"
+    ],
+    "defaultPrice": 9000,
+    "currency": "USD",
+    "unit": "per site / per year"
+  },
+  {
+    "id": "svc-pre-commissioning-inspection",
+    "slug": "pre-commissioning-inspection",
+    "title": "Pre-commissioning HSE inspection",
+    "category": "Inspection",
+    "summary": "Independent verification that a new asset is safe to put into operation — reads to the asset register.",
+    "deliverables": [
+      "Document review (P&IDs, ITPs, MOC records)",
+      "On-site walk-down with photographic evidence",
+      "Punch-list with severity ranking",
+      "Re-inspection of high-severity items",
+      "Sign-off report to the project director"
+    ],
+    "defaultPrice": 7500,
+    "currency": "USD",
+    "unit": "per asset / per visit"
+  },
+  {
+    "id": "svc-statutory-inspection-retainer",
+    "slug": "statutory-inspection-retainer",
+    "title": "Annual statutory inspection retainer",
+    "category": "Inspection",
+    "summary": "Centralised contract covering all your statutory examinations across multiple sites.",
+    "deliverables": [
+      "Single SLA across all sites & equipment classes",
+      "Asset register kept current quarterly",
+      "Centralised certificate library",
+      "Renewal reminder dashboard",
+      "Quarterly compliance score per site"
+    ],
+    "defaultPrice": 22000,
+    "currency": "USD",
+    "unit": "per year (single multi-site contract)"
+  },
+
+  {
+    "id": "svc-hse-feasibility-study",
+    "slug": "hse-feasibility-study",
+    "title": "HSE feasibility study",
+    "category": "Project HSE",
+    "summary": "Risk-aware feasibility for new projects — identifies HSE blockers, regulatory triggers and design pinch-points before commit.",
+    "deliverables": [
+      "Stakeholder kick-off workshop",
+      "Regulatory and consents map",
+      "Preliminary hazard identification (PHA)",
+      "HSE cost envelope and timeline impact",
+      "Go / no-go recommendation report"
+    ],
+    "defaultPrice": 14000,
+    "currency": "USD",
+    "unit": "per project (single phase)"
+  },
+  {
+    "id": "svc-safety-in-design",
+    "slug": "safety-in-design",
+    "title": "Safety in Design (CDM-style) advisor",
+    "category": "Project HSE",
+    "summary": "Embeds HSE into the design process so designers eliminate or reduce risks at source.",
+    "deliverables": [
+      "Designers' risk register reviews",
+      "Hazard elimination workshops with the design team",
+      "Pre-construction information pack",
+      "Residual-risk register handed to the build team",
+      "Design-stage safety file template"
+    ],
+    "defaultPrice": 18000,
+    "currency": "USD",
+    "unit": "per design phase"
+  },
+  {
+    "id": "svc-incident-investigation",
+    "slug": "incident-investigation",
+    "title": "Incident investigation + root-cause analysis",
+    "category": "Project HSE",
+    "summary": "Independent investigation of HSE incidents — TapRoot/5-Why methodology, board-ready report, prevention plan.",
+    "deliverables": [
+      "On-site investigation within 48 hours",
+      "Witness interviews and evidence collection",
+      "Root-cause analysis (5-Why or TapRoot)",
+      "Board-ready findings report",
+      "Corrective + preventive action plan",
+      "30-day follow-up verification"
+    ],
+    "defaultPrice": 8500,
+    "currency": "USD",
+    "unit": "per incident"
+  },
+  {
+    "id": "svc-construction-phase-inspections",
+    "slug": "construction-phase-inspections",
+    "title": "Construction-phase safety inspections",
+    "category": "Project HSE",
+    "summary": "Weekly site inspections during the build, contractor compliance scoring and corrective-action tracking.",
+    "deliverables": [
+      "Weekly on-site inspection (up to 4 hrs)",
+      "Contractor compliance scorecard",
+      "Photographic evidence pack",
+      "Corrective-action tracker",
+      "Monthly steering committee report"
+    ],
+    "defaultPrice": 24000,
+    "currency": "USD",
+    "unit": "per project (up to 6 months)"
+  },
+  {
+    "id": "svc-hse-compliance-audit",
+    "slug": "hse-compliance-audit",
+    "title": "HSE compliance audit",
+    "category": "Project HSE",
+    "summary": "Independent audit of HSE performance against your declared management system and applicable law.",
+    "deliverables": [
+      "Audit plan agreed with HSE leadership",
+      "On-site evidence review (1–3 days)",
+      "Findings report (major / minor / observations)",
+      "Closing meeting with action owners",
+      "Re-audit of major findings within 60 days"
+    ],
+    "defaultPrice": 9500,
+    "currency": "USD",
+    "unit": "per audit"
   }
 ]
