@@ -120,50 +120,6 @@
     "heroImage": "/brand/courses/iosh-class.jpg"
   },
   {
-    "id": "crs-nebosh-igc",
-    "slug": "nebosh-international-general-certificate",
-    "title": "NEBOSH International General Certificate",
-    "headline": "The world's most respected health and safety qualification for practitioners.",
-    "category": "health-safety-environment",
-    "awardingBody": "nebosh-partner",
-    "level": "intermediate",
-    "durationHours": 120,
-    "modes": [
-      "in-person",
-      "blended",
-      "online"
-    ],
-    "language": "en",
-    "priceFromUSD": 995,
-    "status": "filling-fast",
-    "cohortStart": "2026-06-02",
-    "featured": true,
-    "learningOutcomes": [
-      "Apply risk management and control strategies in any sector",
-      "Interpret international standards including ILO OSH-2001 and ISO 45001",
-      "Investigate incidents and design robust safe systems of work",
-      "Prepare for the NEBOSH IG1 and IG2 assessments"
-    ],
-    "whoShouldAttend": [
-      "Aspiring HSE professionals",
-      "Safety officers seeking a recognised qualification",
-      "Career changers entering HSE"
-    ],
-    "moduleOutline": [
-      {
-        "title": "IG1 — Management of international health and safety",
-        "description": "11 elements covering policy, culture, risk and performance."
-      },
-      {
-        "title": "IG2 — Risk assessment",
-        "description": "Practical workplace-based risk assessment project."
-      }
-    ],
-    "assessment": "IG1 open-book written assessment and IG2 practical risk assessment.",
-    "certification": "NEBOSH International General Certificate.",
-    "heroImage": "/brand/courses/course-1.jpg"
-  },
-  {
     "id": "crs-othm-l6-ohs",
     "slug": "othm-level-6-diploma-ohs",
     "title": "OTHM Level 6 Diploma in Occupational Health and Safety",

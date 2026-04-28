@@ -12,9 +12,23 @@ export function NewsletterForm({ tone = "light" }: { tone?: "light" | "dark" }) 
     e.preventDefault();
     if (!email) return;
     setState("loading");
-    // Client-side only for now. Wire to /api/inquiry or your provider later.
-    await new Promise((r) => setTimeout(r, 600));
-    setState("done");
+    try {
+      const res = await fetch("/api/newsletter", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          email,
+          source: typeof window !== "undefined" ? window.location.pathname : undefined,
+        }),
+      });
+      if (!res.ok) {
+        setState("error");
+        return;
+      }
+      setState("done");
+    } catch {
+      setState("error");
+    }
   }
 
   const dark = tone === "dark";
