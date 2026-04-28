@@ -8,6 +8,7 @@ import { Logo } from "@/components/ui/Logo";
 import { Button } from "@/components/ui/Button";
 import { MegaMenuPanel, type MegaKey } from "@/components/layout/MegaMenu";
 import { MobileNav } from "@/components/layout/MobileNav";
+import { ThemeToggle } from "@/components/layout/ThemeToggle";
 import { site } from "@/content/site";
 
 const primaryLinks: { label: string; href: string; mega?: MegaKey }[] = [
@@ -115,8 +116,10 @@ export function Header() {
       <header
         ref={headerRef}
         className={cn(
-          "sticky top-0 z-40 border-b bg-white/95 backdrop-blur-md transition-all",
-          scrolled ? "border-border shadow-[0_6px_24px_-16px_rgba(10,31,68,0.25)]" : "border-transparent"
+          "sticky top-0 z-40 border-b bg-white/95 backdrop-blur-md transition-all dark:bg-navy-950/90 dark:text-white/90",
+          scrolled
+            ? "border-border shadow-[0_6px_24px_-16px_rgba(10,31,68,0.25)] dark:border-white/10"
+            : "border-transparent"
         )}
       >
         <div className="container-page">
@@ -144,8 +147,8 @@ export function Header() {
                         aria-expanded={isActive}
                         aria-haspopup="true"
                         className={cn(
-                          "inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700 cursor-pointer",
-                          isActive && "text-cyan-700"
+                          "inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700 dark:text-white/85 dark:hover:text-cyan-300 cursor-pointer",
+                          isActive && "text-cyan-700 dark:text-cyan-300"
                         )}
                       >
                         {link.label}
@@ -162,14 +165,14 @@ export function Header() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700"
+                        className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700 dark:text-white/85 dark:hover:text-cyan-300"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700"
+                        className="inline-flex items-center gap-1 rounded-md px-3 py-2 text-[0.95rem] font-medium text-navy-900 transition-colors hover:text-cyan-700 dark:text-white/85 dark:hover:text-cyan-300"
                       >
                         {link.label}
                       </Link>
@@ -179,10 +182,11 @@ export function Header() {
               })}
             </nav>
 
-            <div className="flex items-center gap-2.5">
+            <div className="flex items-center gap-2">
+              <ThemeToggle className="hidden md:inline-flex" />
               <Link
                 href="/student/login"
-                className="hidden md:inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-medium text-navy-900 transition hover:border-cyan-400 hover:text-cyan-700"
+                className="hidden md:inline-flex items-center gap-1.5 rounded-lg border border-border px-3.5 py-2 text-sm font-medium text-navy-900 transition hover:border-cyan-400 hover:text-cyan-700 dark:border-white/15 dark:text-white/85 dark:hover:border-cyan-400 dark:hover:text-cyan-300"
               >
                 <LogIn className="h-4 w-4" /> Sign in
               </Link>
@@ -191,7 +195,7 @@ export function Header() {
               </Button>
               <button
                 type="button"
-                className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded-md text-navy-900 hover:bg-navy-50 cursor-pointer"
+                className="inline-flex lg:hidden h-10 w-10 items-center justify-center rounded-md text-navy-900 hover:bg-navy-50 cursor-pointer dark:text-white/90 dark:hover:bg-white/10"
                 aria-label="Open menu"
                 onClick={() => setMobileOpen(true)}
               >

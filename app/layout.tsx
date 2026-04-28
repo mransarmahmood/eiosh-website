@@ -21,13 +21,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   const pathname = headers().get("x-pathname") ?? "";
   const isAdmin = pathname.startsWith("/admin");
 
+  // Boot script: applies the saved theme on first paint so dark mode does not
+  // flash light. Also respects the OS preference when nothing is stored yet.
+  const themeBoot = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}}catch(e){}})();`;
+
   return (
-    <html lang="en" dir="ltr">
+    <html lang="en" dir="ltr" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeBoot }} />
+      </head>
       <body
         className={
           isAdmin
             ? "min-h-screen bg-surface-subtle text-ink antialiased"
-            : "min-h-screen bg-surface text-ink antialiased pb-[72px] md:pb-0"
+            : "min-h-screen bg-surface text-ink antialiased pb-[72px] md:pb-0 dark:bg-navy-950 dark:text-white/90"
         }
       >
         {isAdmin ? (

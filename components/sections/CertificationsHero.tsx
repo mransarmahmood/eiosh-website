@@ -17,7 +17,15 @@ import {
   Users,
 } from "lucide-react";
 import { Container } from "@/components/ui/Container";
+import { AwardingBodyLogo } from "@/components/ui/AwardingBodyLogo";
 import type { Certification } from "@/lib/types";
+
+// "EIOSH (CQI/IRCA-compatible)" → "EIOSH". Strips trailing parenthetical
+// modifiers and country suffixes so the AwardingBodyLogo gradient map can
+// resolve a clean key.
+function bodyKey(awardingBody: string): string {
+  return awardingBody.replace(/\s*\(.*?\)\s*$/, "").trim().split(/\s+/)[0] ?? awardingBody;
+}
 
 // Bright, aspirational hero for the Certifications index page. Replaces the
 // dark navy PageHero with a light gradient field, gradient-typed accent word,
@@ -57,49 +65,52 @@ export function CertificationsHero({
   const previewCards = featured.slice(0, 3);
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/50 to-indigo-50/70">
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/50 to-indigo-50/70 dark:from-navy-950 dark:via-navy-900 dark:to-navy-950">
       {/* Decorative ambient blobs — purely visual, sit behind the content. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full bg-cyan-300/30 blur-3xl"
+        className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full bg-cyan-300/30 blur-3xl dark:bg-cyan-500/15"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/3 -left-20 h-72 w-72 rounded-full bg-indigo-300/25 blur-3xl"
+        className="pointer-events-none absolute top-1/3 -left-20 h-72 w-72 rounded-full bg-indigo-300/25 blur-3xl dark:bg-indigo-500/15"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-1/3 h-64 w-64 rounded-full bg-violet-300/20 blur-3xl"
+        className="pointer-events-none absolute bottom-0 right-1/3 h-64 w-64 rounded-full bg-violet-300/20 blur-3xl dark:bg-violet-500/15"
       />
 
       <Container className="relative z-10 py-14 lg:py-20">
         {/* Breadcrumb — kept understated so the headline does the heavy lifting. */}
-        <nav aria-label="Breadcrumb" className="mb-8">
-          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-ink-soft">
+        <nav aria-label="Breadcrumb" className="mb-6">
+          <ol className="flex flex-wrap items-center gap-1.5 text-sm text-ink-soft dark:text-white/55">
             <li>
-              <Link href="/" className="hover:text-cyan-700 transition">
+              <Link href="/" className="hover:text-cyan-700 transition dark:hover:text-cyan-300">
                 Home
               </Link>
             </li>
             <li className="flex items-center gap-1.5">
               <ChevronRight className="h-3.5 w-3.5" />
-              <span className="text-navy-900 font-medium">Certifications</span>
+              <span className="text-navy-900 font-medium dark:text-white/85">Certifications</span>
             </li>
           </ol>
         </nav>
 
-        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          {/* Left column — copy, CTA, feature pills. */}
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-12 lg:gap-12">
+          {/* Left column — copy, CTA, feature pills. Span 7/12 so the long
+              headline ("Internationally recognised credentials.") gets enough
+              width to sit on two clean balanced lines instead of three. */}
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: [0.2, 0.8, 0.2, 1] }}
+            className="lg:col-span-7"
           >
-            <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100/80 px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-cyan-700 ring-1 ring-inset ring-cyan-200">
+            <span className="inline-flex items-center gap-1.5 rounded-full bg-cyan-100/80 px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-cyan-700 ring-1 ring-inset ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-300 dark:ring-cyan-500/30">
               Certifications
             </span>
 
-            <h1 className="mt-6 font-heading text-4xl font-bold leading-[1.05] text-navy-900 sm:text-5xl lg:text-[3.5rem]">
+            <h1 className="mt-5 font-heading text-[2.5rem] font-bold leading-[1.05] tracking-tight text-navy-900 text-balance sm:text-5xl lg:text-[3.25rem] xl:text-[3.5rem] dark:text-white">
               Internationally{" "}
               <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-600 bg-clip-text text-transparent">
                 recognised
@@ -107,12 +118,12 @@ export function CertificationsHero({
               credentials.
             </h1>
 
-            <p className="mt-5 max-w-xl text-lg leading-relaxed text-ink-muted">
+            <p className="mt-4 max-w-xl text-lg leading-relaxed text-ink-muted dark:text-white/65">
               Every certification EIOSH prepares you for — full syllabus, awarding body, and
               apply route. Click any card to see the modules, duration and assessment.
             </p>
 
-            <div className="mt-8 flex flex-wrap items-center gap-3">
+            <div className="mt-7 flex flex-wrap items-center gap-3">
               <a
                 href="#all-certifications"
                 className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-cyan-600 via-blue-600 to-violet-600 px-7 py-3.5 font-semibold text-white shadow-lg shadow-cyan-500/30 transition hover:scale-[1.02] hover:shadow-xl hover:shadow-cyan-500/40"
@@ -122,14 +133,14 @@ export function CertificationsHero({
               </a>
               <Link
                 href="/admission"
-                className="inline-flex items-center gap-1.5 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-navy-900 ring-1 ring-border transition hover:bg-navy-50 hover:ring-cyan-300"
+                className="inline-flex items-center gap-1.5 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-navy-900 ring-1 ring-border transition hover:bg-navy-50 hover:ring-cyan-300 dark:bg-white/5 dark:text-white/85 dark:ring-white/15 dark:hover:bg-white/10"
               >
                 Talk to an advisor
               </Link>
             </div>
 
             {/* Feature pills — three quick value props under the CTA. */}
-            <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="mt-8 grid grid-cols-1 gap-3 sm:grid-cols-3">
               <FeaturePill
                 icon={Globe2}
                 title="Globally Recognised"
@@ -156,7 +167,7 @@ export function CertificationsHero({
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.55, delay: 0.1, ease: [0.2, 0.8, 0.2, 1] }}
-            className="relative"
+            className="relative lg:col-span-5"
           >
             {/* Decorative certificate "trophy" mark above the cards. */}
             <div className="pointer-events-none absolute -top-10 right-4 hidden h-28 w-28 items-center justify-center rounded-3xl bg-gradient-to-br from-cyan-400 to-blue-600 shadow-2xl shadow-cyan-500/40 lg:flex">
@@ -178,16 +189,12 @@ export function CertificationsHero({
                   >
                     <Link
                       href={`/certifications/${c.slug}`}
-                      className={`group flex items-center gap-4 rounded-2xl bg-white/85 p-4 shadow-xl ring-1 ${tone.ring} backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl`}
+                      className={`group flex items-center gap-3 rounded-2xl bg-white/90 p-3.5 shadow-xl ring-1 ${tone.ring} backdrop-blur transition hover:-translate-y-0.5 hover:shadow-2xl dark:bg-white/5 dark:ring-white/10`}
                     >
-                      <span
-                        className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${tone.from} ${tone.to} shadow-md`}
-                      >
-                        <Award className="h-6 w-6 text-white" />
-                      </span>
+                      <AwardingBodyLogo shortName={bodyKey(c.awardingBody)} size="sm" />
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center gap-2">
-                          <p className="truncate font-heading font-semibold text-navy-900">
+                          <p className="truncate font-heading font-semibold text-navy-900 dark:text-white">
                             {c.title}
                           </p>
                           {c.popular ? (
@@ -199,18 +206,20 @@ export function CertificationsHero({
                             </span>
                           ) : null}
                         </div>
-                        <p className="mt-0.5 truncate text-sm text-ink-muted">{c.subtitle}</p>
+                        <p className="mt-0.5 truncate text-xs text-ink-muted dark:text-white/55">
+                          {c.subtitle}
+                        </p>
+                        <div className="mt-1.5 flex flex-wrap items-center gap-x-3 gap-y-0.5 text-[0.65rem] uppercase tracking-wider text-ink-soft dark:text-white/45">
+                          <span className="inline-flex items-center gap-1">
+                            <BookOpen className="h-3 w-3" /> {c.modules.length} mod
+                          </span>
+                          <span className="inline-flex items-center gap-1">
+                            <Clock className="h-3 w-3" /> {shortDuration(c.duration)}
+                          </span>
+                        </div>
                       </div>
-                      <div className="hidden flex-col items-start gap-1 text-xs text-ink-soft sm:flex">
-                        <span className="inline-flex items-center gap-1">
-                          <BookOpen className="h-3.5 w-3.5" /> {c.modules.length} Modules
-                        </span>
-                        <span className="inline-flex items-center gap-1">
-                          <Clock className="h-3.5 w-3.5" /> {shortDuration(c.duration)}
-                        </span>
-                      </div>
-                      <span className="ml-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md transition group-hover:translate-x-0.5">
-                        <ArrowRight className="h-4 w-4" />
+                      <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-cyan-500 to-blue-600 text-white shadow-md transition group-hover:translate-x-0.5">
+                        <ArrowRight className="h-3.5 w-3.5" />
                       </span>
                     </Link>
                   </motion.div>
@@ -225,7 +234,7 @@ export function CertificationsHero({
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-14 grid grid-cols-2 gap-3 rounded-3xl bg-white/80 p-4 shadow-xl ring-1 ring-black/5 backdrop-blur sm:p-6 lg:grid-cols-4 lg:gap-6"
+          className="mt-14 grid grid-cols-2 gap-3 rounded-3xl bg-white/80 p-4 shadow-xl ring-1 ring-black/5 backdrop-blur sm:p-6 lg:grid-cols-4 lg:gap-6 dark:bg-white/5 dark:ring-white/10"
         >
           <Stat
             icon={GraduationCap}
@@ -273,15 +282,17 @@ function FeaturePill({
   gradient: string;
 }) {
   return (
-    <div className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 ring-1 ring-black/5 backdrop-blur transition hover:bg-white">
+    <div className="flex items-start gap-3 rounded-2xl bg-white/70 p-4 ring-1 ring-black/5 backdrop-blur transition hover:bg-white dark:bg-white/5 dark:ring-white/10 dark:hover:bg-white/10">
       <span
         className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br ${gradient} shadow-md`}
       >
         <Icon className="h-5 w-5 text-white" />
       </span>
       <div className="min-w-0">
-        <p className="font-heading text-sm font-semibold text-navy-900">{title}</p>
-        <p className="mt-0.5 text-xs leading-snug text-ink-muted">{blurb}</p>
+        <p className="font-heading text-sm font-semibold text-navy-900 dark:text-white">
+          {title}
+        </p>
+        <p className="mt-0.5 text-xs leading-snug text-ink-muted dark:text-white/60">{blurb}</p>
       </div>
     </div>
   );
@@ -301,18 +312,18 @@ function Stat({
   gradient: string;
 }) {
   return (
-    <div className="flex items-center gap-4 rounded-2xl px-4 py-3 transition hover:bg-white">
+    <div className="flex items-center gap-4 rounded-2xl px-4 py-3 transition hover:bg-white dark:hover:bg-white/5">
       <span
         className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br ${gradient} shadow-lg`}
       >
         <Icon className="h-6 w-6 text-white" />
       </span>
       <div>
-        <p className="font-heading text-2xl font-bold leading-none text-navy-900 sm:text-3xl">
+        <p className="font-heading text-2xl font-bold leading-none text-navy-900 sm:text-3xl dark:text-white">
           {value}
         </p>
-        <p className="mt-1 text-sm font-semibold text-navy-900">{label}</p>
-        <p className="text-xs text-ink-soft">{blurb}</p>
+        <p className="mt-1 text-sm font-semibold text-navy-900 dark:text-white/90">{label}</p>
+        <p className="text-xs text-ink-soft dark:text-white/55">{blurb}</p>
       </div>
     </div>
   );

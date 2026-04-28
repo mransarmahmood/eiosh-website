@@ -7,13 +7,21 @@ const GRADIENTS: Record<string, string> = {
   "OSHAcademy USA": "from-blue-800 via-blue-600 to-sky-400",
   OSHAwards: "from-red-700 via-orange-600 to-amber-500",
   "HABC UK": "from-amber-600 via-amber-500 to-gold-400",
+  HABC: "from-amber-600 via-amber-500 to-gold-400",
   "OTHM UK": "from-indigo-800 via-indigo-600 to-violet-400",
+  OTHM: "from-indigo-800 via-indigo-600 to-violet-400",
   "NASP USA": "from-rose-700 via-rose-500 to-pink-400",
   "ICBOQ UK": "from-cyan-800 via-cyan-600 to-cyan-400",
   "Global Awards": "from-navy-900 via-navy-700 to-cyan-500",
   "IQ-OHS": "from-teal-800 via-teal-600 to-emerald-400",
   NEBOSH: "from-blue-900 via-navy-800 to-navy-500",
   IEMA: "from-green-800 via-green-600 to-lime-400",
+  // Newer professional bodies — added with the ASP/CSP/PMP/CRSP intake.
+  BCSP: "from-orange-700 via-red-600 to-rose-500",
+  PMI: "from-violet-700 via-purple-600 to-fuchsia-500",
+  BCRSP: "from-red-700 via-rose-600 to-pink-500",
+  ABIH: "from-teal-700 via-cyan-600 to-sky-500",
+  EIOSH: "from-navy-900 via-cyan-700 to-cyan-400",
 };
 
 export function AwardingBodyLogo({
