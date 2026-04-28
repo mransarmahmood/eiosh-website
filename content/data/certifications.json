@@ -1,0 +1,188 @@
+[
+  {
+    "id": "cert-nebosh-igc",
+    "slug": "nebosh-igc",
+    "title": "NEBOSH IGC",
+    "subtitle": "International General Certificate",
+    "awardingBody": "NEBOSH",
+    "level": "Certificate",
+    "summary": "The internationally recognised baseline qualification for HSE practitioners — covers risk, control, ergonomics, fire, and chemical hazards.",
+    "courseSlug": "nebosh-international-general-certificate",
+    "applyHref": "/admission?course=nebosh-international-general-certificate",
+    "outcomes": [
+      "Apply ILO and ISO 45001 principles in any workplace",
+      "Carry out a complete general workplace risk assessment",
+      "Investigate accidents and present recommendations to management",
+      "Map national / regional regulations onto site practice"
+    ],
+    "modules": [
+      "Why we should manage workplace health & safety",
+      "How H&S management systems work",
+      "Managing risk — understanding people and processes",
+      "Health & safety monitoring and measuring",
+      "Physical and psychological health",
+      "Musculoskeletal health",
+      "Chemical and biological agents",
+      "General workplace issues",
+      "Work equipment",
+      "Fire and electricity",
+      "Practical risk assessment (open-book + workplace project)"
+    ],
+    "duration": "10–12 weeks blended (≈ 120 hours)",
+    "assessment": "Two open-book exams (OBE) + a closing interview. Pass mark 45/100.",
+    "deliveryModes": ["online", "blended", "in-person"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-iosh-managing-safely",
+    "slug": "iosh-managing-safely",
+    "title": "IOSH Managing Safely",
+    "subtitle": "Supervisor-level benchmark",
+    "awardingBody": "IOSH",
+    "level": "Certificate",
+    "summary": "The benchmark safety qualification for line managers and supervisors — practical, sector-agnostic, finishable in three days.",
+    "courseSlug": "iosh-managing-safely",
+    "applyHref": "/admission?course=iosh-managing-safely",
+    "outcomes": [
+      "Identify hazards and assess risk to a structured methodology",
+      "Apply control-of-work principles to reduce incidents and downtime",
+      "Communicate safety responsibilities to a team confidently",
+      "Investigate and close out incidents effectively"
+    ],
+    "modules": [
+      "Introducing managing safely",
+      "Assessing risks",
+      "Controlling risks",
+      "Understanding responsibilities",
+      "Understanding hazards",
+      "Investigating incidents",
+      "Measuring performance"
+    ],
+    "duration": "3-day cohort (24 contact hours)",
+    "assessment": "40-question multiple-choice + workplace risk-assessment project.",
+    "deliveryModes": ["in-person", "online"],
+    "popular": true,
+    "active": true
+  },
+  {
+    "id": "cert-othm-level-6-ohs",
+    "slug": "othm-level-6-ohs",
+    "title": "OTHM Level 6 OHS",
+    "subtitle": "Regulated diploma with MSc progression",
+    "awardingBody": "OTHM",
+    "level": "Level 6 Diploma",
+    "summary": "Ofqual-regulated Level 6 Diploma in Occupational Health & Safety. Direct entry route to selected MSc top-ups.",
+    "courseSlug": "othm-level-6-diploma-ohs",
+    "applyHref": "/admission?course=othm-level-6-diploma-ohs",
+    "outcomes": [
+      "Lead an organisation-wide OHS management system to ISO 45001",
+      "Design and audit safety culture interventions",
+      "Articulate the regulatory landscape across multiple jurisdictions",
+      "Progress to a UK MSc in Occupational Safety & Health"
+    ],
+    "modules": [
+      "Health & safety management",
+      "Risk management",
+      "Occupational health & wellbeing",
+      "Workplace safety legislation",
+      "Auditing & monitoring",
+      "Strategic OHS leadership"
+    ],
+    "duration": "9–12 months part-time (320 guided learning hours)",
+    "assessment": "Six written assignments + a workplace research project.",
+    "deliveryModes": ["online", "blended"],
+    "popular": false,
+    "active": true
+  },
+  {
+    "id": "cert-habc-level-2-food-safety",
+    "slug": "habc-level-2-food-safety",
+    "title": "HABC Level 2 Food Safety",
+    "subtitle": "Regulated catering qualification",
+    "awardingBody": "HABC",
+    "level": "Level 2 Award",
+    "summary": "Ofqual-regulated food-safety qualification — mandatory for anyone who handles, prepares or serves food in the UK / GCC.",
+    "courseSlug": "habc-level-2-food-safety",
+    "applyHref": "/admission?course=habc-level-2-food-safety",
+    "outcomes": [
+      "Identify food-safety hazards in a kitchen environment",
+      "Apply HACCP principles to a real menu",
+      "Maintain personal hygiene and cross-contamination controls",
+      "Comply with food labelling and allergen regulations"
+    ],
+    "modules": [
+      "Microbiological hazards",
+      "Physical, chemical & allergenic hazards",
+      "Food-safety management",
+      "Personal hygiene",
+      "Food storage and temperature control",
+      "Food premises and equipment"
+    ],
+    "duration": "1-day cohort (6 contact hours)",
+    "assessment": "30-question multiple-choice (pass at 60%).",
+    "deliveryModes": ["in-person", "online"],
+    "popular": false,
+    "active": true
+  },
+  {
+    "id": "cert-iema-foundation",
+    "slug": "iema-foundation-sustainability",
+    "title": "IEMA Foundation",
+    "subtitle": "Environmental & sustainability",
+    "awardingBody": "IEMA",
+    "level": "Foundation Certificate",
+    "summary": "IEMA-approved entry qualification covering ESG fundamentals, carbon literacy and circular-economy thinking.",
+    "courseSlug": "iema-foundation-sustainability",
+    "applyHref": "/admission?course=iema-foundation-sustainability",
+    "outcomes": [
+      "Explain the environmental & sustainability landscape to non-specialists",
+      "Read and interpret an organisation's ESG report",
+      "Map carbon and resource flows for a typical SME",
+      "Identify circular-economy interventions"
+    ],
+    "modules": [
+      "Sustainability principles",
+      "Climate change and the carbon cycle",
+      "Pollution and resource use",
+      "Sustainable business models",
+      "Drivers for change — regulation, finance, society",
+      "Career pathways in sustainability"
+    ],
+    "duration": "3-day intensive (24 contact hours)",
+    "assessment": "60-minute written assessment.",
+    "deliveryModes": ["online", "in-person"],
+    "popular": false,
+    "active": true
+  },
+  {
+    "id": "cert-iso-45001-lead-auditor",
+    "slug": "iso-45001-lead-auditor",
+    "title": "ISO 45001 Lead Auditor",
+    "subtitle": "Management-system audit",
+    "awardingBody": "EIOSH (CQI/IRCA-compatible)",
+    "level": "Lead Auditor",
+    "summary": "Five-day intensive lead-auditor course aligned to ISO 19011 / ISO/IEC 17021 — for HSE consultants and certification-body auditors.",
+    "courseSlug": "iso-45001-lead-auditor",
+    "applyHref": "/admission?course=iso-45001-lead-auditor",
+    "outcomes": [
+      "Plan and lead an ISO 45001 third-party audit",
+      "Apply ISO 19011 audit principles end-to-end",
+      "Write audit findings to certification-body standard",
+      "Manage non-conformity and corrective-action close-out"
+    ],
+    "modules": [
+      "ISO 45001 clause-by-clause review",
+      "Audit principles per ISO 19011",
+      "Audit planning, opening + closing meetings",
+      "Evidence collection techniques",
+      "Drafting findings and reports",
+      "Final exam (closed-book, 2 hours)"
+    ],
+    "duration": "5-day intensive (40 contact hours)",
+    "assessment": "Continuous assessment + 2-hour closed-book exam.",
+    "deliveryModes": ["in-person", "online"],
+    "popular": true,
+    "active": true
+  }
+]

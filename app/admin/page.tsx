@@ -40,7 +40,7 @@ const GROUPS: { heading: string; icon: LucideIcon; keys: string[]; accent: strin
     heading: "Catalogue",
     icon: GraduationCap,
     accent: "from-navy-900 via-navy-700 to-cyan-600",
-    keys: ["courses", "categories", "accreditations", "trainers", "free-courses"],
+    keys: ["courses", "certifications", "categories", "accreditations", "trainers", "free-courses"],
   },
   {
     heading: "Marketing & community",

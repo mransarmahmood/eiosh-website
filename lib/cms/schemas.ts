@@ -694,6 +694,37 @@ export const schemas: ResourceSchema[] = [
     ],
   },
 
+  // ── Certifications (marketing collection) ─────────────────────────────────
+  {
+    key: "certifications",
+    label: "Certifications",
+    singular: "Certification",
+    file: "certifications.json",
+    shape: "collection",
+    displayField: "title",
+    subField: "subtitle",
+    icon: "Award",
+    description: "Marketing-facing certification cards (mega-menu, homepage). Each links to its own /certifications/{slug} page.",
+    fields: [
+      { name: "id", label: "ID", type: "text", required: true },
+      { name: "slug", label: "Slug", type: "slug", required: true },
+      { name: "title", label: "Title (e.g. NEBOSH IGC)", type: "text", required: true, wide: true },
+      { name: "subtitle", label: "Subtitle (one-liner)", type: "text", wide: true },
+      { name: "awardingBody", label: "Awarding body", type: "text" },
+      { name: "level", label: "Level", type: "text", help: "e.g. Certificate, Level 6 Diploma, Lead Auditor." },
+      { name: "summary", label: "Marketing summary", type: "textarea", wide: true },
+      { name: "courseSlug", label: "Linked course slug", type: "text", help: "Optional. Slug from /admin/courses — used as the default Apply link." },
+      { name: "applyHref", label: "Apply CTA URL (overrides course slug)", type: "text" },
+      { name: "outcomes", label: "Learning outcomes (one per line)", type: "stringList", wide: true },
+      { name: "modules", label: "Modules / topics covered (one per line)", type: "stringList", wide: true },
+      { name: "duration", label: "Duration", type: "text" },
+      { name: "assessment", label: "Assessment description", type: "textarea", wide: true },
+      { name: "deliveryModes", label: "Delivery modes (online, in-person, blended)", type: "tags" },
+      { name: "popular", label: "Show on homepage / mega-menu?", type: "boolean" },
+      { name: "active", label: "Active (uncheck to hide site-wide)", type: "boolean" },
+    ],
+  },
+
   // ── Static pages (singletons) ─────────────────────────────────────────────
   {
     key: "page-certification-preparation",

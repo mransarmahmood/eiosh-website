@@ -237,3 +237,27 @@ export interface SiteSettings {
   social: { linkedin?: string; facebook?: string; instagram?: string; youtube?: string; x?: string };
   stats: { label: string; value: string }[];
 }
+
+export interface Certification {
+  id: string;
+  slug: string;
+  /** Short marketing label, e.g. "NEBOSH IGC". */
+  title: string;
+  /** One-line subtitle shown under the title in cards / mega-menu. */
+  subtitle: string;
+  awardingBody: string;
+  level: string;
+  summary: string;
+  /** Optional link to a live course in `content/courses` so the apply CTA pre-fills. */
+  courseSlug?: string;
+  /** Direct apply link (overrides courseSlug if set). */
+  applyHref?: string;
+  outcomes: string[];
+  modules: string[];
+  duration: string;
+  assessment: string;
+  deliveryModes: ("online" | "in-person" | "blended")[];
+  /** Drives the homepage / mega-menu prominence. */
+  popular: boolean;
+  active: boolean;
+}

@@ -6,6 +6,7 @@ import { ArrowRight } from "lucide-react";
 import { categories } from "@/content/categories";
 import { accreditations } from "@/content/accreditations";
 import { courses } from "@/content/courses";
+import { popularCertifications } from "@/content/certifications";
 import { Badge } from "@/components/ui/Badge";
 
 // Single mega-menu panel driven by the navbar's active key. Panels render the same
@@ -126,22 +127,27 @@ function CertificationsPanel() {
         </Link>
       </div>
       <ul className="col-span-7 grid grid-cols-2 gap-3">
-        {[
-          { t: "NEBOSH IGC", d: "International General Certificate" },
-          { t: "IOSH Managing Safely", d: "Supervisor-level benchmark" },
-          { t: "OTHM Level 6 OHS", d: "Regulated diploma with MSc progression" },
-          { t: "HABC Level 2 Food Safety", d: "Regulated catering qualification" },
-          { t: "IEMA Foundation", d: "Environmental & sustainability" },
-          { t: "ISO 45001 Lead Auditor", d: "Management-system audit" },
-        ].map((i) => (
-          <li key={i.t}>
-            <Link href="/certification-preparation" className="block rounded-lg bg-surface-subtle p-4 ring-1 ring-border transition hover:ring-cyan-400 hover:bg-white">
-              <span className="block font-heading font-medium text-navy-900">{i.t}</span>
-              <span className="mt-0.5 block text-sm text-ink-muted">{i.d}</span>
+        {popularCertifications().map((c) => (
+          <li key={c.id}>
+            <Link
+              href={`/certifications/${c.slug}`}
+              className="block rounded-lg bg-surface-subtle p-4 ring-1 ring-border transition hover:ring-cyan-400 hover:bg-white"
+            >
+              <span className="block font-heading font-medium text-navy-900">{c.title}</span>
+              <span className="mt-0.5 block text-sm text-ink-muted">{c.subtitle}</span>
             </Link>
           </li>
         ))}
       </ul>
+      <div className="col-span-12 -mb-2 mt-2 border-t border-border pt-3 text-right">
+        <Link
+          href="/certifications"
+          className="inline-flex items-center gap-1.5 text-sm font-medium text-cyan-700 hover:underline"
+        >
+          See all certifications
+          <ArrowRight className="h-4 w-4" />
+        </Link>
+      </div>
     </div>
   );
 }

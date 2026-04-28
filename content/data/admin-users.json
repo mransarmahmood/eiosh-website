@@ -14,5 +14,23 @@
     "active": true,
     "createdAt": "2026-04-28T06:39:09.782Z",
     "updatedAt": "2026-04-28T06:39:09.782Z"
+  },
+  {
+    "id": "u-29d69cf79310",
+    "email": "furqan@eiosh.com",
+    "name": "Furqan Nadeem",
+    "passwordHash": "100000:10dcf6c2e0d5ba79cf6a6bf3ebe9d361:2faa6b7ec2d73a89cf7aaf2897d2cd660bb2ea3dbd69f0785ae59e02ed28fbef",
+    "role": "faculty",
+    "modules": [
+      "page-corporate-training",
+      "quotations",
+      "proposals",
+      "invoices",
+      "trainers"
+    ],
+    "permissionOverrides": [],
+    "active": true,
+    "createdAt": "2026-04-28T06:44:35.154Z",
+    "updatedAt": "2026-04-28T06:44:35.154Z"
   }
 ]
