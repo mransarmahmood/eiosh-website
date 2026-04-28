@@ -1,4 +1,5 @@
 import "server-only";
+import { getSettingSync } from "@/lib/runtime-config";
 
 // ------------------------------------------------------------------
 // Pluggable AI client. One module, any OpenAI-compatible provider.
@@ -35,10 +36,9 @@ interface ProviderConfig {
 }
 
 function readProvider(): ProviderConfig & { name: string } {
-  // Load /admin/settings overrides if present, falling back to env.
-  // We do this synchronously via the cached file read.
-  // eslint-disable-next-line @typescript-eslint/no-require-imports
-  const { getSettingSync } = require("@/lib/runtime-config") as typeof import("@/lib/runtime-config");
+  // Read /admin/settings overrides if available, otherwise fall back to env.
+  // `getSettingSync` is safe to call before the runtime-config file is loaded;
+  // it just returns the env value in that case.
   const name = (getSettingSync("AI_PROVIDER", "mock") || "mock").toLowerCase();
   const apiKey = getSettingSync("AI_API_KEY") || undefined;
   const modelOverride = getSettingSync("AI_MODEL") || undefined;

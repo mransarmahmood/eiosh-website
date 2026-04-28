@@ -8,7 +8,7 @@
  *   button — out of scope for this MVP; rates live in `lib/currency.ts`).
  */
 
-import { headers } from "next/headers";
+import { headers, cookies } from "next/headers";
 
 export interface CurrencyDisplay {
   code: string; // "GBP"
@@ -71,18 +71,15 @@ export function detectCountry(): string {
  *   3. USD
  */
 export function detectCurrency(): CurrencyDisplay {
-  // Cookie wins (user explicitly switched).
+  // Cookie wins (user explicitly switched). cookies() may throw outside a
+  // request scope (during build), so we guard with try/catch.
   try {
-    // Lazy-import the cookies API so this module still works in build-time
-    // contexts where the request scope isn't available.
-    // eslint-disable-next-line @typescript-eslint/no-require-imports
-    const { cookies } = require("next/headers") as typeof import("next/headers");
     const code = cookies().get(PREFERENCE_COOKIE)?.value;
     if (code && RATES_FROM_USD[code.toUpperCase()]) {
       return RATES_FROM_USD[code.toUpperCase()];
     }
   } catch {
-    // Outside a request — fall through to geo detection.
+    // No request context — fall through to geo detection.
   }
   const country = detectCountry();
   const code = COUNTRY_TO_CURRENCY[country] ?? "USD";
