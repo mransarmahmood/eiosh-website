@@ -19,11 +19,20 @@ interface Props {
   align?: "left" | "center";
 }
 
-// Shared interior-page hero. Bright, premium light treatment with subtle
-// ambient blobs and a gradient-typed accent on the last word of the title.
-// Dark-mode aware so the global ThemeToggle reads coherently. The homepage
-// uses its own dedicated `Hero` section — this component is for everything
-// else (about, courses, certifications, awarding-bodies, etc.).
+// Shared interior-page hero. Bright, brand-coherent treatment using only the
+// EIOSH palette (navy authority + cyan clarity + warm gold conversion). The
+// homepage uses its own dedicated `Hero` section — this component is for
+// every other interior page.
+//
+// Design notes:
+// • Background is a soft cyan-tinted gradient (the brand's clarity colour).
+//   No indigo/violet — that would push off-brand for a training institute.
+// • Two ambient cyan blobs + one warm gold blob give depth without noise.
+// • The eyebrow is a pill with a pinging cyan dot — signals "live, current".
+// • The headline auto-styles its final word in a cyan→navy gradient (two
+//   brand hues only) so every page picks up an accent without bespoke JSX.
+// • Padding is asymmetric (more above than below) so the next section feels
+//   connected to the hero rather than walled off.
 export function PageHero({
   eyebrow,
   title,
@@ -35,41 +44,40 @@ export function PageHero({
   const alignClass =
     align === "center" ? "text-center mx-auto max-w-3xl" : "max-w-4xl";
 
-  // If the title is a plain string, gradient-style the final word so every
-  // page automatically picks up the brand accent without callers having to
-  // pass JSX. ReactNode titles render as-is.
+  // String titles get the auto-accent. JSX titles render as-is so callers
+  // that pass custom JSX keep full control.
   const renderedTitle =
     typeof title === "string" ? splitTitleWithAccent(title) : title;
 
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/50 to-indigo-50/70 dark:from-navy-950 dark:via-navy-900 dark:to-navy-950">
-      {/* Decorative ambient blobs — purely visual. */}
+    <section className="relative overflow-hidden bg-gradient-to-br from-white via-cyan-50/60 to-white">
+      {/* Brand-aligned ambient depth — two cyan, one warm gold accent. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute -top-32 -right-24 h-96 w-96 rounded-full bg-cyan-300/30 blur-3xl dark:bg-cyan-500/15"
+        className="pointer-events-none absolute -top-32 -right-24 h-[28rem] w-[28rem] rounded-full bg-cyan-300/25 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute top-1/3 -left-20 h-72 w-72 rounded-full bg-indigo-300/25 blur-3xl dark:bg-indigo-500/15"
+        className="pointer-events-none absolute -bottom-24 left-1/4 h-72 w-72 rounded-full bg-cyan-200/30 blur-3xl"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 right-1/3 h-64 w-64 rounded-full bg-violet-300/20 blur-3xl dark:bg-violet-500/15"
+        className="pointer-events-none absolute top-10 left-[8%] h-56 w-56 rounded-full bg-amber-200/25 blur-3xl"
       />
-      {/* Soft grid overlay for texture. */}
+      {/* Faint dotted-grid texture for premium tactility. */}
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(10,31,68,0.06)_1px,transparent_0)] [background-size:28px_28px] dark:bg-[radial-gradient(circle_at_1px_1px,rgba(255,255,255,0.05)_1px,transparent_0)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_1px_1px,rgba(10,31,68,0.05)_1px,transparent_0)] [background-size:28px_28px]"
       />
 
-      <Container className="relative z-10 py-14 lg:py-20">
+      <Container className="relative z-10 pt-12 pb-16 lg:pt-16 lg:pb-20">
         {breadcrumbs?.length ? (
           <nav aria-label="Breadcrumb" className="mb-6">
-            <ol className="flex flex-wrap items-center gap-1.5 text-sm text-ink-soft dark:text-white/55">
+            <ol className="flex flex-wrap items-center gap-1.5 text-sm text-ink-soft">
               <li>
                 <Link
                   href="/"
-                  className="hover:text-cyan-700 transition dark:hover:text-cyan-300"
+                  className="hover:text-cyan-700 transition"
                 >
                   Home
                 </Link>
@@ -80,14 +88,12 @@ export function PageHero({
                   {c.href ? (
                     <Link
                       href={c.href}
-                      className="hover:text-cyan-700 transition dark:hover:text-cyan-300"
+                      className="hover:text-cyan-700 transition"
                     >
                       {c.label}
                     </Link>
                   ) : (
-                    <span className="text-navy-900 font-medium dark:text-white/85">
-                      {c.label}
-                    </span>
+                    <span className="text-navy-900 font-medium">{c.label}</span>
                   )}
                 </li>
               ))}
@@ -102,24 +108,25 @@ export function PageHero({
           className={alignClass}
         >
           {eyebrow ? (
-            <span className="inline-flex items-center gap-2 rounded-full bg-cyan-100/80 px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-cyan-700 ring-1 ring-inset ring-cyan-200 dark:bg-cyan-500/15 dark:text-cyan-300 dark:ring-cyan-500/30">
-              <span
-                aria-hidden
-                className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan-500 dark:bg-cyan-400"
-              >
-                <span className="absolute inset-0 animate-ping rounded-full bg-cyan-500/60 dark:bg-cyan-400/60" />
+            <span
+              className={`inline-flex items-center gap-2 rounded-full bg-white/70 px-4 py-1.5 text-[0.7rem] font-bold uppercase tracking-[0.18em] text-cyan-700 ring-1 ring-inset ring-cyan-200/70 shadow-sm backdrop-blur ${
+                align === "center" ? "" : ""
+              }`}
+            >
+              <span aria-hidden className="relative inline-flex h-1.5 w-1.5 rounded-full bg-cyan-500">
+                <span className="absolute inset-0 animate-ping rounded-full bg-cyan-500/60" />
               </span>
               {eyebrow}
             </span>
           ) : null}
 
-          <h1 className="mt-5 font-heading text-[2.25rem] font-bold leading-[1.1] tracking-tight text-navy-900 text-balance sm:text-5xl lg:text-[3.25rem] dark:text-white">
+          <h1 className="mt-5 font-heading text-[2.25rem] font-bold leading-[1.08] tracking-tight text-navy-900 text-balance sm:text-5xl lg:text-[3.25rem]">
             {renderedTitle}
           </h1>
 
           {description ? (
             <p
-              className={`mt-5 text-lg leading-relaxed text-ink-muted text-pretty dark:text-white/65 ${
+              className={`mt-5 text-lg leading-relaxed text-ink-muted text-pretty ${
                 align === "center" ? "" : "max-w-2xl"
               }`}
             >
@@ -130,16 +137,20 @@ export function PageHero({
           {children ? <div className="mt-7">{children}</div> : null}
         </motion.div>
       </Container>
+
+      {/* Soft fade into the next section so the hero feels connected. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute inset-x-0 bottom-0 h-12 bg-gradient-to-b from-transparent to-white"
+      />
     </section>
   );
 }
 
-// Returns the title as JSX with the final word styled in a cyan→blue→violet
-// gradient. We strip a trailing period before highlighting and reattach it so
-// titles like "About EIOSH." still feel intentional.
+// Accent the final word of a plain-string title with the brand cyan→navy
+// gradient. Strips and reattaches trailing punctuation so it feels intentional.
 function splitTitleWithAccent(title: string): React.ReactNode {
   const trimmed = title.trim();
-  // Single word — gradient the whole thing.
   if (!trimmed.includes(" ")) {
     return <Accent>{trimmed}</Accent>;
   }
@@ -161,7 +172,7 @@ function splitTitleWithAccent(title: string): React.ReactNode {
 
 function Accent({ children }: { children: React.ReactNode }) {
   return (
-    <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-violet-600 bg-clip-text text-transparent">
+    <span className="bg-gradient-to-r from-cyan-600 via-cyan-500 to-navy-700 bg-clip-text text-transparent">
       {children}
     </span>
   );
