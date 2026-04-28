@@ -98,6 +98,48 @@ export function AdminShell({
               );
             })}
           </ul>
+
+          <p className="mt-5 px-3 text-[0.7rem] font-semibold uppercase tracking-wider text-ink-soft">
+            Tools
+          </p>
+          <ul className="mt-1.5 space-y-0.5">
+            <li>
+              <Link
+                href="/admin/proposals/new"
+                className={cx(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-navy-50",
+                  activeKey === "proposals/new" ? "bg-cyan-50 text-cyan-800 font-medium" : "text-ink hover:text-navy-900",
+                )}
+              >
+                <FileText className="h-4 w-4 text-cyan-600" />
+                <span>Send a proposal</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/admin/services"
+                className={cx(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-navy-50",
+                  activeKey === "services" ? "bg-cyan-50 text-cyan-800 font-medium" : "text-ink hover:text-navy-900",
+                )}
+              >
+                <FileText className="h-4 w-4 text-cyan-600" />
+                <span>Service catalog</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/admin/settings"
+                className={cx(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-navy-50",
+                  activeKey === "settings" ? "bg-cyan-50 text-cyan-800 font-medium" : "text-ink hover:text-navy-900",
+                )}
+              >
+                <FileText className="h-4 w-4 text-cyan-600" />
+                <span>Settings &amp; API keys</span>
+              </Link>
+            </li>
+          </ul>
         </nav>
         <div className="border-t border-border p-3 space-y-1">
           <Link

@@ -1,0 +1,41 @@
+[
+  {
+    "id": "p-77591b477b23",
+    "reference": "PROP-2026-0001",
+    "title": "Test corporate proposal",
+    "status": "sent",
+    "createdAt": "2026-04-28T05:36:02.430Z",
+    "updatedAt": "2026-04-28T05:36:02.430Z",
+    "client": {
+      "company": "Acme Engineering",
+      "contactName": "Jane Smith",
+      "contactEmail": "jane@acme.example",
+      "addressLines": [
+        "1 Industrial Way",
+        "Lahore"
+      ],
+      "country": "Pakistan"
+    },
+    "intro": "Thank you for the opportunity.",
+    "approach": "3 cohorts of 20 across 6 months.",
+    "lineItems": [
+      {
+        "id": "li-test",
+        "title": "IOSH Managing Safely cohort",
+        "quantity": 3,
+        "unitPrice": 7500,
+        "currency": "USD"
+      }
+    ],
+    "terms": "30% deposit",
+    "currency": "USD",
+    "totals": {
+      "subtotal": 22500,
+      "discountPercent": 5,
+      "discountAmount": 1125,
+      "taxPercent": 0,
+      "taxAmount": 0,
+      "total": 21375
+    }
+  }
+]

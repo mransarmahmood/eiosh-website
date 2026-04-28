@@ -1,0 +1,104 @@
+[
+  {
+    "id": "svc-iosh-managing-safely",
+    "slug": "iosh-managing-safely",
+    "title": "IOSH Managing Safely (3-day classroom)",
+    "category": "Open programmes",
+    "summary": "Benchmark managers' safety qualification — 3-day in-person delivery for up to 20 learners.",
+    "deliverables": [
+      "3 days of facilitated classroom delivery",
+      "Pre-course needs analysis",
+      "All IOSH learner workbooks",
+      "Risk-assessment workplace project",
+      "End-of-course assessment + IOSH certificate",
+      "Post-course refresher webinar (90 min)"
+    ],
+    "defaultPrice": 7500,
+    "currency": "USD",
+    "unit": "cohort up to 20"
+  },
+  {
+    "id": "svc-iosh-working-safely",
+    "slug": "iosh-working-safely",
+    "title": "IOSH Working Safely (1-day)",
+    "category": "Open programmes",
+    "summary": "Foundation safety awareness for the whole workforce. Live online or on-site.",
+    "deliverables": [
+      "1 day of live delivery (online or on-site)",
+      "All learner workbooks (digital)",
+      "End-of-course multiple choice assessment",
+      "IOSH-issued passport card per learner"
+    ],
+    "defaultPrice": 2500,
+    "currency": "USD",
+    "unit": "cohort up to 25"
+  },
+  {
+    "id": "svc-nebosh-igc-blended",
+    "slug": "nebosh-igc-blended",
+    "title": "NEBOSH International General Certificate (blended)",
+    "category": "Regulated qualifications",
+    "summary": "Industry-standard HSE qualification — 12-week blended cohort with assessment support.",
+    "deliverables": [
+      "12 weekly live tutorials (90 min each)",
+      "Self-paced LMS access for 6 months",
+      "Two mock exams + tutor feedback",
+      "Open-book exam invigilation",
+      "Practical risk assessment marking + feedback"
+    ],
+    "defaultPrice": 1500,
+    "currency": "USD",
+    "unit": "per learner"
+  },
+  {
+    "id": "svc-iso-45001-implementation",
+    "slug": "iso-45001-implementation",
+    "title": "ISO 45001 implementation support",
+    "category": "Consulting",
+    "summary": "Build or upgrade your occupational health & safety management system, gap to certified.",
+    "deliverables": [
+      "On-site gap analysis (2 days)",
+      "Risk register + control framework template",
+      "Document set (policies, SOPs, audit checklists)",
+      "Internal-auditor training for 4 staff",
+      "Certification-body liaison",
+      "30-day follow-up review"
+    ],
+    "defaultPrice": 18000,
+    "currency": "USD",
+    "unit": "fixed-price project"
+  },
+  {
+    "id": "svc-iv-monitoring",
+    "slug": "iv-monitoring",
+    "title": "Internal verification + EQA support",
+    "category": "Compliance",
+    "summary": "Awarding-body audit-readiness for centres delivering IOSH/OSHAcademy/HABC qualifications.",
+    "deliverables": [
+      "Quarterly IV sampling against awarding-body standards",
+      "Standardisation meeting facilitation",
+      "EQA evidence pack preparation",
+      "Pre-EQA mock visit + corrective actions",
+      "Annual centre quality review"
+    ],
+    "defaultPrice": 9500,
+    "currency": "USD",
+    "unit": "per year"
+  },
+  {
+    "id": "svc-corporate-onboarding",
+    "slug": "corporate-onboarding",
+    "title": "Corporate HSE onboarding programme",
+    "category": "Corporate",
+    "summary": "Tailored induction track covering site safety, PPE, emergency procedures, and a cultural alignment module.",
+    "deliverables": [
+      "Discovery workshop with HSE & HR leads",
+      "Bespoke 4-module e-learning track in your LMS",
+      "Trainer-of-trainers session for line managers",
+      "Quarterly cohort dashboards"
+    ],
+    "defaultPrice": 12000,
+    "currency": "USD",
+    "unit": "first 100 learners"
+  }
+]

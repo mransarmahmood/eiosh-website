@@ -35,10 +35,14 @@ interface ProviderConfig {
 }
 
 function readProvider(): ProviderConfig & { name: string } {
-  const name = (process.env.AI_PROVIDER ?? "mock").toLowerCase();
-  const apiKey = process.env.AI_API_KEY;
-  const modelOverride = process.env.AI_MODEL;
-  const baseOverride = process.env.AI_BASE_URL;
+  // Load /admin/settings overrides if present, falling back to env.
+  // We do this synchronously via the cached file read.
+  // eslint-disable-next-line @typescript-eslint/no-require-imports
+  const { getSettingSync } = require("@/lib/runtime-config") as typeof import("@/lib/runtime-config");
+  const name = (getSettingSync("AI_PROVIDER", "mock") || "mock").toLowerCase();
+  const apiKey = getSettingSync("AI_API_KEY") || undefined;
+  const modelOverride = getSettingSync("AI_MODEL") || undefined;
+  const baseOverride = getSettingSync("AI_BASE_URL") || undefined;
 
   switch (name) {
     case "groq":

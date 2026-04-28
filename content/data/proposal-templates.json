@@ -1,0 +1,46 @@
+[
+  {
+    "id": "tpl-corporate-iosh-rollout",
+    "title": "Corporate IOSH rollout",
+    "description": "For multi-site clients standardising line-manager safety training across the organisation. Three-cohort delivery, blended modes, central reporting.",
+    "intro": "EIOSH International is pleased to propose a structured rollout of the IOSH Managing Safely qualification across your organisation. Drawing on 12+ years as an approved IOSH centre, we'll deliver consistent, audit-ready training to your line managers and supervisors — with a single point of accountability through delivery, assessment and certification.",
+    "approach": "We'll begin with a 90-minute discovery workshop with your HSE lead to map cohort priorities, calendar pinch-points and any sector-specific risk scenarios. Cohorts run as 3-day in-person sessions for groups of up to 20, supplemented by a digital risk-assessment workbook. Each learner completes the IOSH-mandated workplace project, marked by our IV-certified faculty within 5 working days of submission.",
+    "serviceIds": [
+      "svc-iosh-managing-safely",
+      "svc-iv-monitoring",
+      "svc-corporate-onboarding"
+    ],
+    "terms": "Quoted prices exclude in-country travel and venue. 30% deposit on signature; balance net-30 against milestone invoices. Quotation valid for 60 days. EIOSH terms of business apply. Cancellation: ≥ 14 days = full refund less admin fee; <14 days = 50% retained.",
+    "validityDays": 60
+  },
+  {
+    "id": "tpl-nebosh-cohort-blended",
+    "title": "NEBOSH IGC blended cohort",
+    "description": "12-week blended NEBOSH International General Certificate delivery for a single department or learner cohort.",
+    "intro": "Thank you for your interest in running a NEBOSH IGC cohort with EIOSH International. As an approved NEBOSH centre, we'll deliver a 12-week blended programme combining live tutorials, self-paced LMS access, and the full assessment cycle — all under our centre's quality framework.",
+    "approach": "Weekly 90-minute live sessions on Tuesdays at 18:00 local time, with full LMS access from day one. Two mock exams, one practical risk-assessment submission, and the NEBOSH open-book exam (invigilated remotely). Pass rate across our last four cohorts: 89%.",
+    "serviceIds": ["svc-nebosh-igc-blended"],
+    "terms": "Per-learner fee covers tutorial delivery, NEBOSH registration, exam invigilation and one resit if needed. Travel & venue not included. Minimum 6 learners per cohort to confirm. Quotation valid 45 days.",
+    "validityDays": 45
+  },
+  {
+    "id": "tpl-iso-45001-implementation",
+    "title": "ISO 45001 implementation project",
+    "description": "Fixed-price gap-to-cert support for a single site or single business unit moving toward ISO 45001 certification.",
+    "intro": "EIOSH International proposes a structured ISO 45001 implementation programme for your organisation, taking you from baseline gap analysis through to a certification-ready management system. Our consulting team has supported 30+ certifications across MENA and Asia, including supply-chain-led mandates.",
+    "approach": "Phase 1 — Gap analysis (week 1–2): on-site review against the 10-clause ISO 45001 structure, risk register baseline, stakeholder interviews. Phase 2 — Build (week 3–8): policies, SOPs and audit checklists in your branded template; internal-auditor training for 4 staff. Phase 3 — Certify (week 9–12): liaison with your chosen certification body, mock external audit, corrective-action plan.",
+    "serviceIds": ["svc-iso-45001-implementation", "svc-iv-monitoring"],
+    "terms": "Fixed-price for a single-site scope; multi-site uplift on request. 25% on signature, 50% at end of Phase 2, 25% on certification-body audit. Quotation valid 60 days.",
+    "validityDays": 60
+  },
+  {
+    "id": "tpl-workforce-induction",
+    "title": "Workforce-wide HSE induction",
+    "description": "Foundational safety awareness for every employee across all sites — IOSH Working Safely, optionally extended to a corporate onboarding e-learning track.",
+    "intro": "EIOSH International is delighted to propose a workforce-wide HSE induction programme for your organisation. The aim: ensure every employee — regardless of role — shares a baseline understanding of risk, control and reporting culture. We'll combine the IOSH Working Safely qualification with a tailored corporate onboarding track.",
+    "approach": "Phase 1: pilot cohort of up to 25 employees (live online or on-site) to fine-tune content emphasis. Phase 2: full rollout via the LMS, with managers tracking completion in real time. Each learner receives the IOSH Passport card on completion.",
+    "serviceIds": ["svc-iosh-working-safely", "svc-corporate-onboarding"],
+    "terms": "Per-cohort pricing covers facilitator, materials, IOSH passports and one round of progress review. Volume discount available for >5 cohorts. Quotation valid 60 days.",
+    "validityDays": 60
+  }
+]
