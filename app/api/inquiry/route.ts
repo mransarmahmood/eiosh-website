@@ -2,6 +2,8 @@ import { NextResponse } from "next/server";
 import { z } from "zod";
 import { promises as fs } from "node:fs";
 import { join } from "node:path";
+import { notifyChannels } from "@/lib/notifications";
+import { getSetting } from "@/lib/runtime-config";
 
 // Inquiry endpoint. Forwards to INQUIRY_WEBHOOK_URL when set, and ALWAYS
 // persists a copy to content/data/inquiries.jsonl so no lead is lost if the
@@ -73,6 +75,24 @@ export async function POST(req: Request) {
       console.error("[inquiry] webhook failed", err);
     }
   }
+
+  // Best-effort transactional notifications.
+  // 1. Auto-reply to the prospect, 2. Internal alert to the admissions inbox.
+  const adminEmail = await getSetting("ADMIN_EMAIL", "info@eiosh.com");
+  const adminWhatsApp = await getSetting("ADMIN_WHATSAPP_TO");
+  const detail = `${parsed.data.variant} · ${parsed.data.name} (${parsed.data.email})${parsed.data.courseSlug ? ` · ${parsed.data.courseSlug}` : ""}\n\n${parsed.data.message ?? ""}`;
+  // Don't await — we don't want a slow SMTP to delay the user's response.
+  notifyChannels({
+    emailTo: parsed.data.email,
+    subject: "We've received your enquiry — EIOSH International",
+    body: `Hi ${parsed.data.name.split(" ")[0]},\n\nThanks for reaching out. We've received your enquiry and an EIOSH advisor will be in touch within one business day.\n\n— EIOSH admissions`,
+  }).catch((e) => console.warn("[inquiry] auto-reply failed", e));
+  notifyChannels({
+    emailTo: adminEmail,
+    whatsappTo: adminWhatsApp || undefined,
+    subject: `New enquiry — ${parsed.data.variant}`,
+    body: `New enquiry received:\n\n${detail}`,
+  }).catch((e) => console.warn("[inquiry] admin notify failed", e));
 
   return NextResponse.json({ ok: true });
 }

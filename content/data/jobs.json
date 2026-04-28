@@ -1,0 +1,93 @@
+[
+  {
+    "id": "job-1",
+    "slug": "hse-officer-saudi",
+    "title": "HSE Officer (NEBOSH IGC required)",
+    "company": "Eastern Cement Co.",
+    "companyLogo": null,
+    "location": "Riyadh, Saudi Arabia",
+    "remote": false,
+    "employmentType": "full-time",
+    "salaryFrom": 3500,
+    "salaryTo": 5500,
+    "currency": "USD",
+    "summary": "Lead day-to-day HSE for a 600-person cement plant. Drive zero-incident culture, lead toolbox talks, and own the ISO 45001 audit cycle.",
+    "responsibilities": [
+      "Maintain the site risk register and conduct weekly walk-downs.",
+      "Lead toolbox talks and incident root-cause investigations.",
+      "Liaise with the corporate HSE function on KPI reporting.",
+      "Coordinate ISO 45001 internal audits."
+    ],
+    "requirements": [
+      "NEBOSH International General Certificate (or equivalent).",
+      "3+ years HSE experience in heavy industry.",
+      "Strong written English; Arabic is a plus."
+    ],
+    "applyUrl": "mailto:hr@easterncement.example",
+    "applyEmail": "hr@easterncement.example",
+    "postedAt": "2026-04-20",
+    "expiresAt": "2026-06-20",
+    "featured": true,
+    "active": true
+  },
+  {
+    "id": "job-2",
+    "slug": "hse-trainer-uae",
+    "title": "Lead HSE Trainer (IOSH approved)",
+    "company": "Gulf Safety Academy",
+    "companyLogo": null,
+    "location": "Dubai, UAE",
+    "remote": false,
+    "employmentType": "full-time",
+    "salaryFrom": 4500,
+    "salaryTo": 7000,
+    "currency": "USD",
+    "summary": "Deliver IOSH Managing Safely + IOSH Working Safely cohorts to corporate clients across the GCC. Up to 30% travel.",
+    "responsibilities": [
+      "Run 4–6 IOSH cohorts per month.",
+      "Maintain centre quality records to IOSH standards.",
+      "Mentor junior facilitators."
+    ],
+    "requirements": [
+      "Approved IOSH trainer status (IOSH Working/Managing Safely).",
+      "5+ years training delivery experience.",
+      "Excellent presentation skills."
+    ],
+    "applyUrl": "https://gulfsafetyacademy.example/careers",
+    "applyEmail": null,
+    "postedAt": "2026-04-15",
+    "expiresAt": "2026-07-01",
+    "featured": false,
+    "active": true
+  },
+  {
+    "id": "job-3",
+    "slug": "hse-coordinator-pakistan",
+    "title": "HSE Coordinator",
+    "company": "Lahore Construction Group",
+    "companyLogo": null,
+    "location": "Lahore, Pakistan",
+    "remote": false,
+    "employmentType": "full-time",
+    "salaryFrom": 1200,
+    "salaryTo": 1800,
+    "currency": "USD",
+    "summary": "Site-based HSE coordinator across two active construction projects. Daily JSAs, PTW reviews, and contractor inductions.",
+    "responsibilities": [
+      "Daily JSA reviews and permit-to-work approvals.",
+      "Contractor induction sessions.",
+      "Maintain training matrix for 200+ field staff."
+    ],
+    "requirements": [
+      "IOSH Working Safely (minimum); IOSH Managing Safely preferred.",
+      "2+ years on construction sites.",
+      "Strong organisational skills."
+    ],
+    "applyUrl": null,
+    "applyEmail": "careers@lcg.example",
+    "postedAt": "2026-04-10",
+    "expiresAt": "2026-05-25",
+    "featured": false,
+    "active": true
+  }
+]

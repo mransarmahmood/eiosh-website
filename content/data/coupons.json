@@ -1,0 +1,44 @@
+[
+  {
+    "code": "WELCOME10",
+    "label": "Welcome 10%",
+    "description": "First-purchase discount for new learners.",
+    "kind": "percent",
+    "amount": 10,
+    "currency": "USD",
+    "validFrom": null,
+    "validUntil": null,
+    "usageLimit": 0,
+    "usedCount": 0,
+    "courseSlugs": [],
+    "active": true
+  },
+  {
+    "code": "EARLY50",
+    "label": "Early bird US$50 off",
+    "description": "Fixed US$50 off any course when booked 30+ days before the cohort start.",
+    "kind": "fixed",
+    "amount": 50,
+    "currency": "USD",
+    "validFrom": null,
+    "validUntil": null,
+    "usageLimit": 100,
+    "usedCount": 0,
+    "courseSlugs": [],
+    "active": true
+  },
+  {
+    "code": "CORP20",
+    "label": "Corporate group 20%",
+    "description": "20% off when at least 5 learners from the same company enrol within 30 days.",
+    "kind": "percent",
+    "amount": 20,
+    "currency": "USD",
+    "validFrom": null,
+    "validUntil": null,
+    "usageLimit": 0,
+    "usedCount": 0,
+    "courseSlugs": [],
+    "active": true
+  }
+]

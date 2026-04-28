@@ -1,0 +1,15 @@
+[
+  {
+    "id": "th-welcome",
+    "slug": "welcome-to-the-eiosh-community",
+    "title": "Welcome to the EIOSH community",
+    "category": "Announcements",
+    "authorEmail": "info@eiosh.com",
+    "authorName": "EIOSH faculty",
+    "body": "Welcome! This forum is a place for current and past learners to share questions, advice and stories from the field. A few ground rules:\n\n• Stay constructive — disagree, but politely.\n• No spam, no recruiting unless flagged for the jobs board.\n• Anything that could be a safety incident at your workplace — please follow your internal reporting first, then anonymise here if useful for others.\n\nTo start a thread, sign in to /student first.",
+    "createdAt": "2026-04-20T10:00:00Z",
+    "pinned": true,
+    "locked": false,
+    "comments": []
+  }
+]

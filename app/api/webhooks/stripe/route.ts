@@ -4,6 +4,7 @@ import type Stripe from "stripe";
 import { stripe } from "@/lib/payments";
 import { recordEnrolment, provisionLmsAccess } from "@/lib/enrolments";
 import { rewardForAmount } from "@/lib/referrals";
+import { incrementUsage } from "@/lib/coupons";
 
 /**
  * Stripe webhook entry point. Configure in Stripe Dashboard:
@@ -55,6 +56,11 @@ export async function POST(req: Request) {
     };
 
     await recordEnrolment(enrolment);
+
+    // Mark coupon as used so usage limits hold.
+    if (md.couponCode) {
+      await incrementUsage(md.couponCode);
+    }
 
     // Best-effort LMS auto-enrol; failure is logged but not surfaced to Stripe.
     const lms = await provisionLmsAccess(enrolment);

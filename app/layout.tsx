@@ -6,6 +6,7 @@ import { Footer } from "@/components/layout/Footer";
 import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { StickyMobileCTA } from "@/components/layout/StickyMobileCTA";
 import { AIChatFab } from "@/components/layout/AIChatFab";
+import { CookieConsent } from "@/components/layout/CookieConsent";
 import { pageMeta, organizationJsonLd } from "@/lib/seo";
 
 export const metadata: Metadata = pageMeta();
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <WhatsAppButton />
             <AIChatFab />
             <StickyMobileCTA />
+            <CookieConsent />
 
             <script
               type="application/ld+json"
