@@ -10,6 +10,7 @@ import {
   type SafeAdminUser,
 } from "@/lib/cms/users";
 import { permissionsFor, type AdminRole, type Permission } from "@/lib/cms/rbac";
+import { getSettingSync } from "@/lib/runtime-config";
 
 /**
  * Two-tier admin auth:
@@ -31,10 +32,18 @@ const DEV_DEFAULT = "eiosh-admin";
 const MAX_AGE = 60 * 60 * 8; // 8 hours
 
 function envPassword(): string {
+  // 1. Runtime override from /admin/settings (admin can change without redeploy).
+  // 2. Fall back to the env var.
+  // 3. Last resort: the dev default — logged loudly in production so the
+  //    operator knows they need to lock this down.
+  const fromConfig = getSettingSync("ADMIN_PASSWORD");
+  if (fromConfig && fromConfig.length >= 6) return fromConfig;
   const p = process.env.ADMIN_PASSWORD;
   if (p && p.length >= 6) return p;
   if (process.env.NODE_ENV === "production") {
-    throw new Error("ADMIN_PASSWORD is required in production");
+    console.warn(
+      "[auth] ADMIN_PASSWORD not set — using the public default. Change it at /admin/settings ASAP.",
+    );
   }
   return DEV_DEFAULT;
 }
