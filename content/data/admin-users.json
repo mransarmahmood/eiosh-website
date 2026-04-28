@@ -1,0 +1,18 @@
+[
+  {
+    "id": "u-6a46caee3700",
+    "email": "editor@eiosh.com",
+    "name": "Blog Editor",
+    "passwordHash": "100000:ef1a81edf4efc1ede4ea1605115a0d58:994a6e971bb4a1e857c88f83c2ac668197446ce8cebab1c616d5f7aa40c8f4de",
+    "role": "faculty",
+    "modules": [
+      "blog",
+      "testimonials",
+      "events"
+    ],
+    "permissionOverrides": [],
+    "active": true,
+    "createdAt": "2026-04-28T06:39:09.782Z",
+    "updatedAt": "2026-04-28T06:39:09.782Z"
+  }
+]

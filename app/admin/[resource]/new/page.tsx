@@ -1,9 +1,10 @@
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import { ArrowLeft } from "lucide-react";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { ResourceForm } from "@/components/admin/ResourceForm";
 import { getSchema } from "@/lib/cms/schemas";
+import { canSeeModule } from "@/lib/cms/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -11,10 +12,11 @@ interface Ctx {
   params: { resource: string };
 }
 
-export default function NewRecord({ params }: Ctx) {
+export default async function NewRecord({ params }: Ctx) {
   const schema = getSchema(params.resource);
   if (!schema) return notFound();
   if (schema.shape === "singleton") return notFound();
+  if (!(await canSeeModule(schema.key))) redirect(`/admin/${params.resource}`);
 
   return (
     <AdminShell activeKey={schema.key}>

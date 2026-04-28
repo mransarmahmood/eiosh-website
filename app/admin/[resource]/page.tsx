@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { Plus, Edit, Eye, Search } from "lucide-react";
+import { Plus, Edit, Eye, Search, ShieldOff } from "lucide-react";
 import { AdminShell } from "@/components/admin/AdminShell";
 import { ResourceForm } from "@/components/admin/ResourceForm";
 import { InvoiceListTable } from "@/components/admin/InvoiceListTable";
@@ -8,6 +8,7 @@ import { DeleteRecordButton } from "@/components/admin/DeleteRecordButton";
 import { getSchema } from "@/lib/cms/schemas";
 import { listAll } from "@/lib/cms/store";
 import { get } from "@/lib/cms/shape";
+import { canSeeModule } from "@/lib/cms/auth";
 
 export const dynamic = "force-dynamic";
 
@@ -18,6 +19,26 @@ interface Ctx {
 export default async function ResourceListPage({ params }: Ctx) {
   const schema = getSchema(params.resource);
   if (!schema) return notFound();
+
+  // Module-level access guard. Super admin always passes.
+  if (!(await canSeeModule(schema.key))) {
+    return (
+      <AdminShell activeKey={schema.key}>
+        <div className="max-w-2xl p-10">
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6">
+            <ShieldOff className="h-8 w-8 text-amber-700" />
+            <h1 className="mt-2 text-xl font-heading font-semibold text-amber-900">
+              You don't have access to this module.
+            </h1>
+            <p className="mt-1 text-sm text-amber-800">
+              Your account isn't assigned <code className="rounded bg-white px-1">{schema.key}</code>.
+              Ask a super admin to grant it in <strong>Users &amp; roles</strong>.
+            </p>
+          </div>
+        </div>
+      </AdminShell>
+    );
+  }
 
   if (schema.shape === "singleton") {
     const { records } = await listAll(schema.key);

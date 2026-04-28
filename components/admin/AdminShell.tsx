@@ -21,7 +21,7 @@ import {
   ArrowLeft,
   type LucideIcon,
 } from "lucide-react";
-import { isAuthed } from "@/lib/cms/auth";
+import { isAuthed, currentUserOrSuper, canSeeModuleSync } from "@/lib/cms/auth";
 import { schemas } from "@/lib/cms/schemas";
 import { LogoutButton } from "./LogoutButton";
 
@@ -44,7 +44,7 @@ const ICONS: Record<string, LucideIcon> = {
   BookText,
 };
 
-export function AdminShell({
+export async function AdminShell({
   children,
   activeKey,
 }: {
@@ -52,6 +52,9 @@ export function AdminShell({
   activeKey?: string;
 }) {
   if (!isAuthed()) redirect("/admin/login");
+  const me = await currentUserOrSuper();
+  // Hide modules the current user can't access. Super admin sees everything.
+  const visibleSchemas = schemas.filter((s) => canSeeModuleSync(me, s.key));
 
   return (
     <div className="flex min-h-screen">
@@ -79,7 +82,7 @@ export function AdminShell({
             Content
           </p>
           <ul className="mt-1.5 space-y-0.5">
-            {schemas.map((s) => {
+            {visibleSchemas.map((s) => {
               const Icon = ICONS[s.icon ?? "FileText"] ?? FileText;
               const active = activeKey === s.key;
               return (
@@ -137,6 +140,18 @@ export function AdminShell({
               >
                 <FileText className="h-4 w-4 text-cyan-600" />
                 <span>Settings &amp; API keys</span>
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/admin/users"
+                className={cx(
+                  "flex items-center gap-3 rounded-lg px-3 py-2 text-sm hover:bg-navy-50",
+                  activeKey === "users" ? "bg-cyan-50 text-cyan-800 font-medium" : "text-ink hover:text-navy-900",
+                )}
+              >
+                <UserPlus className="h-4 w-4 text-cyan-600" />
+                <span>Users &amp; roles</span>
               </Link>
             </li>
           </ul>
